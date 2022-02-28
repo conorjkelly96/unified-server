@@ -1,29 +1,42 @@
 const { model, Schema } = require("mongoose");
 
+const likeSchema = require("./Like");
+const commentSchema = require("./Comments");
+
 const forumBoardSchema = {
   _id: {
-    type: String,
+    type: Schema.Types.ObjectId,
+    required: true,
+    auto: true,
   },
   username: {
     type: String,
+    required: true,
   },
-  postTitle: [
-    {
-      type: String,
-    },
-  ],
+  postTitle: {
+    type: String,
+  },
+
   postText: {
-    type: Number,
-  },
-  likes: {
     type: String,
+    required: true,
+    minLength: 1,
+    maxLength: 100,
   },
-  comment: {
-    type: String,
-  },
+  likes: [likeSchema],
+  comment: [commentSchema],
   category: [
     {
       type: String,
+      enum: [
+        "Life & Style",
+        "Entertainment",
+        "Study Help",
+        "University & University Courses",
+        "Accommodation",
+        "Careers & Jobs",
+      ],
+      default: "Life & Style",
     },
   ],
   timestamps: { createdAt: "created_at", updatedAt: "updated_at" },
