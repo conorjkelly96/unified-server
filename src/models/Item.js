@@ -2,6 +2,7 @@ const { model, Schema } = require("mongoose");
 const { validatePrice } = require("../utils");
 
 const imageSchema = require("./Images");
+const transactionSchema = require("./Transaction");
 
 const itemSchema = {
   _id: {
@@ -60,9 +61,7 @@ const itemSchema = {
     required: true,
   },
   images: [imageSchema],
-  transactions: {
-    type: String,
-  },
+  transactions: [transactionSchema],
   timestamps: { createdAt: "created_at", updatedAt: "updated_at" },
 };
 
