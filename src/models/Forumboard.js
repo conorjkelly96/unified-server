@@ -15,6 +15,7 @@ const forumBoardSchema = {
   },
   postTitle: {
     type: String,
+    required: true,
   },
 
   postText: {
@@ -37,6 +38,7 @@ const forumBoardSchema = {
         "Careers & Jobs",
       ],
       default: "Life & Style",
+      required: true,
     },
   ],
   timestamps: { createdAt: "created_at", updatedAt: "updated_at" },
