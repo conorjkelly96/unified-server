@@ -15,7 +15,7 @@ const jobSchema = {
       type: String,
       required: true,
       minLength: 1,
-      maxLength: 100,
+      maxLength: 500,
     },
   ],
   type: [
@@ -28,17 +28,19 @@ const jobSchema = {
   category: [
     {
       type: String,
+      //add category in the future
       enum: ["", ""],
       required: true,
     },
   ],
-  joiningDate: {
+  postDate: {
     type: Date,
     required: true,
   },
   department: {
     type: String,
   },
+  //do we add options here?
   payRange: {
     type: String,
   },
@@ -46,7 +48,8 @@ const jobSchema = {
     type: Date,
   },
   postedBy: {
-    type: String,
+    type: Schema.Types.ObjectId,
+    ref: "user",
     required: true,
   },
   jobSkills: {

@@ -7,8 +7,9 @@ const transactionSchema = {
     auto: true,
   },
   buyer: {
-    type: String,
+    type: Schema.Types.ObjectId,
     ref: "user",
+    required: true,
   },
   transactionStatus: [
     {
@@ -21,6 +22,7 @@ const transactionSchema = {
     type: Date,
     required: true,
   },
+  //do we add cash or card options
   paymentMethod: {
     type: String,
     required: true,

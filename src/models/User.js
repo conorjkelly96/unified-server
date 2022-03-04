@@ -12,6 +12,16 @@ const userSchema = {
     type: String,
     required: true,
   },
+  firstName: {
+    type: String,
+    required: true,
+    maxLength: 200,
+  },
+  lastName: {
+    type: String,
+    required: true,
+    maxLength: 200,
+  },
   email: [
     {
       type: String,

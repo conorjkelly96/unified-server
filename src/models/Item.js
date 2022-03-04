@@ -19,7 +19,7 @@ const itemSchema = {
       type: String,
       required: true,
       minLength: 1,
-      maxLength: 100,
+      maxLength: 500,
     },
   ],
   category: [
@@ -46,7 +46,7 @@ const itemSchema = {
   condition: [
     {
       type: String,
-      enum: ["New", "Used"],
+      enum: ["New", "Fair", "Like New", "Used"],
       required: true,
     },
   ],
