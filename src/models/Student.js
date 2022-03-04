@@ -19,20 +19,19 @@ const studentSchema = {
     required: true,
     maxLength: 50,
   },
-  email: [
-    {
-      type: String,
-      trim: true,
-      lowercase: true,
-      unique: true,
-      required: true,
-      validate: [validateEmail, "Please fill a valid email address"],
-      match: [
-        /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
-        "Please fill a valid email address",
-      ],
-    },
-  ],
+  email: {
+    type: String,
+    trim: true,
+    lowercase: true,
+    unique: true,
+    required: true,
+    validate: [validateEmail, "Please fill a valid email address"],
+    match: [
+      /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+      "Please fill a valid email address",
+    ],
+  },
+
   // TODO: add validation - 1 uppercase 1 lowercase 1 number and 1 special character
   password: {
     type: String,
@@ -66,7 +65,7 @@ const studentSchema = {
   course: {
     type: String,
   },
-  timestamps: true,
+  // timestamps: true,
   sellerRating: {
     type: Number,
     default: 0,

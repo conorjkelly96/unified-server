@@ -20,7 +20,7 @@ const typeDefs = gql`
     university: University
     bio: String
     course: String
-    sellerRating: Number
+    sellerRating: Float
     friends: [Student]
   }
 
@@ -33,14 +33,15 @@ const typeDefs = gql`
     lastName: String!
     username: String!
     email: String!
+    password: String!
     interests: [String]
-    university: University
+    university: String
     bio: String
     course: String
   }
 
   type Query {
-    dashboard: User!
+    dashboard: String!
   }
 
   type Mutation {
