@@ -1,26 +1,23 @@
 const { model, Schema } = require("mongoose");
-const { validateEmail } = require("../utils");
 const bcrypt = require("bcrypt");
 
-const userSchema = {
-  _id: {
-    type: Schema.Types.ObjectId,
-    required: true,
-    auto: true,
-  },
+const { validateEmail } = require("../utils");
+
+const studentSchema = {
   username: {
     type: String,
     required: true,
+    maxLength: 50,
   },
   firstName: {
     type: String,
     required: true,
-    maxLength: 200,
+    maxLength: 50,
   },
   lastName: {
     type: String,
     required: true,
-    maxLength: 200,
+    maxLength: 50,
   },
   email: [
     {
@@ -36,6 +33,17 @@ const userSchema = {
       ],
     },
   ],
+  // TODO: add validation - 1 uppercase 1 lowercase 1 number and 1 special character
+  password: {
+    type: String,
+    required: true,
+    minLength: 8,
+  },
+  bio: {
+    type: String,
+    minLength: 1,
+    maxLength: 250,
+  },
   interests: [
     {
       type: String,
@@ -52,42 +60,32 @@ const userSchema = {
     },
   ],
   university: {
-    type: String,
-    default: "University of Birmingham",
-    required: true,
+    type: Schema.Types.ObjectId,
+    ref: "University",
   },
-  password: {
+  course: {
     type: String,
-    required: true,
-    minLength: 8,
   },
-  bio: {
-    type: String,
-    minLength: 1,
-    maxLength: 100,
-  },
-  universityCourse: {
-    type: String,
-    required: true,
-  },
-  timestamps: { createdAt: "joinDate" },
-  studentStatus: {
-    type: String,
-    required: true,
-  },
+  timestamps: true,
   sellerRating: {
     type: Number,
+    default: 0,
   },
   friends: [
     {
       type: Schema.Types.ObjectId,
-      ref: "user",
+      ref: "Student",
       required: false,
     },
   ],
+  // TODO: Investigate further
+  // studentStatus: {
+  //   type: String,
+  //   required: true,
+  // },
 };
 
-const schema = new Schema(userSchema, {
+const schema = new Schema(studentSchema, {
   toJSON: {
     getters: true,
   },
@@ -106,6 +104,6 @@ schema.methods.checkPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
 
-const User = model("user", schema);
+const Student = model("Student", schema);
 
-module.exports = User;
+module.exports = Student;

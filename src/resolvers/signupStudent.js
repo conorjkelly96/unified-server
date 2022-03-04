@@ -1,14 +1,14 @@
 const { ApolloError } = require("apollo-server");
 
-const { User } = require("../models");
-const { signToken } = require("../utils/auth");
+const { Student } = require("../models");
 
 const signup = async (_, { input }) => {
   try {
-    const user = await User.create(input);
+    await Student.create(input);
 
     return {
-      token: signToken(user),
+      success: true,
+      message: "Successfully created account",
     };
   } catch (error) {
     console.log(`[ERROR]: Failed to sign up | ${error.message}`);

@@ -1,11 +1,7 @@
-const ForumBoard = require("./Forumboard");
-const User = require("./User");
-const Item = require("./Item");
-const Job = require("./Job");
+const Student = require("./Student");
+const University = require("./University");
 
 module.exports = {
-  ForumBoard,
-  User,
-  Item,
-  Job,
+  Student,
+  University,
 };

@@ -1,13 +1,12 @@
-const login = require("./login");
-const signUp = require("./signup");
+const signupStudent = require("./signupStudent");
+const dashboard = require("./dashboard");
+
 const resolvers = {
   Query: {
     dashboard,
   },
   Mutation: {
-    login,
-    signUp,
-    postImage,
+    signupStudent,
   },
 };
 
