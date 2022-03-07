@@ -1,7 +1,8 @@
 const createJob = require("./createJob");
+const jobs = require("./jobs");
 
 const resolvers = {
-  Query: {},
+  Query: { jobs },
   Mutation: { createJob },
 };
 
