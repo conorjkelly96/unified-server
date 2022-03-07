@@ -17,13 +17,24 @@ type Staff {
     username: String!
     email: String!
     university: University
-    
+
     # Should this be required?
     college: String
 }
 
 type Job {
-
+    id: ID!
+    jobTitle: String!
+    jobDescription: String!
+    type: String!
+    jobPostUrl: String,
+    createdAt: String!
+    department: String
+    minPayRate: Number,
+    maxPayRate: Number,
+    closingDate: Date,
+    postedBy: Staff!
+    jobSkills: String,
 }
 
   type Query {

@@ -43,16 +43,20 @@ const jobSchema = {
   //   type: Date,
   //   required: true,
   // },
+  timestamps: true,
 
   department: {
     type: String,
   },
 
+  // does this need additional validation for decimals?
   minPayRate: {
     type: Number,
     required: true,
+    min: 0,
   },
 
+  // does this need additional validation for decimals?
   maxPayRate: {
     type: Number,
     required: true,
@@ -71,7 +75,6 @@ const jobSchema = {
   //   make an enum?
   jobSkills: {
     type: String,
-    required: true,
   },
 
   //   what is this one?
