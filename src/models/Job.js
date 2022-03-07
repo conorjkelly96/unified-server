@@ -1,12 +1,6 @@
 const { model, Schema } = require("mongoose");
 
 const jobSchema = {
-  _id: {
-    type: Schema.Types.ObjectId,
-    required: true,
-    auto: true,
-  },
-
   jobTitle: {
     type: String,
     required: true,
@@ -29,27 +23,39 @@ const jobSchema = {
     },
   ],
 
-  category: [
-    {
-      type: String,
-      //add category in the future
-      enum: ["", ""],
-      required: true,
-    },
-  ],
-
-  postDate: {
-    type: Date,
+  // for external postings
+  jobPostUrl: {
+    type: String,
     required: true,
   },
+
+  // category: [
+  //   {
+  //     type: String,
+  //     //add category in the future
+  //     enum: ["", ""],
+  //     required: true,
+  //   },
+  // ],
+
+  //* wouldn't this just be the createdAt item?
+  // postDate: {
+  //   type: Date,
+  //   required: true,
+  // },
 
   department: {
     type: String,
   },
 
-  //do we add options here?
-  payRange: {
-    type: String,
+  minPayRate: {
+    type: Number,
+    required: true,
+  },
+
+  maxPayRate: {
+    type: Number,
+    required: true,
   },
 
   closingDate: {
@@ -67,17 +73,12 @@ const jobSchema = {
     type: String,
     required: true,
   },
+
   //   what is this one?
   //   companyProfile: {
   //     type: String,
   //     required: true,
   //   },
-
-  // for external postings
-  jobPostUrl: {
-    type: String,
-    required: true,
-  },
 };
 
 const schema = new Schema(jobSchema);
