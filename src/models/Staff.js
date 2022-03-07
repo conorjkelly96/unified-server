@@ -4,12 +4,6 @@ const bcrypt = require("bcrypt");
 const { validateEmail } = require("../utils");
 
 const staffSchema = {
-  username: {
-    type: String,
-    required: true,
-    maxLength: 50,
-  },
-
   firstName: {
     type: String,
     required: true,
@@ -17,6 +11,11 @@ const staffSchema = {
   },
 
   lastName: {
+    type: String,
+    required: true,
+    maxLength: 50,
+  },
+  username: {
     type: String,
     required: true,
     maxLength: 50,
@@ -50,6 +49,7 @@ const staffSchema = {
     ref: "University",
   },
 
+  //* should this be required?
   college: {
     type: String,
     enum: [
