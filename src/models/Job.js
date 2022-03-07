@@ -43,7 +43,6 @@ const jobSchema = {
   //   type: Date,
   //   required: true,
   // },
-  timestamps: true,
 
   department: {
     type: String,
@@ -68,7 +67,7 @@ const jobSchema = {
 
   postedBy: {
     type: Schema.Types.ObjectId,
-    ref: "staff",
+    ref: "Staff",
     required: true,
   },
 
@@ -84,7 +83,7 @@ const jobSchema = {
   //   },
 };
 
-const schema = new Schema(jobSchema);
+const schema = new Schema(jobSchema, { timestamps: true });
 
 const Job = model("job", schema);
 

@@ -1,6 +1,8 @@
+const createJob = require("./createJob");
+
 const resolvers = {
   Query: {},
-  Mutation: {},
+  Mutation: { createJob },
 };
 
 module.exports = resolvers;

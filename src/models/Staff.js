@@ -1,8 +1,6 @@
 const { model, Schema } = require("mongoose");
 const bcrypt = require("bcrypt");
 
-const { validateEmail } = require("../utils");
-
 const staffSchema = {
   firstName: {
     type: String,
