@@ -27,13 +27,13 @@ const typeDefs = gql`
     jobTitle: String!
     jobDescription: String!
     type: String!
-    jobPostUrl: String
+    jobPostUrl: String!
     createdAt: String!
     department: String
     minPayRate: Int
     maxPayRate: Int
     closingDate: String
-    postedBy: Staff!
+    postedBy: Staff
     jobSkills: String
   }
 
@@ -41,12 +41,15 @@ const typeDefs = gql`
     jobTitle: String!
     jobDescription: String!
     type: String!
-    jobPostUrl: String
+    jobPostUrl: String!
     department: String
-    minPayRate: Int
-    maxPayRate: Int
+    minPayRate: Int!
+    maxPayRate: Int!
     closingDate: String
-    postedBy: String!
+
+    # check that staff data populates!! Should this be an ID instead of String?
+    postedBy: String
+
     jobSkills: String
   }
 
@@ -55,7 +58,7 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    createJob(job: CreateJobInput!): Job!
+    createJob(jobInput: CreateJobInput!): Job!
   }
 `;
 

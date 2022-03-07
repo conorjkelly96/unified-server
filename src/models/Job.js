@@ -6,24 +6,19 @@ const jobSchema = {
     required: true,
   },
 
-  jobDescription: [
-    {
-      type: String,
-      required: true,
-      minLength: 1,
-      maxLength: 500,
-    },
-  ],
+  jobDescription: {
+    type: String,
+    required: true,
+    minLength: 1,
+    maxLength: 500,
+  },
 
-  type: [
-    {
-      type: String,
-      enum: ["Internal", "External"],
-      required: true,
-    },
-  ],
+  type: {
+    type: String,
+    enum: ["Internal", "External"],
+    required: true,
+  },
 
-  // for external postings
   jobPostUrl: {
     type: String,
     required: true,
@@ -68,7 +63,7 @@ const jobSchema = {
   postedBy: {
     type: Schema.Types.ObjectId,
     ref: "Staff",
-    required: true,
+    // required: true,
   },
 
   //   make an enum?
@@ -83,7 +78,7 @@ const jobSchema = {
   //   },
 };
 
-const schema = new Schema(jobSchema, { timestamps: true });
+const schema = new Schema(jobSchema, { timestamps: true, id: true });
 
 const Job = model("job", schema);
 
