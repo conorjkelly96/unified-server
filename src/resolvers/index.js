@@ -1,5 +1,6 @@
 const signupStudent = require("./signupStudent");
 const dashboard = require("./dashboard");
+const createItem = require("./createItem");
 
 const resolvers = {
   Query: {
@@ -7,6 +8,7 @@ const resolvers = {
   },
   Mutation: {
     signupStudent,
+    createItem,
   },
 };
 

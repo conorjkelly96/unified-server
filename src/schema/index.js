@@ -77,12 +77,28 @@ const typeDefs = gql`
     course: String
   }
 
+  input CreateItemInput {
+    id: ID!
+    itemName: String!
+    itemDescription: String!
+    category: String!
+    status: String!
+    condition: String!
+    price: Int!
+    quantity: Int!
+    seller: String!
+    comments: [String]
+    images: [String]
+    transactions: [String]
+  }
+
   type Query {
     dashboard: String!
   }
 
   type Mutation {
     signupStudent(input: SignupStudentInput!): SignupStudentSuccess!
+    createItem(input: CreateItemInput!): Item!
   }
 `;
 
