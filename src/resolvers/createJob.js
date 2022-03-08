@@ -10,7 +10,6 @@ const createJob = async (_, { jobInput }, context) => {
     // }
 
     const newJob = await Job.create(jobInput);
-    console.log(newJob);
 
     return newJob;
   } catch (error) {
