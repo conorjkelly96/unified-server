@@ -6,11 +6,6 @@ const transactionSchema = require("./Transaction");
 const commentSchema = require("./Comment");
 
 const itemSchema = {
-  id: {
-    type: Schema.Types.ObjectId,
-    required: true,
-    auto: true,
-  },
   itemName: {
     type: String,
     required: true,
@@ -41,7 +36,7 @@ const itemSchema = {
     {
       type: String,
       enum: ["For Sale", "Sold"],
-      required: true,
+      default: "For Sale",
     },
   ],
   condition: [
@@ -54,15 +49,24 @@ const itemSchema = {
   price: { type: Number, validate: validatePrice },
   quantity: {
     type: Number,
+    default: 1,
+  },
+  seller: {
+    type: Schema.Types.ObjectId,
+    ref: "Student",
     required: true,
   },
-  seller: { type: String, required: true },
   comments: [commentSchema],
   images: [imageSchema],
   transactions: [transactionSchema],
 };
 
-const schema = new Schema(itemSchema);
+const schema = new Schema(itemSchema, {
+  toJSON: {
+    getters: true,
+  },
+  id: true,
+});
 
 const Item = model("item", schema);
 

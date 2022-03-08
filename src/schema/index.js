@@ -32,14 +32,9 @@ const typeDefs = gql`
     username: String!
   }
 
-  type Images {
-    id: ID!
-    imageUrl: ID!
-  }
-
   type Transaction {
     id: ID!
-    buyer: String!
+    buyer: Student!
     transactionStatus: String!
     collectionDate: Date!
     paymentMethod: String!
@@ -55,9 +50,9 @@ const typeDefs = gql`
     condition: String!
     price: Int!
     quantity: Int!
-    seller: String!
+    seller: Student!
     comments: [Comment]
-    images: [Images]
+    images: [String]
     transactions: [Transaction]
   }
 
@@ -78,18 +73,13 @@ const typeDefs = gql`
   }
 
   input CreateItemInput {
-    id: ID!
     itemName: String!
     itemDescription: String!
     category: String!
-    status: String!
     condition: String!
     price: Int!
-    quantity: Int!
-    seller: String!
-    comments: [String]
+    quantity: Int
     images: [String]
-    transactions: [String]
   }
 
   type Query {
