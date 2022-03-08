@@ -72,6 +72,23 @@ const typeDefs = gql`
     jobSkills: String
   }
 
+  input UpdateJobInput {
+    id: ID!
+    jobTitle: String!
+    jobDescription: String!
+    type: String!
+    jobPostUrl: String!
+    department: String
+    minPayRate: Int!
+    maxPayRate: Int!
+    closingDate: String
+
+    # check that staff data populates!! Should this be an ID instead of String?
+    postedBy: String
+
+    jobSkills: String
+  }
+
   input SignupStudentInput {
     firstName: String!
     lastName: String!
@@ -84,14 +101,17 @@ const typeDefs = gql`
     course: String
   }
 
+  # QUERIES
   type Query {
     dashboard: String!
     jobs: [Job]
   }
 
+  # MUTATIONS
   type Mutation {
     signupStudent(input: SignupStudentInput!): SignupStudentSuccess!
-    createJob(jobInput: CreateJobInput!): Job!
+    createJob(newJobInput: CreateJobInput!): Job!
+    updateJob(jobInput: UpdateJobInput!): Job!
   }
 `;
 

@@ -9,6 +9,7 @@ const jobs = async (_, __, context) => {
     //   throw new AuthenticationError("You must be logged in to create a job.");
     // }
 
+    //* populate with "staff" data?
     const jobs = await Job.find({});
 
     return jobs;
