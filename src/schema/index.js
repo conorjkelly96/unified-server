@@ -31,9 +31,9 @@ const typeDefs = gql`
     category: String!
     status: String!
     condition: String!
-    price: Number!
+    price: Int!
     seller: String!
-    comments: 
+    comments: String!
   }
 
   type SignupStudentSuccess {
