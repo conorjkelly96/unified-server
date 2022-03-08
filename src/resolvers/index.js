@@ -1,4 +1,5 @@
 const signupStudent = require("./signupStudent");
+const loginStudent = require("./loginStudent");
 const dashboard = require("./dashboard");
 
 const resolvers = {
@@ -7,6 +8,7 @@ const resolvers = {
   },
   Mutation: {
     signupStudent,
+    loginStudent,
   },
 };
 
