@@ -25,6 +25,11 @@ const universitySchema = {
     type: String,
     required: true,
   },
+  colleges: [
+    {
+      type: String,
+    },
+  ],
 };
 
 const schema = new Schema(universitySchema, {

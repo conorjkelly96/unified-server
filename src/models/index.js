@@ -5,5 +5,7 @@ const University = require("./University");
 
 module.exports = {
   Student,
-  University, Job, Staff
+  University,
+  Job,
+  Staff,
 };

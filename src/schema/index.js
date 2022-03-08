@@ -30,10 +30,8 @@ const typeDefs = gql`
     lastName: String!
     username: String!
     email: String!
-    university: University
-
-    # Should this be required?
-    college: String
+    university: University!
+    college: String!
   }
 
   type Job {
@@ -53,6 +51,16 @@ const typeDefs = gql`
 
   type SignupStudentSuccess {
     student: Student!
+  }
+
+  type StudentAuth {
+    token: ID!
+    student: Student!
+  }
+
+  type StaffAuth {
+    token: ID!
+    staff: Staff!
   }
 
   # INPUTS
@@ -89,6 +97,16 @@ const typeDefs = gql`
     jobSkills: String
   }
 
+  type SignupStaffSuccess {
+    success: Boolean!
+    staff: Staff
+  }
+
+  input LoginInput {
+    email: String!
+    password: String!
+  }
+
   input SignupStudentInput {
     firstName: String!
     lastName: String!
@@ -101,6 +119,16 @@ const typeDefs = gql`
     course: String
   }
 
+  input SignupStaffInput {
+    firstName: String!
+    lastName: String!
+    username: String!
+    email: String!
+    password: String!
+    university: ID!
+    college: String!
+  }
+
   # QUERIES
   type Query {
     dashboard: String!
@@ -110,8 +138,11 @@ const typeDefs = gql`
   # MUTATIONS
   type Mutation {
     signupStudent(input: SignupStudentInput!): SignupStudentSuccess!
+    loginStudent(input: LoginInput!): StudentAuth!
     createJob(newJobInput: CreateJobInput!): Job!
     updateJob(jobInput: UpdateJobInput!): Job!
+    signupStaff(input: SignupStaffInput!): SignupStaffSuccess!
+    loginStaff(input: LoginInput!): StaffAuth!
   }
 `;
 

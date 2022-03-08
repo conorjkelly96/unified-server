@@ -47,17 +47,9 @@ const staffSchema = {
     ref: "University",
   },
 
-  //* should this be required?
   college: {
     type: String,
-    enum: [
-      "College of Arts and Law",
-      "College of Engineering and Physical Sciences",
-      "College of Life and Environmental Sciences",
-      "College of Medical and Dental Sciences",
-      "College of Social Sciences",
-      "Professional Services",
-    ],
+    required: true,
   },
 
   // department: {
