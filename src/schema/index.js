@@ -24,8 +24,38 @@ const typeDefs = gql`
     friends: [Student]
   }
 
+  type Staff {
+    id: ID!
+    firstName: String!
+    lastName: String!
+    username: String!
+    email: String!
+    university: University!
+    college: String!
+  }
+
   type SignupStudentSuccess {
     student: Student!
+  }
+
+  type SignupStaffSuccess {
+    success: Boolean!
+    staff: Staff
+  }
+
+  type StudentAuth {
+    token: ID!
+    student: Student!
+  }
+
+  type StaffAuth {
+    token: ID!
+    staff: Staff!
+  }
+
+  input LoginInput {
+    email: String!
+    password: String!
   }
 
   input SignupStudentInput {
@@ -40,12 +70,25 @@ const typeDefs = gql`
     course: String
   }
 
+  input SignupStaffInput {
+    firstName: String!
+    lastName: String!
+    username: String!
+    email: String!
+    password: String!
+    university: ID!
+    college: String!
+  }
+
   type Query {
     dashboard: String!
   }
 
   type Mutation {
     signupStudent(input: SignupStudentInput!): SignupStudentSuccess!
+    loginStudent(input: LoginInput!): StudentAuth!
+    signupStaff(input: SignupStaffInput!): SignupStaffSuccess!
+    loginStaff(input: LoginInput!): StaffAuth!
   }
 `;
 
