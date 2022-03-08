@@ -51,6 +51,11 @@ const typeDefs = gql`
     jobSkills: String
   }
 
+  type SignupStudentSuccess {
+    student: Student!
+  }
+
+  # INPUTS
   input CreateJobInput {
     jobTitle: String!
     jobDescription: String!
@@ -67,24 +72,6 @@ const typeDefs = gql`
     jobSkills: String
   }
 
-  type Query {
-    jobs: [Job]
-  }
-
-  type Mutation {
-    createJob(jobInput: CreateJobInput!): Job!
-    interests: [String]
-    university: University
-    bio: String
-    course: String
-    sellerRating: Float
-    friends: [Student]
-  }
-
-  type SignupStudentSuccess {
-    student: Student!
-  }
-
   input SignupStudentInput {
     firstName: String!
     lastName: String!
@@ -99,10 +86,12 @@ const typeDefs = gql`
 
   type Query {
     dashboard: String!
+    jobs: [Job]
   }
 
   type Mutation {
     signupStudent(input: SignupStudentInput!): SignupStudentSuccess!
+    createJob(jobInput: CreateJobInput!): Job!
   }
 `;
 
