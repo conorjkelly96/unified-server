@@ -57,6 +57,11 @@ const typeDefs = gql`
     password: String!
   }
 
+  input LoginStaffInput {
+    email: String!
+    password: String!
+  }
+
   input SignupStudentInput {
     firstName: String!
     lastName: String!
@@ -75,7 +80,7 @@ const typeDefs = gql`
     username: String!
     email: String!
     university: String
-    college: String
+    college: [String]
   }
 
   type Query {
@@ -86,6 +91,7 @@ const typeDefs = gql`
     signupStudent(input: SignupStudentInput!): SignupStudentSuccess!
     loginStudent(input: LoginStudentInput!): StudentAuth!
     signupStaff(input: SignupStaffInput!): SignupStaffSuccess!
+    loginStaff(input: LoginStaffInput!): StaffAuth!
   }
 `;
 
