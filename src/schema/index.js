@@ -28,6 +28,16 @@ const typeDefs = gql`
     student: Student!
   }
 
+  type Auth {
+    token: ID!
+    student: Student!
+  }
+
+  input LoginStudentInput {
+    email: String!
+    password: String!
+  }
+
   input SignupStudentInput {
     firstName: String!
     lastName: String!
@@ -46,6 +56,7 @@ const typeDefs = gql`
 
   type Mutation {
     signupStudent(input: SignupStudentInput!): SignupStudentSuccess!
+    loginStudent(input: LoginStudentInput!): Auth!
   }
 `;
 
