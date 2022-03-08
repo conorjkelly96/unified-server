@@ -14,3 +14,5 @@ const imageSchema = {
 };
 
 const schema = new Schema(imageSchema);
+
+module.exports = schema;

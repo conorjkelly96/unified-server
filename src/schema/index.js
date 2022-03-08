@@ -24,6 +24,18 @@ const typeDefs = gql`
     friends: [Student]
   }
 
+  type Item {
+    id: ID!
+    itemName: String!
+    itemDescription: String!
+    category: String!
+    status: String!
+    condition: String!
+    price: Number!
+    seller: String!
+    comments: 
+  }
+
   type SignupStudentSuccess {
     student: Student!
   }

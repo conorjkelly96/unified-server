@@ -3,9 +3,10 @@ const { validatePrice } = require("../utils");
 
 const imageSchema = require("./Images");
 const transactionSchema = require("./Transaction");
+const commentSchema = require("./Comment");
 
 const itemSchema = {
-  _id: {
+  id: {
     type: Schema.Types.ObjectId,
     required: true,
     auto: true,
@@ -56,10 +57,7 @@ const itemSchema = {
     required: true,
   },
   seller: { type: String, required: true },
-  comments: {
-    type: String,
-    required: true,
-  },
+  comments: [commentSchema],
   images: [imageSchema],
   transactions: [transactionSchema],
 };
