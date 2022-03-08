@@ -3,9 +3,11 @@ const { AuthenticationError } = require("apollo-server");
 const { Staff } = require("../models");
 const { signToken } = require("../utils");
 
-const loginStaff = async (_, { input }, context) => {
+const loginStaff = async (_, { input }) => {
   try {
-    const staff = await Staff.findOne({ email: input.email });
+    const staff = await Staff.findOne({ email: input.email }).populate(
+      "university"
+    );
 
     if (!staff) {
       console.log("[ERROR]: Failed to login | Staff does not exist");
@@ -27,6 +29,8 @@ const loginStaff = async (_, { input }, context) => {
         lastName: staff.lastName,
         email: staff.email,
         username: staff.username,
+        university: staff.university,
+        college: staff.college,
       },
     };
   } catch (error) {

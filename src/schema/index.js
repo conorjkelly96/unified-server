@@ -30,8 +30,8 @@ const typeDefs = gql`
     lastName: String!
     username: String!
     email: String!
-    university: University
-    college: String
+    university: University!
+    college: String!
   }
 
   type SignupStudentSuccess {
@@ -39,7 +39,8 @@ const typeDefs = gql`
   }
 
   type SignupStaffSuccess {
-    staff: Staff!
+    success: Boolean!
+    staff: Staff
   }
 
   type StudentAuth {
@@ -52,12 +53,7 @@ const typeDefs = gql`
     staff: Staff!
   }
 
-  input LoginStudentInput {
-    email: String!
-    password: String!
-  }
-
-  input LoginStaffInput {
+  input LoginInput {
     email: String!
     password: String!
   }
@@ -79,8 +75,9 @@ const typeDefs = gql`
     lastName: String!
     username: String!
     email: String!
-    university: String
-    college: [String]
+    password: String!
+    university: ID!
+    college: String!
   }
 
   type Query {
@@ -89,9 +86,9 @@ const typeDefs = gql`
 
   type Mutation {
     signupStudent(input: SignupStudentInput!): SignupStudentSuccess!
-    loginStudent(input: LoginStudentInput!): StudentAuth!
+    loginStudent(input: LoginInput!): StudentAuth!
     signupStaff(input: SignupStaffInput!): SignupStaffSuccess!
-    loginStaff(input: LoginStaffInput!): StaffAuth!
+    loginStaff(input: LoginInput!): StaffAuth!
   }
 `;
 
