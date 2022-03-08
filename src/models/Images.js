@@ -2,7 +2,7 @@ const { Schema } = require("mongoose");
 
 // schema only
 const imageSchema = {
-  _id: {
+  id: {
     type: Schema.Types.ObjectId,
     required: true,
     auto: true,

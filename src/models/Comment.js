@@ -1,12 +1,12 @@
 const { Schema } = require("mongoose");
 
 const commentSchema = {
-  reactionId: {
+  commentId: {
     type: Schema.Types.ObjectId,
     required: true,
     auto: true,
   },
-  reactionBody: {
+  commentBody: {
     type: String,
     required: true,
     maxLength: 280,
@@ -14,10 +14,6 @@ const commentSchema = {
   username: {
     type: String,
     required: true,
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now(),
   },
 };
 

@@ -1,6 +1,8 @@
 const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
+  scalar Date
+
   type University {
     name: String!
     courses: [String]
@@ -24,6 +26,26 @@ const typeDefs = gql`
     friends: [Student]
   }
 
+  type Comment {
+    commentId: ID!
+    commentBody: String!
+    username: String!
+  }
+
+  type Images {
+    id: ID!
+    imageUrl: ID!
+  }
+
+  type Transaction {
+    id: ID!
+    buyer: String!
+    transactionStatus: String!
+    collectionDate: Date!
+    paymentMethod: String!
+    buyerRating: Int!
+  }
+
   type Item {
     id: ID!
     itemName: String!
@@ -32,8 +54,11 @@ const typeDefs = gql`
     status: String!
     condition: String!
     price: Int!
+    quantity: Int!
     seller: String!
-    comments: String!
+    comments: [Comment]
+    images: [Images]
+    transactions: [Transaction]
   }
 
   type SignupStudentSuccess {

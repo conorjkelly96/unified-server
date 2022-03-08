@@ -1,7 +1,7 @@
 const { Schema } = require("mongoose");
 
 const transactionSchema = {
-  _id: {
+  id: {
     type: Schema.Types.ObjectId,
     required: true,
     auto: true,
