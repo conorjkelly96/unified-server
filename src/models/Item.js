@@ -62,7 +62,6 @@ const itemSchema = {
   },
   images: [imageSchema],
   transactions: [transactionSchema],
-  timestamps: { createdAt: "created_at", updatedAt: "updated_at" },
 };
 
 const schema = new Schema(itemSchema);

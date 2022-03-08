@@ -1,5 +1,6 @@
 const { Schema } = require("mongoose");
 
+// schema only
 const imageSchema = {
   _id: {
     type: Schema.Types.ObjectId,

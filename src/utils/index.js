@@ -30,7 +30,12 @@ const authMiddleware = ({ req }) => {
   return req;
 };
 
+const validatePrice = (price) => {
+  return Math.round(price * 100) / 100;
+};
+
 module.exports = {
   signToken,
   authMiddleware,
+  validatePrice,
 };
