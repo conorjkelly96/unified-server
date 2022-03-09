@@ -64,13 +64,23 @@ const typeDefs = gql`
     college: String!
   }
 
-  type SignupStudentSuccess {
-    student: Student!
+  type Job {
+    id: ID!
+    jobTitle: String!
+    jobDescription: String!
+    type: String!
+    jobPostUrl: String!
+    createdAt: String!
+    department: String
+    minPayRate: Int
+    maxPayRate: Int
+    closingDate: String
+    postedBy: Staff!
+    jobSkills: String
   }
 
-  type SignupStaffSuccess {
-    success: Boolean!
-    staff: Staff
+  type SignupStudentSuccess {
+    student: Student!
   }
 
   type StudentAuth {
@@ -81,6 +91,37 @@ const typeDefs = gql`
   type StaffAuth {
     token: ID!
     staff: Staff!
+  }
+
+  # INPUTS
+  input CreateJobInput {
+    jobTitle: String!
+    jobDescription: String!
+    type: String!
+    jobPostUrl: String!
+    department: String
+    minPayRate: Int!
+    maxPayRate: Int!
+    closingDate: String
+    jobSkills: String
+  }
+
+  input UpdateJobInput {
+    id: ID!
+    jobTitle: String!
+    jobDescription: String!
+    type: String!
+    jobPostUrl: String!
+    department: String
+    minPayRate: Int!
+    maxPayRate: Int!
+    closingDate: String
+    jobSkills: String
+  }
+
+  type SignupStaffSuccess {
+    success: Boolean!
+    staff: Staff
   }
 
   input LoginInput {
@@ -118,14 +159,19 @@ const typeDefs = gql`
     college: String!
   }
 
+  # QUERIES
   type Query {
     dashboard: String!
+    jobs: [Job]
   }
 
+  # MUTATIONS
   type Mutation {
     signupStudent(input: SignupStudentInput!): SignupStudentSuccess!
     createItem(input: CreateItemInput!): Item!
     loginStudent(input: LoginInput!): StudentAuth!
+    createJob(newJobInput: CreateJobInput!): Job!
+    updateJob(jobInput: UpdateJobInput!): Job!
     signupStaff(input: SignupStaffInput!): SignupStaffSuccess!
     loginStaff(input: LoginInput!): StaffAuth!
   }
