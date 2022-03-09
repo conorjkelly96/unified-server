@@ -9,9 +9,11 @@ const jobs = async (_, __, context) => {
     //   throw new AuthenticationError("You must be logged in to create a job.");
     // }
 
-    //* populate with "staff" data?
-    const jobs = await Job.find({});
-
+    const jobs = await Job.find({}).populate({
+      path: "postedBy",
+      populate: { path: "university" },
+    });
+    console.log(jobs);
     return jobs;
   } catch (error) {
     console.log(`[ERROR]: Failed to get jobs | ${error.message}`);

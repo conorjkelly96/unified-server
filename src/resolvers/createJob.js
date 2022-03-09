@@ -4,12 +4,12 @@ const { Job } = require("../models");
 
 const createJob = async (_, { newJobInput }, { user }) => {
   try {
-    //   confirm user is logged in
-
+    // * TODO: restrict to staff user type
     if (user) {
       const postedBy = user.id;
+      const newJob = await Job.create({ ...newJobInput, postedBy });
 
-      return await Job.create({ ...newJobInput, postedBy });
+      return newJob;
     } else {
       throw new AuthenticationError("You must be logged in to create a job.");
     }
