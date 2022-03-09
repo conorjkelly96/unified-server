@@ -33,12 +33,6 @@ const jobSchema = {
   //   },
   // ],
 
-  //* wouldn't this just be the createdAt item?
-  // postDate: {
-  //   type: Date,
-  //   required: true,
-  // },
-
   department: {
     type: String,
   },
@@ -63,19 +57,13 @@ const jobSchema = {
   postedBy: {
     type: Schema.Types.ObjectId,
     ref: "Staff",
-    // required: true,
+    required: true,
   },
 
   //   make an enum?
   jobSkills: {
     type: String,
   },
-
-  //   what is this one?
-  //   companyProfile: {
-  //     type: String,
-  //     required: true,
-  //   },
 };
 
 const schema = new Schema(jobSchema, { timestamps: true, id: true });

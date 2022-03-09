@@ -45,7 +45,7 @@ const typeDefs = gql`
     minPayRate: Int
     maxPayRate: Int
     closingDate: String
-    postedBy: Staff
+    postedBy: Staff!
     jobSkills: String
   }
 
@@ -73,10 +73,6 @@ const typeDefs = gql`
     minPayRate: Int!
     maxPayRate: Int!
     closingDate: String
-
-    # check that staff data populates!! Should this be an ID instead of String?
-    postedBy: String
-
     jobSkills: String
   }
 
@@ -90,9 +86,6 @@ const typeDefs = gql`
     minPayRate: Int!
     maxPayRate: Int!
     closingDate: String
-
-    # check that staff data populates!! Should this be an ID instead of String?
-    postedBy: String
 
     jobSkills: String
   }
