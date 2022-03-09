@@ -2,6 +2,7 @@ const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
   type University {
+    id: ID!
     name: String!
     courses: [String]
     addressLine1: String!
@@ -82,6 +83,7 @@ const typeDefs = gql`
 
   type Query {
     dashboard: String!
+    colleges(id: ID!): [String]!
   }
 
   type Mutation {
