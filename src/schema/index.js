@@ -54,10 +54,38 @@ const typeDefs = gql`
     comments: [Comment]
     images: [String]
     transactions: [Transaction]
+  type Staff {
+    id: ID!
+    firstName: String!
+    lastName: String!
+    username: String!
+    email: String!
+    university: University!
+    college: String!
   }
 
   type SignupStudentSuccess {
     student: Student!
+  }
+
+  type SignupStaffSuccess {
+    success: Boolean!
+    staff: Staff
+  }
+
+  type StudentAuth {
+    token: ID!
+    student: Student!
+  }
+
+  type StaffAuth {
+    token: ID!
+    staff: Staff!
+  }
+
+  input LoginInput {
+    email: String!
+    password: String!
   }
 
   input SignupStudentInput {
@@ -80,6 +108,14 @@ const typeDefs = gql`
     price: Int!
     quantity: Int
     images: [String]
+  input SignupStaffInput {
+    firstName: String!
+    lastName: String!
+    username: String!
+    email: String!
+    password: String!
+    university: ID!
+    college: String!
   }
 
   type Query {
@@ -89,6 +125,9 @@ const typeDefs = gql`
   type Mutation {
     signupStudent(input: SignupStudentInput!): SignupStudentSuccess!
     createItem(input: CreateItemInput!): Item!
+    loginStudent(input: LoginInput!): StudentAuth!
+    signupStaff(input: SignupStaffInput!): SignupStaffSuccess!
+    loginStaff(input: LoginInput!): StaffAuth!
   }
 `;
 

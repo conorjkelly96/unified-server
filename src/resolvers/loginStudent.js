@@ -1,14 +1,14 @@
 const { AuthenticationError } = require("apollo-server");
 
 const { Student } = require("../models");
-const { signToken } = require("../utils/auth");
+const { signToken } = require("../utils");
 
-const login = async (_, { input }, context) => {
+const loginStudent = async (_, { input }, context) => {
   try {
     const student = await Student.findOne({ email: input.email });
 
-    if (!user) {
-      console.log("[ERROR]: Failed to login | User does not exist");
+    if (!student) {
+      console.log("[ERROR]: Failed to login | Student does not exist");
       throw new AuthenticationError("Failed to login");
     }
 
@@ -20,7 +20,7 @@ const login = async (_, { input }, context) => {
     }
 
     return {
-      token: signToken(user),
+      token: signToken(student),
       student: {
         id: student.id,
         firstName: student.firstName,
@@ -35,4 +35,4 @@ const login = async (_, { input }, context) => {
   }
 };
 
-module.exports = login;
+module.exports = loginStudent;
