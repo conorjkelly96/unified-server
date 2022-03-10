@@ -5,6 +5,7 @@ const signupStaff = require("./signupStaff");
 const loginStudent = require("./loginStudent");
 const loginStaff = require("./loginStaff");
 const dashboard = require("./dashboard");
+const createItem = require("./createItem");
 const updateJob = require("./updateJob");
 
 const createForumPost = require("./forumPost/createForumPost");
@@ -14,6 +15,7 @@ const resolvers = {
   Mutation: {
     createJob,
     signupStudent,
+    createItem,
     updateJob,
     signupStaff,
     loginStudent,

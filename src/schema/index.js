@@ -1,6 +1,8 @@
 const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
+  scalar Date
+
   type University {
     name: String!
     courses: [String]
@@ -24,6 +26,34 @@ const typeDefs = gql`
     friends: [Student]
   }
 
+  type Comment {
+    commentId: ID!
+    commentBody: String!
+    username: String!
+  }
+
+  type Transaction {
+    id: ID!
+    buyer: Student!
+    transactionStatus: String!
+    collectionDate: Date!
+    paymentMethod: String!
+    buyerRating: Int!
+  }
+
+  type Item {
+    id: ID!
+    itemName: String!
+    itemDescription: String!
+    category: String!
+    status: String!
+    condition: String!
+    price: Int!
+    quantity: Int!
+    seller: Student!
+    comments: [Comment]
+    images: [String]
+    transactions: [Transaction]
   type Staff {
     id: ID!
     firstName: String!
@@ -118,6 +148,14 @@ const typeDefs = gql`
     course: String
   }
 
+  input CreateItemInput {
+    itemName: String!
+    itemDescription: String!
+    category: String!
+    condition: String!
+    price: Int!
+    quantity: Int
+    images: [String]
   input SignupStaffInput {
     firstName: String!
     lastName: String!
@@ -141,6 +179,7 @@ const typeDefs = gql`
   # MUTATIONS
   type Mutation {
     signupStudent(input: SignupStudentInput!): SignupStudentSuccess!
+    createItem(input: CreateItemInput!): Item!
     loginStudent(input: LoginInput!): StudentAuth!
     signupStaff(input: SignupStaffInput!): SignupStaffSuccess!
     loginStaff(input: LoginInput!): StaffAuth!

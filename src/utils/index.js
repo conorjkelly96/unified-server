@@ -38,8 +38,13 @@ const formatDate = (date) => {
   return format(dateObject, "EEEE MMMM do, yyyy @ hh:mm:ss aaaa");
 };
 
+const validatePrice = (price) => {
+  return Math.round(price * 100) / 100;
+};
+
 module.exports = {
   signToken,
   authMiddleware,
   formatDate,
+  validatePrice,
 };
