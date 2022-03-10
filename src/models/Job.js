@@ -69,6 +69,8 @@ const jobSchema = {
   jobSkills: {
     type: String,
   },
+
+  
 };
 
 const schema = new Schema(jobSchema, { timestamps: true, id: true });

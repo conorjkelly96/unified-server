@@ -1,4 +1,6 @@
 const { model, Schema } = require("mongoose");
+const jobSchema = require("./Job");
+
 const bcrypt = require("bcrypt");
 
 const { validateEmail } = require("../utils");
@@ -77,6 +79,9 @@ const studentSchema = {
       required: false,
     },
   ],
+
+  savedJob: [jobSchema],
+
   // TODO: Investigate further
   // studentStatus: {
   //   type: String,
