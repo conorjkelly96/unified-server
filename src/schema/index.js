@@ -194,7 +194,7 @@ const typeDefs = gql`
     loginStaff(input: LoginInput!): StaffAuth!
 
     createForumPost(forumPost: ForumPostInput!): ForumPost
-    saveJob(input: SaveJobInput!): Student!
+    saveJob(jobId: ID!): Student!
   }
 `;
 

@@ -80,7 +80,13 @@ const studentSchema = {
     },
   ],
 
-  savedJob: [jobSchema],
+  savedJobs: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Job",
+      required: false,
+    },
+  ],
 
   // TODO: Investigate further
   // studentStatus: {
