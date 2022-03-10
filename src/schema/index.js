@@ -54,6 +54,8 @@ const typeDefs = gql`
     comments: [Comment]
     images: [String]
     transactions: [Transaction]
+  }
+
   type Staff {
     id: ID!
     firstName: String!
@@ -156,6 +158,8 @@ const typeDefs = gql`
     price: Int!
     quantity: Int
     images: [String]
+  }
+
   input SignupStaffInput {
     firstName: String!
     lastName: String!
