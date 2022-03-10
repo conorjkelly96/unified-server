@@ -178,7 +178,7 @@ const typeDefs = gql`
   # QUERIES
   type Query {
     dashboard: String!
-    colleges(id: ID!): [University]!
+    colleges(id: ID!): University!
     universities: [University]!
     jobs: [Job]
     job(jobId: ID!): Job!
