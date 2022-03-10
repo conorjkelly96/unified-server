@@ -63,6 +63,13 @@ const typeDefs = gql`
     staff: Staff!
   }
 
+  type ForumPost {
+    postText: String!
+    user: Student!
+    createdAt: String!
+    replies: [String]
+  }
+
   # INPUTS
   input CreateJobInput {
     jobTitle: String!
