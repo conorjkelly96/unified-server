@@ -10,12 +10,14 @@ const signupStaff = require("./signupStaff");
 const loginStaff = require("./loginStaff");
 
 const dashboard = require("./dashboard");
+const createItem = require("./createItem");
 
 const resolvers = {
   Query: { jobs, job, dashboard },
   Mutation: {
     createJob,
     signupStudent,
+    createItem,
     updateJob,
     deleteJob,
     signupStaff,
