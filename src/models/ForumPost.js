@@ -11,7 +11,7 @@ const forumPostSchema = {
     maxLength: 2000,
   },
 
-  user: {
+  postedBy: {
     type: Schema.Types.ObjectId,
     ref: "Student",
     required: true,

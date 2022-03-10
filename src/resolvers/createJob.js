@@ -4,7 +4,7 @@ const { Job } = require("../models");
 
 const createJob = async (_, { newJobInput }, { user }) => {
   try {
-    // * TODO: restrict to staff user type
+    // TODO: restrict to Staff users
     if (user) {
       const postedBy = user.id;
       const newJob = await Job.create({ ...newJobInput, postedBy });

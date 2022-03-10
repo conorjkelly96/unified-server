@@ -1,5 +1,8 @@
 const { model, Schema } = require("mongoose");
 
+// TODO: use this to format the createdAt date (see ForumPost model)
+// const { formatDate } = require("../utils");
+
 const jobSchema = {
   jobTitle: {
     type: String,
