@@ -131,8 +131,11 @@ const typeDefs = gql`
   type Mutation {
     signupStudent(input: SignupStudentInput!): SignupStudentSuccess!
     loginStudent(input: LoginInput!): StudentAuth!
+
     createJob(newJobInput: CreateJobInput!): Job!
     updateJob(jobInput: UpdateJobInput!): Job!
+    deleteJob(jobId: ID!): Job
+
     signupStaff(input: SignupStaffInput!): SignupStaffSuccess!
     loginStaff(input: LoginInput!): StaffAuth!
   }

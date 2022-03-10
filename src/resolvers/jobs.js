@@ -2,12 +2,11 @@ const { ApolloError, AuthenticationError } = require("apollo-server");
 
 const { Job } = require("../models");
 
-const jobs = async (_, __, context) => {
+const jobs = async (_, __, { user }) => {
   try {
-    // //   confirm user is logged in
-    // if (!context.user) {
-    //   throw new AuthenticationError("You must be logged in to create a job.");
-    // }
+    if (!user) {
+      throw new AuthenticationError("You must be logged in to create a job.");
+    }
 
     const jobs = await Job.find({}).populate({
       path: "postedBy",
