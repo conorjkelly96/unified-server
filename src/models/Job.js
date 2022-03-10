@@ -1,5 +1,8 @@
 const { model, Schema } = require("mongoose");
 
+// TODO: use this to format the createdAt date (see ForumPost model)
+// const { formatDate } = require("../utils");
+
 const jobSchema = {
   jobTitle: {
     type: String,
@@ -24,10 +27,10 @@ const jobSchema = {
     required: true,
   },
 
+  //     //add category in the future
   // category: [
   //   {
   //     type: String,
-  //     //add category in the future
   //     enum: ["", ""],
   //     required: true,
   //   },
@@ -45,9 +48,11 @@ const jobSchema = {
   },
 
   // does this need additional validation for decimals?
+  // TODO: add validation that maxPayRate is larger than minPayRate
   maxPayRate: {
     type: Number,
     required: true,
+    // validate: {}
   },
 
   closingDate: {
