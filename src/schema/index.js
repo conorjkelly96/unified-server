@@ -77,7 +77,7 @@ const typeDefs = gql`
     minPayRate: Int
     maxPayRate: Int
     closingDate: String
-    postedBy: Staff!
+    postedBy: Staff
     jobSkills: String
   }
 
