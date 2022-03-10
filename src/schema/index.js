@@ -107,7 +107,6 @@ const typeDefs = gql`
   }
 
   input UpdateJobInput {
-    id: ID!
     jobTitle: String!
     jobDescription: String!
     type: String!
@@ -163,6 +162,7 @@ const typeDefs = gql`
   type Query {
     dashboard: String!
     jobs: [Job]
+    job(jobId: ID!): Job!
   }
 
   # MUTATIONS
@@ -170,8 +170,11 @@ const typeDefs = gql`
     signupStudent(input: SignupStudentInput!): SignupStudentSuccess!
     createItem(input: CreateItemInput!): Item!
     loginStudent(input: LoginInput!): StudentAuth!
+
     createJob(newJobInput: CreateJobInput!): Job!
-    updateJob(jobInput: UpdateJobInput!): Job!
+    updateJob(jobInput: UpdateJobInput!, jobId: ID!): Job!
+    deleteJob(jobId: ID!): Job
+
     signupStaff(input: SignupStaffInput!): SignupStaffSuccess!
     loginStaff(input: LoginInput!): StaffAuth!
   }
