@@ -54,6 +54,8 @@ const typeDefs = gql`
     comments: [Comment]
     images: [String]
     transactions: [Transaction]
+  }
+
   type Staff {
     id: ID!
     firstName: String!
@@ -91,6 +93,13 @@ const typeDefs = gql`
   type StaffAuth {
     token: ID!
     staff: Staff!
+  }
+
+  type ForumPost {
+    postText: String!
+    postedBy: Student!
+    createdAt: String!
+    replies: [String]
   }
 
   # INPUTS
@@ -148,6 +157,8 @@ const typeDefs = gql`
     price: Int!
     quantity: Int
     images: [String]
+  }
+
   input SignupStaffInput {
     firstName: String!
     lastName: String!
@@ -156,6 +167,10 @@ const typeDefs = gql`
     password: String!
     university: ID!
     college: String!
+  }
+
+  input ForumPostInput {
+    postText: String!
   }
 
   # QUERIES
@@ -177,6 +192,8 @@ const typeDefs = gql`
 
     signupStaff(input: SignupStaffInput!): SignupStaffSuccess!
     loginStaff(input: LoginInput!): StaffAuth!
+
+    createForumPost(forumPost: ForumPostInput!): ForumPost
   }
 `;
 

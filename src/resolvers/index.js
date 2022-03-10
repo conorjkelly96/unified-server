@@ -12,6 +12,8 @@ const loginStaff = require("./loginStaff");
 const dashboard = require("./dashboard");
 const createItem = require("./createItem");
 
+const createForumPost = require("./forumPost/createForumPost");
+
 const resolvers = {
   Query: { jobs, job, dashboard },
   Mutation: {
@@ -23,6 +25,7 @@ const resolvers = {
     signupStaff,
     loginStudent,
     loginStaff,
+    createForumPost,
   },
 };
 

@@ -1,4 +1,5 @@
 require("dotenv").config();
+const { format } = require("date-fns");
 const { AuthenticationError } = require("apollo-server");
 const jwt = require("jsonwebtoken");
 
@@ -31,6 +32,12 @@ const authMiddleware = ({ req }) => {
   return req;
 };
 
+const formatDate = (date) => {
+  const dateObject = new Date(date);
+  // Format: Monday March 7th, 2022 @ 12:34:56 p.m.
+  return format(dateObject, "EEEE MMMM do, yyyy @ hh:mm:ss aaaa");
+};
+
 const validatePrice = (price) => {
   return Math.round(price * 100) / 100;
 };
@@ -38,5 +45,6 @@ const validatePrice = (price) => {
 module.exports = {
   signToken,
   authMiddleware,
+  formatDate,
   validatePrice,
 };
