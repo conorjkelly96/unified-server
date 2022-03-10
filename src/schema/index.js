@@ -148,6 +148,8 @@ const typeDefs = gql`
     price: Int!
     quantity: Int
     images: [String]
+  }
+
   input SignupStaffInput {
     firstName: String!
     lastName: String!
