@@ -124,6 +124,7 @@ const typeDefs = gql`
   type Query {
     dashboard: String!
     jobs: [Job]
+    job(jobId: ID!): Job!
   }
 
   # MUTATIONS
