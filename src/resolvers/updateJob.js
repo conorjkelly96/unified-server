@@ -2,20 +2,20 @@ const { ApolloError, AuthenticationError } = require("apollo-server");
 
 const { Job } = require("../models");
 
-const updateJob = async (_, { jobInput }, { user }) => {
+const updateJob = async (_, { jobInput, jobId }, { user }) => {
   try {
     if (!user) {
-      throw new AuthenticationError("You must be logged in to create a job.");
+      throw new AuthenticationError("You must be logged in to update a job.");
     }
 
-    console.log("jobInput:", jobInput);
-
     const updatedJob = await Job.findByIdAndUpdate(
-      jobInput.id,
-      { $set: { jobInput } },
+      jobId,
+      { $set: { ...jobInput } },
       { returnDocument: "after" }
-    );
-    console.log("updatedJob:", updatedJob);
+    ).populate({
+      path: "postedBy",
+      populate: { path: "university" },
+    });
 
     return updatedJob;
   } catch (error) {

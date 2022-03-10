@@ -77,7 +77,6 @@ const typeDefs = gql`
   }
 
   input UpdateJobInput {
-    id: ID!
     jobTitle: String!
     jobDescription: String!
     type: String!
@@ -133,7 +132,7 @@ const typeDefs = gql`
     loginStudent(input: LoginInput!): StudentAuth!
 
     createJob(newJobInput: CreateJobInput!): Job!
-    updateJob(jobInput: UpdateJobInput!): Job!
+    updateJob(jobInput: UpdateJobInput!, jobId: ID!): Job!
     deleteJob(jobId: ID!): Job
 
     signupStaff(input: SignupStaffInput!): SignupStaffSuccess!
