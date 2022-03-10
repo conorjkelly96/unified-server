@@ -1,5 +1,6 @@
 const { ApolloError, AuthenticationError } = require("apollo-server-errors");
-const { Job } = require("../models");
+
+const { Job } = require("../../models");
 
 const deleteJob = async (_, { jobId }, { user }) => {
   try {

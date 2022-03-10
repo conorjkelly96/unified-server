@@ -1,6 +1,6 @@
 const { ApolloError, AuthenticationError } = require("apollo-server");
 
-const { Job } = require("../models");
+const { Job } = require("../../models");
 
 const updateJob = async (_, { jobInput, jobId }, { user }) => {
   try {

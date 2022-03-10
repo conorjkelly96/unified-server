@@ -1,5 +1,6 @@
 const { AuthenticationError, ApolloError } = require("apollo-server-errors");
-const { Job } = require("../models");
+
+const { Job } = require("../../models");
 
 const job = async (_, { jobId }, { user }) => {
   try {
