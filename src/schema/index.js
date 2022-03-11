@@ -68,17 +68,13 @@ const typeDefs = gql`
 
   type Job {
     id: ID!
-    jobTitle: String!
-    jobDescription: String!
-    type: String!
-    jobPostUrl: String!
+    title: String!
+    description: String!
+    url: String!
     createdAt: String!
-    department: String
-    minPayRate: Int
-    maxPayRate: Int
+    salary: String
     closingDate: String
     postedBy: Staff!
-    jobSkills: String
   }
 
   type SignupStudentSuccess {
@@ -104,27 +100,21 @@ const typeDefs = gql`
 
   # INPUTS
   input CreateJobInput {
-    jobTitle: String!
-    jobDescription: String!
-    type: String!
-    jobPostUrl: String!
-    department: String
-    minPayRate: Int!
-    maxPayRate: Int!
+    title: String!
+    company: String!
+    description: String!
+    url: String!
+    salary: String!
     closingDate: String
-    jobSkills: String
   }
 
   input UpdateJobInput {
     jobTitle: String!
     jobDescription: String!
-    type: String!
     jobPostUrl: String!
-    department: String
     minPayRate: Int!
     maxPayRate: Int!
     closingDate: String
-    jobSkills: String
   }
 
   type SignupStaffSuccess {
