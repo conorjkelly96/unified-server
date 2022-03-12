@@ -4,12 +4,14 @@ const typeDefs = gql`
   scalar Date
 
   type University {
-    name: String!
+    id: ID
+    name: String
     courses: [String]
-    addressLine1: String!
+    addressLine1: String
     addressLine2: String
-    city: String!
-    postcode: String!
+    city: String
+    postcode: String
+    colleges: [String]
   }
 
   type Student {
@@ -69,17 +71,13 @@ const typeDefs = gql`
 
   type Job {
     id: ID!
-    jobTitle: String!
-    jobDescription: String!
-    type: String!
-    jobPostUrl: String!
+    title: String!
+    description: String!
+    url: String!
     createdAt: String!
-    department: String
-    minPayRate: Int
-    maxPayRate: Int
+    salary: String
     closingDate: String
-    postedBy: Staff
-    jobSkills: String
+    postedBy: Staff!
   }
 
   type SignupStudentSuccess {
@@ -105,27 +103,20 @@ const typeDefs = gql`
 
   # INPUTS
   input CreateJobInput {
-    jobTitle: String!
-    jobDescription: String!
-    type: String!
-    jobPostUrl: String!
-    department: String
-    minPayRate: Int!
-    maxPayRate: Int!
+    title: String!
+    company: String!
+    description: String!
+    url: String!
+    salary: String!
     closingDate: String
-    jobSkills: String
   }
 
   input UpdateJobInput {
     jobTitle: String!
     jobDescription: String!
-    type: String!
     jobPostUrl: String!
-    department: String
-    minPayRate: Int!
-    maxPayRate: Int!
+    salary: String!
     closingDate: String
-    jobSkills: String
   }
 
   type SignupStaffSuccess {
@@ -177,6 +168,8 @@ const typeDefs = gql`
   # QUERIES
   type Query {
     dashboard: String!
+    colleges(id: ID!): University!
+    universities: [University]!
     jobs: [Job]
     job(jobId: ID!): Job!
   }

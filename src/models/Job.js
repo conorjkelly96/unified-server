@@ -4,55 +4,31 @@ const { model, Schema } = require("mongoose");
 // const { formatDate } = require("../utils");
 
 const jobSchema = {
-  jobTitle: {
+  title: {
     type: String,
     required: true,
   },
 
-  jobDescription: {
+  company: {
+    type: String,
+    required: true,
+  },
+
+  description: {
     type: String,
     required: true,
     minLength: 1,
     maxLength: 500,
   },
 
-  type: {
-    type: String,
-    enum: ["Internal", "External"],
-    required: true,
-  },
-
-  jobPostUrl: {
+  url: {
     type: String,
     required: true,
   },
 
-  //     //add category in the future
-  // category: [
-  //   {
-  //     type: String,
-  //     enum: ["", ""],
-  //     required: true,
-  //   },
-  // ],
-
-  department: {
+  salary: {
     type: String,
-  },
-
-  // does this need additional validation for decimals?
-  minPayRate: {
-    type: Number,
-    required: true,
-    min: 0,
-  },
-
-  // does this need additional validation for decimals?
-  // TODO: add validation that maxPayRate is larger than minPayRate
-  maxPayRate: {
-    type: Number,
-    required: true,
-    // validate: {}
+    default: "N/A",
   },
 
   closingDate: {
@@ -63,11 +39,6 @@ const jobSchema = {
     type: Schema.Types.ObjectId,
     ref: "Staff",
     required: true,
-  },
-
-  //   make an enum?
-  jobSkills: {
-    type: String,
   },
 };
 
