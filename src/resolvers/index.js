@@ -11,6 +11,7 @@ const loginStaff = require("./loginStaff");
 
 const dashboard = require("./dashboard");
 const createItem = require("./createItem");
+const saveJob = require("./saveJob");
 
 const createForumPost = require("./forumPost/createForumPost");
 
@@ -26,6 +27,7 @@ const resolvers = {
     loginStudent,
     loginStaff,
     createForumPost,
+    saveJob,
   },
 };
 
