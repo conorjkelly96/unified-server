@@ -112,8 +112,7 @@ const typeDefs = gql`
     jobTitle: String!
     jobDescription: String!
     jobPostUrl: String!
-    minPayRate: Int!
-    maxPayRate: Int!
+    salary: String!
     closingDate: String
   }
 
