@@ -26,6 +26,7 @@ const typeDefs = gql`
     course: String
     sellerRating: Float
     friends: [Student]
+    savedJobs: [Job]
   }
 
   type Comment {
@@ -187,6 +188,7 @@ const typeDefs = gql`
     loginStaff(input: LoginInput!): StaffAuth!
 
     createForumPost(forumPost: ForumPostInput!): ForumPost
+    saveJob(jobId: ID!): Student!
   }
 `;
 

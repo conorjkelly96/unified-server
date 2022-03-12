@@ -7,9 +7,12 @@ const createJob = async (_, { newJobInput }, { user }) => {
     // TODO: restrict to Staff users
     if (user) {
       const postedBy = user.id;
+
       const newJob = await Job.create({ ...newJobInput, postedBy });
 
-      return newJob;
+      const job = await Job.findById(newJob._id).populate("postedBy");
+
+      return job;
     } else {
       throw new AuthenticationError("You must be logged in to create a job.");
     }
