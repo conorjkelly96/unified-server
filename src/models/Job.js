@@ -1,7 +1,6 @@
 const { model, Schema } = require("mongoose");
 
-// TODO: use this to format the createdAt date (see ForumPost model)
-// const { formatDate } = require("../utils");
+const { formatDate } = require("../utils");
 
 const jobSchema = {
   title: {
@@ -18,7 +17,7 @@ const jobSchema = {
     type: String,
     required: true,
     minLength: 1,
-    maxLength: 500,
+    maxLength: 2000,
   },
 
   url: {
@@ -33,12 +32,19 @@ const jobSchema = {
 
   closingDate: {
     type: Date,
+    get: formatDate,
   },
 
   postedBy: {
     type: Schema.Types.ObjectId,
     ref: "Staff",
     required: true,
+  },
+
+  createdAt: {
+    type: Date,
+    default: Date.now,
+    get: formatDate,
   },
 };
 

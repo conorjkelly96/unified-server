@@ -72,6 +72,7 @@ const typeDefs = gql`
   type Job {
     id: ID!
     title: String!
+    company: String!
     description: String!
     url: String!
     createdAt: String!
@@ -112,9 +113,9 @@ const typeDefs = gql`
   }
 
   input UpdateJobInput {
-    jobTitle: String!
-    jobDescription: String!
-    jobPostUrl: String!
+    title: String!
+    description: String!
+    url: String!
     salary: String!
     closingDate: String
   }
