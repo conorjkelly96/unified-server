@@ -4,12 +4,14 @@ const typeDefs = gql`
   scalar Date
 
   type University {
-    name: String!
+    id: ID
+    name: String
     courses: [String]
-    addressLine1: String!
+    addressLine1: String
     addressLine2: String
-    city: String!
-    postcode: String!
+    city: String
+    postcode: String
+    colleges: [String]
   }
 
   type Student {
@@ -176,6 +178,8 @@ const typeDefs = gql`
   # QUERIES
   type Query {
     dashboard: String!
+    colleges(id: ID!): University!
+    universities: [University]!
     jobs: [Job]
     job(jobId: ID!): Job!
   }
