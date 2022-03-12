@@ -32,7 +32,6 @@ const jobSchema = {
 
   closingDate: {
     type: Date,
-    // TODO: add function to format date when pulled from db
     get: formatDate,
   },
 
