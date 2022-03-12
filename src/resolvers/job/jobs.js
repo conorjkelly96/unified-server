@@ -12,7 +12,7 @@ const jobs = async (_, __, { user }) => {
       path: "postedBy",
       populate: { path: "university" },
     });
-    console.log(jobs);
+
     return jobs;
   } catch (error) {
     console.log(`[ERROR]: Failed to get jobs | ${error.message}`);
