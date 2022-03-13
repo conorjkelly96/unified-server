@@ -173,6 +173,7 @@ const typeDefs = gql`
     universities: [University]!
     jobs: [Job]
     job(jobId: ID!): Job!
+    staffJobs(staffId: ID!): [Job]
   }
 
   # MUTATIONS
