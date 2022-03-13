@@ -2,16 +2,12 @@ const { ApolloError, AuthenticationError } = require("apollo-server");
 
 const { Job, Staff } = require("../../models");
 
-// TODO: restrict to only logged in Staff user
-//* Should the staffId come from the user context instead?
-const staffJobs = async (_, { staffId }) => {
+const staffJobs = async (_, __, { user }) => {
   try {
-    const staff = await Staff.findOne({ staffId });
+    const staff = await Staff.findById(user.id);
 
     if (staff) {
-      const jobs = await Job.find({ postedBy: staffId });
-
-      return jobs;
+      return await Job.find({ postedBy: user.id });
     }
 
     throw new AuthenticationError(

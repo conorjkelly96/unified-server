@@ -67,7 +67,7 @@ const studentSchema = {
   course: {
     type: String,
   },
-  // timestamps: true,
+
   sellerRating: {
     type: Number,
     default: 0,
