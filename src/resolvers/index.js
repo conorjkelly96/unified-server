@@ -4,6 +4,8 @@ const jobs = require("./job/jobs");
 const job = require("./job/job");
 const updateJob = require("./job/updateJob");
 const deleteJob = require("./job/deleteJob");
+const saveJob = require("./saveJob");
+const staffJobs = require("./job/staffJobs");
 
 // STUDENT and STAFF AUTH Queries and Mutations
 const signupStudent = require("./signupStudent");
@@ -17,7 +19,6 @@ const universities = require("./universities");
 
 // ITEM Queries and Mutations
 const createItem = require("./createItem");
-const saveJob = require("./saveJob");
 
 // FORUM Queries and Mutations
 const createForumPost = require("./forumPost/createForumPost");
@@ -28,6 +29,7 @@ const resolvers = {
     universities,
     jobs,
     job,
+    staffJobs,
   },
   Mutation: {
     createJob,

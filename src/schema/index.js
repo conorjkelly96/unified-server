@@ -87,12 +87,12 @@ const typeDefs = gql`
 
   type StudentAuth {
     token: ID!
-    student: Student!
+    user: Student!
   }
 
   type StaffAuth {
     token: ID!
-    staff: Staff!
+    user: Staff!
   }
 
   type ForumPost {
@@ -173,6 +173,7 @@ const typeDefs = gql`
     universities: [University]!
     jobs: [Job]
     job(jobId: ID!): Job!
+    staffJobs: [Job]
   }
 
   # MUTATIONS
