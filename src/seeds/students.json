@@ -1,0 +1,28 @@
+[
+  {
+    "username": "joebloggs@gmail.com",
+    "firstName": "Joe",
+    "lastName": "Bloggs",
+    "email": "joebloggs@gmail.com",
+    "password": "password123",
+    "bio": "A day in a life of a student",
+    "interests": "Travelling",
+    "university": "University of Birmingham",
+    "course": "Computer Science",
+    "sellerRating": "5",
+    "friends": ["Jamie", "Sal"]
+  },
+  {
+    "username": "saljames@gmail.com",
+    "firstName": "Sal",
+    "lastName": "James",
+    "email": "saljames@gmail.com",
+    "password": "password",
+    "bio": "I love to study",
+    "interests": "Dancing",
+    "university": "University of Southampton",
+    "course": "Art",
+    "sellerRating": "3",
+    "friends": ["Joe", "Sal"]
+  }
+]
