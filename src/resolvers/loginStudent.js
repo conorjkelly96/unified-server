@@ -21,12 +21,13 @@ const loginStudent = async (_, { input }, context) => {
 
     return {
       token: signToken(student),
-      student: {
+      user: {
         id: student.id,
         firstName: student.firstName,
         lastName: student.lastName,
         email: student.email,
         username: student.username,
+        type: "student",
       },
     };
   } catch (error) {
