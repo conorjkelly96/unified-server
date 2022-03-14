@@ -23,7 +23,7 @@ const typeDefs = gql`
     interests: [String]
     university: University
     bio: String
-    course: String
+    college: String
     sellerRating: Float
     friends: [Student]
     savedJobs: [Job]
@@ -82,7 +82,8 @@ const typeDefs = gql`
   }
 
   type SignupStudentSuccess {
-    student: Student!
+    success: Boolean!
+    student: Student
   }
 
   type StudentAuth {
@@ -136,10 +137,10 @@ const typeDefs = gql`
     username: String!
     email: String!
     password: String!
-    interests: [String]
-    university: String
+    university: String!
+    college: String!
     bio: String
-    course: String
+    interests: [String]
   }
 
   input CreateItemInput {
