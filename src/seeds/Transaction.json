@@ -1,0 +1,18 @@
+[
+  {
+    "id": "001",
+    "buyer": "Joe",
+    "transactionStatus": "Books",
+    "collectionDate": "14/03/2022",
+    "paymentMethod": "Card",
+    "buyerRating": "5"
+  },
+  {
+    "id": "002",
+    "buyer": "Sal",
+    "transactionStatus": "Printer",
+    "collectionDate": "15/03/2022",
+    "paymentMethod": "Card",
+    "buyerRating": "5"
+  }
+]
