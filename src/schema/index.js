@@ -51,7 +51,7 @@ const typeDefs = gql`
     category: String!
     status: String!
     condition: String!
-    price: Int!
+    price: Float!
     quantity: Int!
     seller: Student!
     comments: [Comment]
@@ -147,7 +147,7 @@ const typeDefs = gql`
     itemDescription: String!
     category: String!
     condition: String!
-    price: Int!
+    price: Float!
     quantity: Int
     images: [String]
   }
