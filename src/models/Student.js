@@ -63,9 +63,11 @@ const studentSchema = {
   university: {
     type: Schema.Types.ObjectId,
     ref: "University",
+    required: true,
   },
-  course: {
+  college: {
     type: String,
+    required: true,
   },
 
   sellerRating: {
