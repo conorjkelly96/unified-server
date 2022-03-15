@@ -45,6 +45,7 @@ const staffSchema = {
   university: {
     type: Schema.Types.ObjectId,
     ref: "University",
+    required: true,
   },
 
   college: {
