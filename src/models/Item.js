@@ -1,7 +1,6 @@
 const { model, Schema } = require("mongoose");
 const { validatePrice } = require("../utils");
 
-const imageSchema = require("./Images");
 const transactionSchema = require("./Transaction");
 const commentSchema = require("./Comment");
 
@@ -10,42 +9,38 @@ const itemSchema = {
     type: String,
     required: true,
   },
-  itemDescription: [
-    {
-      type: String,
-      required: true,
-      minLength: 1,
-      maxLength: 500,
-    },
-  ],
-  category: [
-    {
-      type: String,
-      enum: [
-        "Clothing & Accessories",
-        "Sporting Goods",
-        "Electronics",
-        "Academic Materials",
-        "Other",
-      ],
-      default: "Academic Materials",
-      required: true,
-    },
-  ],
-  status: [
-    {
-      type: String,
-      enum: ["For Sale", "Sold"],
-      default: "For Sale",
-    },
-  ],
-  condition: [
-    {
-      type: String,
-      enum: ["New", "Fair", "Like New", "Used"],
-      required: true,
-    },
-  ],
+  itemDescription: {
+    type: String,
+    required: true,
+    minLength: 1,
+    maxLength: 500,
+  },
+
+  category: {
+    type: String,
+    enum: [
+      "Clothing & Accessories",
+      "Sporting Goods",
+      "Electronics",
+      "Academic Materials",
+      "Other",
+    ],
+    default: "Academic Materials",
+    required: true,
+  },
+
+  status: {
+    type: String,
+    enum: ["For Sale", "Sold"],
+    default: "For Sale",
+  },
+
+  condition: {
+    type: String,
+    enum: ["New", "Fair", "Like New", "Used"],
+    required: true,
+  },
+
   price: { type: Number, validate: validatePrice },
   quantity: {
     type: Number,
@@ -57,7 +52,11 @@ const itemSchema = {
     required: true,
   },
   comments: [commentSchema],
-  images: [imageSchema],
+  images: [
+    {
+      type: String,
+    },
+  ],
   transactions: [transactionSchema],
 };
 
