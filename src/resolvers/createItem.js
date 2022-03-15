@@ -8,7 +8,8 @@ const createItem = async (_, { input }, { user }) => {
   try {
     if (user) {
       const seller = user.id;
-      const item = await Item.create({ ...input, seller }).populate("seller");
+      const newItem = await Item.create({ ...input, seller });
+      const item = newItem.populate("seller");
       return item;
     } else {
       console.log(`[ERROR]: Failed to create item | ${notAuthorized}`);

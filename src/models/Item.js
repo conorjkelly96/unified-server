@@ -10,42 +10,38 @@ const itemSchema = {
     type: String,
     required: true,
   },
-  itemDescription: [
-    {
-      type: String,
-      required: true,
-      minLength: 1,
-      maxLength: 500,
-    },
-  ],
-  category: [
-    {
-      type: String,
-      enum: [
-        "Clothing & Accessories",
-        "Sporting Goods",
-        "Electronics",
-        "Academic Materials",
-        "Other",
-      ],
-      default: "Academic Materials",
-      required: true,
-    },
-  ],
-  status: [
-    {
-      type: String,
-      enum: ["For Sale", "Sold"],
-      default: "For Sale",
-    },
-  ],
-  condition: [
-    {
-      type: String,
-      enum: ["New", "Fair", "Like New", "Used"],
-      required: true,
-    },
-  ],
+  itemDescription: {
+    type: String,
+    required: true,
+    minLength: 1,
+    maxLength: 500,
+  },
+
+  category: {
+    type: String,
+    enum: [
+      "Clothing & Accessories",
+      "Sporting Goods",
+      "Electronics",
+      "Academic Materials",
+      "Other",
+    ],
+    default: "Academic Materials",
+    required: true,
+  },
+
+  status: {
+    type: String,
+    enum: ["For Sale", "Sold"],
+    default: "For Sale",
+  },
+
+  condition: {
+    type: String,
+    enum: ["New", "Fair", "Like New", "Used"],
+    required: true,
+  },
+
   price: { type: Number, validate: validatePrice },
   quantity: {
     type: Number,
