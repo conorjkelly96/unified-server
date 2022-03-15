@@ -1,0 +1,22 @@
+[
+  {
+    "itemName": "r",
+    "itemDescription": "",
+    "category": "",
+    "status": "",
+    "condition": "New",
+    "price": "10.00",
+    "seller": "Joe",
+    "quantity": "Joe"
+  },
+  {
+    "itemName": "Software Developer",
+    "itemDescription": "NETFLIX",
+    "category": "IT",
+    "status": "www.net.com",
+    "condition": "35000",
+    "price": "23/03/2022",
+    "seller": "Joe",
+    "quantity": "Joe"
+  }
+]
