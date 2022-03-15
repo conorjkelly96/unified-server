@@ -1,7 +1,6 @@
 const { model, Schema } = require("mongoose");
 const { validatePrice } = require("../utils");
 
-const imageSchema = require("./Images");
 const transactionSchema = require("./Transaction");
 const commentSchema = require("./Comment");
 
@@ -53,7 +52,11 @@ const itemSchema = {
     required: true,
   },
   comments: [commentSchema],
-  images: [imageSchema],
+  images: [
+    {
+      type: String,
+    },
+  ],
   transactions: [transactionSchema],
 };
 
