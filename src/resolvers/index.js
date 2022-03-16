@@ -18,6 +18,7 @@ const colleges = require("./colleges");
 const universities = require("./universities");
 
 // ITEM Queries and Mutations
+const deleteItem = require("./item/deleteItem");
 const createItem = require("./item/createItem");
 const viewAllItems = require("./item/viewAllItems");
 
@@ -44,6 +45,7 @@ const resolvers = {
     loginStaff,
     createForumPost,
     saveJob,
+    deleteItem,
   },
 };
 
