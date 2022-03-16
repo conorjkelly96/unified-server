@@ -21,9 +21,9 @@ const typeDefs = gql`
     username: String!
     email: String!
     university: University
-    college: String
     bio: String
     interests: [String]
+    college: String
     sellerRating: Float
     friends: [Student]
     savedJobs: [Job]
@@ -51,7 +51,7 @@ const typeDefs = gql`
     category: String!
     status: String!
     condition: String!
-    price: Int!
+    price: Float!
     quantity: Int!
     seller: Student!
     comments: [Comment]
@@ -82,7 +82,8 @@ const typeDefs = gql`
   }
 
   type SignupStudentSuccess {
-    student: Student!
+    success: Boolean!
+    student: Student
   }
 
   type StudentAuth {
@@ -136,8 +137,8 @@ const typeDefs = gql`
     username: String!
     email: String!
     password: String!
-    university: String
-    college: String
+    university: String!
+    college: String!
     bio: String
     interests: [String]
   }
@@ -147,7 +148,7 @@ const typeDefs = gql`
     itemDescription: String!
     category: String!
     condition: String!
-    price: Int!
+    price: Float!
     quantity: Int
     images: [String]
   }
@@ -173,8 +174,8 @@ const typeDefs = gql`
     universities: [University]!
     jobs: [Job]
     job(jobId: ID!): Job!
-    staffJobs: [Job]
     forumPosts: [ForumPost]
+    getStaffJobs: [Job]
   }
 
   # MUTATIONS
