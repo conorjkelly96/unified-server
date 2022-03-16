@@ -18,7 +18,8 @@ const colleges = require("./colleges");
 const universities = require("./universities");
 
 // ITEM Queries and Mutations
-const createItem = require("./createItem");
+const createItem = require("./item/createItem");
+const viewAllItems = require("./item/viewAllItems");
 
 // FORUM Queries and Mutations
 const createForumPost = require("./forumPost/createForumPost");
@@ -30,6 +31,7 @@ const resolvers = {
     jobs,
     job,
     staffJobs,
+    viewAllItems,
   },
   Mutation: {
     createJob,

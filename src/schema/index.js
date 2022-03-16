@@ -175,6 +175,7 @@ const typeDefs = gql`
     jobs: [Job]
     job(jobId: ID!): Job!
     staffJobs: [Job]
+    viewAllItems: [Item]
   }
 
   # MUTATIONS
