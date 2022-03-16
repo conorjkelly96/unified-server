@@ -2,7 +2,7 @@ const { ApolloError, AuthenticationError } = require("apollo-server");
 
 const { Job, Staff } = require("../../models");
 
-const staffJobs = async (_, __, { user }) => {
+const getStaffJobs = async (_, __, { user }) => {
   try {
     const staff = await Staff.findById(user.id);
 
@@ -19,4 +19,4 @@ const staffJobs = async (_, __, { user }) => {
   }
 };
 
-module.exports = staffJobs;
+module.exports = getStaffJobs;
