@@ -20,10 +20,10 @@ const typeDefs = gql`
     lastName: String!
     username: String!
     email: String!
-    interests: [String]
     university: University
+    college: String
     bio: String
-    course: String
+    interests: [String]
     sellerRating: Float
     friends: [Student]
     savedJobs: [Job]
@@ -136,10 +136,10 @@ const typeDefs = gql`
     username: String!
     email: String!
     password: String!
-    interests: [String]
     university: String
+    college: String
     bio: String
-    course: String
+    interests: [String]
   }
 
   input CreateItemInput {
