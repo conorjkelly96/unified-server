@@ -20,9 +20,9 @@ const typeDefs = gql`
     lastName: String!
     username: String!
     email: String!
-    interests: [String]
     university: University
     bio: String
+    interests: [String]
     college: String
     sellerRating: Float
     friends: [Student]
@@ -97,6 +97,7 @@ const typeDefs = gql`
   }
 
   type ForumPost {
+    id: ID!
     postText: String!
     postedBy: Student!
     createdAt: String!
@@ -174,6 +175,7 @@ const typeDefs = gql`
     universities: [University]!
     jobs: [Job]
     job(jobId: ID!): Job!
+    forumPosts: [ForumPost]
     getStaffJobs: [Job]
   }
 
