@@ -97,6 +97,7 @@ const typeDefs = gql`
   }
 
   type ForumPost {
+    id: ID!
     postText: String!
     postedBy: Student!
     createdAt: String!

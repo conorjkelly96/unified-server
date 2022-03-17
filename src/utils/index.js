@@ -35,7 +35,7 @@ const authMiddleware = ({ req }) => {
 const formatDate = (date) => {
   const dateObject = new Date(date);
   // Format: Monday March 7th, 2022
-  return format(dateObject, "MM/dd/yyyy");
+  return format(dateObject, "MMMM do, yyyy");
 };
 
 const validatePrice = (price) => {

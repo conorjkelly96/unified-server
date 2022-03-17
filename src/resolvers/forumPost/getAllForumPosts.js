@@ -6,7 +6,9 @@ const forumPosts = async (_, __, { user }) => {
     //restrict to student
     if (user) {
       //get all forum posts
-      const forumPosts = await ForumPost.find({}).populate("postedBy");
+      const forumPosts = await ForumPost.find({})
+        .populate("postedBy")
+        .populate("replies");
 
       return forumPosts;
     } else {
