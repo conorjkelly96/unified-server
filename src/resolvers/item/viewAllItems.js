@@ -13,8 +13,6 @@ const viewAllItems = async (_, __, { user }) => {
       populate: { path: "username" },
     });
 
-    console.log(items);
-
     return items;
   } catch (error) {
     console.log(`[ERROR]: Failed to get items | ${error.message}`);
