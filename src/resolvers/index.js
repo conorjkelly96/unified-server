@@ -23,28 +23,35 @@ const createItem = require("./createItem");
 // FORUM Queries and Mutations
 const createForumPost = require("./forumPost/createForumPost");
 const forumPosts = require("./forumPost/getAllForumPosts");
+const forumReply = require("./forumPost/forumReply");
 
 const resolvers = {
   Query: {
     colleges,
     universities,
+
     jobs,
     job,
-    forumPosts,
     getStaffJobs,
+
+    forumPosts,
   },
+
   Mutation: {
-    createJob,
     signupStudent,
-    createItem,
-    updateJob,
-    deleteJob,
     signupStaff,
     loginStudent,
     loginStaff,
 
+    createItem,
+
     createForumPost,
+    forumReply,
+
+    createJob,
     saveJob,
+    updateJob,
+    deleteJob,
   },
 };
 

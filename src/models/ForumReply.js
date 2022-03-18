@@ -2,17 +2,17 @@ const { Schema } = require("mongoose");
 const { formatDate } = require("../utils");
 
 const forumReplySchema = {
-  forumReplyId: {
+  id: {
     type: Schema.Types.ObjectId,
     required: true,
     auto: true,
   },
-  forumReplyBody: {
+  text: {
     type: String,
     required: true,
     maxLength: 280,
   },
-  username: {
+  user: {
     type: String,
     required: true,
   },
