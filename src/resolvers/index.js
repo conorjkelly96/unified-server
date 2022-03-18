@@ -24,6 +24,8 @@ const viewAllItems = require("./item/viewAllItems");
 const viewMyItems = require("./item/viewMyItems");
 const removeFromMyItems = require("./item/removeFromMyItems");
 const saveToMyItems = require("./item/saveToMyItems");
+const removeCommentFromItem = require("./item/removeCommentFromItem");
+const addCommentToItem = require("./item/addCommentToItem");
 
 // FORUM Queries and Mutations
 const createForumPost = require("./forumPost/createForumPost");
@@ -52,6 +54,8 @@ const resolvers = {
     deleteItem,
     removeFromMyItems,
     saveToMyItems,
+    removeCommentFromItem,
+    addCommentToItem,
   },
 };
 

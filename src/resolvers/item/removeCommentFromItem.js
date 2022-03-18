@@ -2,7 +2,7 @@ const { ApolloError, AuthenticationError } = require("apollo-server");
 
 const { Item } = require("../../models");
 
-const removeCommentToItem = async (_, { comment, itemId }, { user }) => {
+const removeCommentFromItem = async (_, { comment, itemId }, { user }) => {
   try {
     if (!user) {
       throw new AuthenticationError("You must be logged in to delete a job.");
@@ -19,4 +19,4 @@ const removeCommentToItem = async (_, { comment, itemId }, { user }) => {
   }
 };
 
-module.exports = addCommentToItem;
+module.exports = removeCommentFromItem;
