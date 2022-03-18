@@ -1,7 +1,7 @@
 const { AuthenticationError, ApolloError } = require("apollo-server");
 const { Student } = require("../models");
 
-const removeSavedJobs = (_, { jobId }, { user }) => {
+const removeSavedJobs = async (_, { jobId }, { user }) => {
   try {
     if (user) {
       const student = await Student.findByIdAndUpdate(
