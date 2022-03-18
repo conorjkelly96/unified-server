@@ -185,6 +185,8 @@ const typeDefs = gql`
     signupStudent(input: SignupStudentInput!): SignupStudentSuccess!
     createItem(input: CreateItemInput!): Item!
     deleteItem(itemId: String!): Item
+    removeFromMyItems(itemId: String!): Item
+    saveToMyItems(itemId: String!): Item
     loginStudent(input: LoginInput!): StudentAuth!
 
     createJob(newJobInput: CreateJobInput!): Job!

@@ -22,6 +22,8 @@ const deleteItem = require("./item/deleteItem");
 const createItem = require("./item/createItem");
 const viewAllItems = require("./item/viewAllItems");
 const viewMyItems = require("./item/viewMyItems");
+const removeFromMyItems = require("./item/removeFromMyItems");
+const saveToMyItems = require("./item/saveToMyItems");
 
 // FORUM Queries and Mutations
 const createForumPost = require("./forumPost/createForumPost");
@@ -48,6 +50,8 @@ const resolvers = {
     createForumPost,
     saveJob,
     deleteItem,
+    removeFromMyItems,
+    saveToMyItems,
   },
 };
 
