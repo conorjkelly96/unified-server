@@ -27,6 +27,7 @@ const typeDefs = gql`
     sellerRating: Float
     friends: [Student]
     savedJobs: [Job]
+    savedItem: [Item]
   }
 
   type Comment {
@@ -176,6 +177,7 @@ const typeDefs = gql`
     job(jobId: ID!): Job!
     staffJobs: [Job]
     viewAllItems: [Item]
+    viewMyItems: [Item]
   }
 
   # MUTATIONS
