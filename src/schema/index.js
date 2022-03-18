@@ -187,6 +187,7 @@ const typeDefs = gql`
     jobs: [Job]
     job(jobId: ID!): Job!
     forumPosts: [ForumPost]
+    getForumPost(postId: ID!): ForumPost
     getStaffJobs: [Job]
     getStudentJobs: [Job]
   }
