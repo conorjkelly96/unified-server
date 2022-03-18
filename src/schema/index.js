@@ -194,6 +194,7 @@ const typeDefs = gql`
 
     createForumPost(forumPost: ForumPostInput!): ForumPost
     saveJob(jobId: ID!): Student!
+    removeSavedJobs(jobId: ID!): Student
   }
 `;
 
