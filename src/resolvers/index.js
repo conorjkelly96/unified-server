@@ -24,6 +24,7 @@ const createItem = require("./createItem");
 const createForumPost = require("./forumPost/createForumPost");
 const forumPosts = require("./forumPost/getAllForumPosts");
 const forumReply = require("./forumPost/forumReply");
+const getForumPost = require("./forumPost/getForumPost");
 
 const resolvers = {
   Query: {
@@ -35,6 +36,7 @@ const resolvers = {
     getStaffJobs,
 
     forumPosts,
+    getForumPost,
   },
 
   Mutation: {
