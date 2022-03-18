@@ -4,18 +4,18 @@ const jobs = require("./job/jobs");
 const job = require("./job/job");
 const updateJob = require("./job/updateJob");
 const deleteJob = require("./job/deleteJob");
-const saveJob = require("./saveJob");
+const saveJob = require("./job/saveJob");
 const staffJobs = require("./job/staffJobs");
 
 // STUDENT and STAFF AUTH Queries and Mutations
-const signupStudent = require("./signupStudent");
-const loginStudent = require("./loginStudent");
-const signupStaff = require("./signupStaff");
-const loginStaff = require("./loginStaff");
+const signupStudent = require("./student/signupStudent");
+const loginStudent = require("./student/loginStudent");
+const signupStaff = require("./staff/signupStaff");
+const loginStaff = require("./staff/loginStaff");
 
 // UNIVERSITY Queries and Mutations
-const colleges = require("./colleges");
-const universities = require("./universities");
+const colleges = require("./university/colleges");
+const universities = require("./university/universities");
 
 // ITEM Queries and Mutations
 const deleteItem = require("./item/deleteItem");

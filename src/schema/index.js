@@ -122,6 +122,11 @@ const typeDefs = gql`
     closingDate: String
   }
 
+  input AddComment {
+    commentBody: String!
+    username: String!
+  }
+
   type SignupStaffSuccess {
     success: Boolean!
     staff: Staff
@@ -183,11 +188,14 @@ const typeDefs = gql`
   # MUTATIONS
   type Mutation {
     signupStudent(input: SignupStudentInput!): SignupStudentSuccess!
-    createItem(input: CreateItemInput!): Item!
+    loginStudent(input: LoginInput!): StudentAuth!
+
     deleteItem(itemId: String!): Item
+    createItem(input: CreateItemInput!): Item!
     removeFromMyItems(itemId: String!): Item
     saveToMyItems(itemId: String!): Item
-    loginStudent(input: LoginInput!): StudentAuth!
+    removeCommentFromItem(itemId: String!, Comment: ID!): Item
+    addCommentToItem(input: AddComment, itemId: String!): Item
 
     createJob(newJobInput: CreateJobInput!): Job!
     updateJob(jobInput: UpdateJobInput!, jobId: ID!): Job!

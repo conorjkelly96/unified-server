@@ -1,7 +1,7 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
 
-const { University } = require("../models");
+const { University } = require("../../models");
 
 const universities = require("./universities.json");
 

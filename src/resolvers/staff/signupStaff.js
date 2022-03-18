@@ -1,16 +1,16 @@
 const { ApolloError } = require("apollo-server");
 
-const { Student } = require("../models");
+const { Staff } = require("../../models");
 
-const signup = async (_, { input }) => {
+const signupStaff = async (_, { input }) => {
   try {
-    const student = await Student.create(input);
+    const staff = await Staff.create(input);
 
-    return { success: true, student };
+    return { success: true, staff };
   } catch (error) {
     console.log(`[ERROR]: Failed to sign up | ${error.message}`);
     throw new ApolloError("Failed to sign up");
   }
 };
 
-module.exports = signup;
+module.exports = signupStaff;
