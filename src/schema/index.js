@@ -183,6 +183,7 @@ const typeDefs = gql`
     staffJobs: [Job]
     viewAllItems: [Item]
     viewMyItems: [Item]
+    getSingleItemData(id: ID!): Item
   }
 
   # MUTATIONS

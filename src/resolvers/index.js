@@ -26,6 +26,7 @@ const removeFromMyItems = require("./item/removeFromMyItems");
 const saveToMyItems = require("./item/saveToMyItems");
 const removeCommentFromItem = require("./item/removeCommentFromItem");
 const addCommentToItem = require("./item/addCommentToItem");
+const getSingleItemData = require("./item/getSingleItemData");
 
 // FORUM Queries and Mutations
 const createForumPost = require("./forumPost/createForumPost");
@@ -39,6 +40,7 @@ const resolvers = {
     staffJobs,
     viewAllItems,
     viewMyItems,
+    getSingleItemData,
   },
   Mutation: {
     createJob,
