@@ -32,7 +32,7 @@ const jobSchema = {
 
   closingDate: {
     type: Date,
-    get: formatDate,
+    // get: formatDate,
   },
 
   postedBy: {
