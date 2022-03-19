@@ -96,12 +96,19 @@ const typeDefs = gql`
     user: Staff!
   }
 
+  type Reply {
+    id: ID!
+    text: String!
+    user: String!
+    createdAt: String
+  }
+
   type ForumPost {
     id: ID!
     postText: String!
     postedBy: Student!
     createdAt: String!
-    replies: [String]
+    replies: [Reply]
   }
 
   # INPUTS
@@ -168,6 +175,10 @@ const typeDefs = gql`
     postText: String!
   }
 
+  input ForumReplyInput {
+    text: String!
+  }
+
   # QUERIES
   type Query {
     dashboard: String!
@@ -176,18 +187,19 @@ const typeDefs = gql`
     jobs: [Job]
     job(jobId: ID!): Job!
     forumPosts: [ForumPost]
+    getForumPost(postId: ID!): ForumPost
     getStaffJobs: [Job]
   }
 
   # MUTATIONS
   type Mutation {
     signupStudent(input: SignupStudentInput!): SignupStudentSuccess!
-    createItem(input: CreateItemInput!): Item!
     loginStudent(input: LoginInput!): StudentAuth!
 
     createJob(newJobInput: CreateJobInput!): Job!
     updateJob(jobInput: UpdateJobInput!, jobId: ID!): Job!
     deleteJob(jobId: ID!): Job
+    saveJob(jobId: ID!): Student!
 
     signupStaff(input: SignupStaffInput!): SignupStaffSuccess!
     loginStaff(input: LoginInput!): StaffAuth!
@@ -195,6 +207,9 @@ const typeDefs = gql`
     createForumPost(forumPost: ForumPostInput!): ForumPost
     saveJob(jobId: ID!): Student!
     removeSavedJobs(jobId: ID!): Student
+    forumReply(input: ForumReplyInput, postId: ID!): ForumPost
+
+    createItem(input: CreateItemInput!): Item!
   }
 `;
 
