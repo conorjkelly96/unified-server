@@ -205,6 +205,8 @@ const typeDefs = gql`
     loginStaff(input: LoginInput!): StaffAuth!
 
     createForumPost(forumPost: ForumPostInput!): ForumPost
+    saveJob(jobId: ID!): Student!
+    removeSavedJobs(jobId: ID!): Student
     forumReply(input: ForumReplyInput, postId: ID!): ForumPost
 
     createItem(input: CreateItemInput!): Item!
