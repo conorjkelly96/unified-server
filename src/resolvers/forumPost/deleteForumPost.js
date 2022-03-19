@@ -1,23 +1,19 @@
 const { ApolloError, AuthenticationError } = require("apollo-server-errors");
-const deleteForumPost = require("../../models/ForumPost");
 
-// TODO: Delete post from forum
-const deleteForumPost = async (_, { forumPost }, { context }) => {
+const { ForumPost } = require("../../models/ForumPost");
+
+const deleteForumPost = async (_, { forumId }, { user }) => {
   try {
-    if (context.forumPost) {
-      const postedBy = user.id;
-      const forumPost = await ForumPost.delete({ ...forumPost, postedBy });
-      const post = await ForumPost.findById(newForumPost._id).populate(
-        "postedBy"
-      );
-      return post;
-    } else {
+    if (!user) {
       throw new AuthenticationError(
         "You must be logged in to delete post from the forum."
       );
     }
+    const deleteForumPost = await ForumPost.findByIdAndDelete(forumId);
+
+    return deleteForumPost;
   } catch (error) {
-    console.log(`[ERROR]: Failed to delete post from forum | ${error.message}`);
+    console.log(`[ERROR]: Failed to delete post from forum |${error.message}`);
     throw new ApolloError("Failed to delete post from forum.");
   }
 };
