@@ -208,6 +208,7 @@ const typeDefs = gql`
     removeSavedJobs(jobId: ID!): Student
     forumReply(input: ForumReplyInput, postId: ID!): ForumPost
     updateForumPost(id: ID!, input: ForumPostInput!): ForumPost
+    deleteForumPost(id: ID!): ForumPost
 
     createItem(input: CreateItemInput!): Item!
   }
