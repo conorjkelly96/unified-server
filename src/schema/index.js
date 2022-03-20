@@ -207,6 +207,7 @@ const typeDefs = gql`
     createForumPost(forumPost: ForumPostInput!): ForumPost
     removeSavedJobs(jobId: ID!): Student
     forumReply(input: ForumReplyInput, postId: ID!): ForumPost
+    deleteForumPost(id: ID!): ForumPost
 
     createItem(input: CreateItemInput!): Item!
   }
