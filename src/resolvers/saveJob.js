@@ -4,6 +4,7 @@ const { Student } = require("../models");
 const saveJob = async (_, { jobId }, { user }) => {
   try {
     if (user) {
+      //TODO: check if student savedjobs array already has the id & if it does (alert already saved)
       const student = await Student.findByIdAndUpdate(
         user.id,
         {
