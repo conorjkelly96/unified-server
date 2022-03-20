@@ -11,7 +11,6 @@ const saveJob = async (_, { jobId }, { user }) => {
         },
         { new: true }
       ).populate("savedJobs");
-
       return student;
     } else {
       throw new AuthenticationError("You must be logged in to create a job.");

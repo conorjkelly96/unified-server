@@ -27,6 +27,7 @@ const createForumPost = require("./forumPost/createForumPost");
 const forumPosts = require("./forumPost/getAllForumPosts");
 const forumReply = require("./forumPost/forumReply");
 const getForumPost = require("./forumPost/getForumPost");
+const getStudentJobs = require("./job/getStudentJobs");
 
 const resolvers = {
   Query: {
@@ -36,6 +37,7 @@ const resolvers = {
     jobs,
     job,
     getStaffJobs,
+    getStudentJobs,
 
     forumPosts,
     getForumPost,
