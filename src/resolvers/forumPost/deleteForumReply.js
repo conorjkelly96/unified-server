@@ -10,7 +10,7 @@ const deleteForumReply = async (_, { id }, { user }) => {
       );
     }
 
-    const deleteForumReply = await ForumPost.findByIdAndUpdate(id);
+    const deleteForumReply = await ForumPost.findByIdAndDelete(id);
 
     if (deleteForumReply) {
       return deleteForumReply;
