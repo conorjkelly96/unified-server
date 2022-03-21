@@ -1,6 +1,6 @@
 const { ApolloError, AuthenticationError } = require("apollo-server");
 
-const { ForumPost } = require("../../models/FormPost");
+const { ForumPost } = require("../../models");
 
 const deleteForumReply = async (_, { input, postId }, { user }) => {
   try {
