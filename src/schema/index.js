@@ -226,8 +226,6 @@ const typeDefs = gql`
     forumReply(input: ForumReplyInput, postId: ID!): ForumPost
     updateForumPost(id: ID!, input: ForumPostInput!): ForumPost
     deleteForumPost(id: ID!): ForumPost
-
-    createItem(input: CreateItemInput!): Item!
   }
 `;
 
