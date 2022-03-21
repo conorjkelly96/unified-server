@@ -4,15 +4,23 @@ const { Student } = require("../../models");
 const saveJob = async (_, { jobId }, { user }) => {
   try {
     if (user) {
-      //TODO: check if student savedjobs array already has the id & if it does (alert already saved)
-      const student = await Student.findByIdAndUpdate(
-        user.id,
-        {
-          $push: { savedJobs: jobId },
-        },
-        { new: true }
-      ).populate("savedJobs");
-      return student;
+      const studentData = await Student.findById(user.id);
+      const savedJobs = studentData.savedJobs;
+
+      const alreadySaved = savedJobs.includes(jobId);
+
+      if (!alreadySaved) {
+        const student = await Student.findByIdAndUpdate(
+          user.id,
+          {
+            $push: { savedJobs: jobId },
+          },
+          { new: true }
+        ).populate("savedJobs");
+        return student;
+      } else {
+        throw new ApolloError("Job already saved");
+      }
     } else {
       throw new AuthenticationError("You must be logged in to create a job.");
     }
