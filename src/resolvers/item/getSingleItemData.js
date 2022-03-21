@@ -4,7 +4,6 @@ const { Item } = require("../../models");
 
 const getSingleItemData = async (_, { id }, { user }) => {
   try {
-    console.log(id);
     if (!user) {
       throw new AuthenticationError("You must be logged in to view an item.");
     }

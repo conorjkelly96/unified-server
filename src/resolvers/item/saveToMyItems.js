@@ -4,6 +4,8 @@ const { Student } = require("../../models");
 const saveToMyItems = async (_, { itemId }, { user }) => {
   try {
     if (user) {
+      console.log(itemId);
+
       const student = await Student.findByIdAndUpdate(
         user.id,
         {
