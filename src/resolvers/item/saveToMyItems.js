@@ -9,8 +9,11 @@ const saveToMyItems = async (_, { itemId }, { user }) => {
       const student = await Student.findByIdAndUpdate(
         user.id,
         {
-          $push: { savedItems: itemId },
+          $push: {
+            savedItems: { id: itemId, ...input, username: user.username },
+          },
         },
+
         { new: true }
       ).populate("savedItems");
 

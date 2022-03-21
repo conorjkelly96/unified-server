@@ -130,11 +130,6 @@ const typeDefs = gql`
     closingDate: String
   }
 
-  input AddComment {
-    commentBody: String!
-    username: String!
-  }
-
   type SignupStaffSuccess {
     success: Boolean!
     staff: Staff
@@ -185,6 +180,10 @@ const typeDefs = gql`
     text: String!
   }
 
+  input ItemCommentInput {
+    commentBody: String!
+  }
+
   # QUERIES
   type Query {
     dashboard: String!
@@ -211,7 +210,7 @@ const typeDefs = gql`
     removeFromMyItems(itemId: String!): Item
     saveToMyItems(itemId: String!): Item
     removeCommentFromItem(itemId: String!, Comment: ID!): Item
-    addCommentToItem(input: AddComment, itemId: String!): Item
+    addCommentToItem(input: ItemCommentInput, itemId: String!): Item
 
     createJob(newJobInput: CreateJobInput!): Job!
     updateJob(jobInput: UpdateJobInput!, jobId: ID!): Job!
