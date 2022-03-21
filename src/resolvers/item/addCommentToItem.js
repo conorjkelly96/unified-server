@@ -2,20 +2,17 @@ const { ApolloError, AuthenticationError } = require("apollo-server");
 
 const { Item } = require("../../models");
 
-const addCommentToItem = async (_, input, { user }) => {
+const addCommentToItem = async (_, { input }, { user }) => {
   try {
     if (!user) {
       throw new AuthenticationError("You must be logged in leave a comment.");
     }
 
-    const itemId = input.itemId;
-    const commentBody = input.input.commentBody;
-
-    console.log(itemId, commentBody);
+    const { itemId, commentBody } = input;
 
     const item = await Item.findByIdAndUpdate(itemId, {
       $push: {
-        comments: { commentBody: commentBody, username: user.username },
+        comments: { commentBody, username: user.username },
       },
     });
 

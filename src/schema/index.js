@@ -182,6 +182,7 @@ const typeDefs = gql`
 
   input ItemCommentInput {
     commentBody: String!
+    itemId: String!
   }
 
   # QUERIES
@@ -210,7 +211,7 @@ const typeDefs = gql`
     removeFromMyItems(itemId: String!): Item
     saveToMyItems(itemId: String!): Item
     removeCommentFromItem(itemId: String!, Comment: ID!): Item
-    addCommentToItem(input: ItemCommentInput, itemId: String!): Item
+    addCommentToItem(input: ItemCommentInput): Item
 
     createJob(newJobInput: CreateJobInput!): Job!
     updateJob(jobInput: UpdateJobInput!, jobId: ID!): Job!
