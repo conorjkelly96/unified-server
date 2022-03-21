@@ -1,5 +1,5 @@
 const { AuthenticationError, ApolloError } = require("apollo-server");
-const { Student } = require("../models");
+const { Student } = require("../../models");
 
 const saveJob = async (_, { jobId }, { user }) => {
   try {
