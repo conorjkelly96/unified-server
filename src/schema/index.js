@@ -20,9 +20,9 @@ const typeDefs = gql`
     lastName: String!
     username: String!
     email: String!
-    interests: [String]
     university: University
     bio: String
+    interests: [String]
     college: String
     sellerRating: Float
     friends: [Student]
@@ -97,11 +97,19 @@ const typeDefs = gql`
     user: Staff!
   }
 
+  type Reply {
+    id: ID!
+    text: String!
+    user: String!
+    createdAt: String
+  }
+
   type ForumPost {
+    id: ID!
     postText: String!
     postedBy: Student!
     createdAt: String!
-    replies: [String]
+    replies: [Reply]
   }
 
   # INPUTS
@@ -173,6 +181,10 @@ const typeDefs = gql`
     postText: String!
   }
 
+  input ForumReplyInput {
+    text: String!
+  }
+
   # QUERIES
   type Query {
     dashboard: String!
@@ -184,6 +196,9 @@ const typeDefs = gql`
     viewAllItems: [Item]
     viewMyItems: [Item]
     getSingleItemData(id: ID!): Item
+    forumPosts: [ForumPost]
+    getForumPost(postId: ID!): ForumPost
+    getStaffJobs: [Job]
   }
 
   # MUTATIONS
@@ -201,12 +216,18 @@ const typeDefs = gql`
     createJob(newJobInput: CreateJobInput!): Job!
     updateJob(jobInput: UpdateJobInput!, jobId: ID!): Job!
     deleteJob(jobId: ID!): Job
+    saveJob(jobId: ID!): Student!
 
     signupStaff(input: SignupStaffInput!): SignupStaffSuccess!
     loginStaff(input: LoginInput!): StaffAuth!
 
     createForumPost(forumPost: ForumPostInput!): ForumPost
-    saveJob(jobId: ID!): Student!
+    removeSavedJobs(jobId: ID!): Student
+    forumReply(input: ForumReplyInput, postId: ID!): ForumPost
+    updateForumPost(id: ID!, input: ForumPostInput!): ForumPost
+    deleteForumPost(id: ID!): ForumPost
+
+    createItem(input: CreateItemInput!): Item!
   }
 `;
 

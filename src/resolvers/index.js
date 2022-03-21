@@ -5,7 +5,10 @@ const job = require("./job/job");
 const updateJob = require("./job/updateJob");
 const deleteJob = require("./job/deleteJob");
 const saveJob = require("./job/saveJob");
-const staffJobs = require("./job/staffJobs");
+// const staffJobs = require("./job/staffJobs");
+const removeSavedJobs = require("./job/removeSavedJobs");
+
+const getStaffJobs = require("./job/getStaffJobs");
 
 // STUDENT and STAFF AUTH Queries and Mutations
 const signupStudent = require("./student/signupStudent");
@@ -30,34 +33,52 @@ const getSingleItemData = require("./item/getSingleItemData");
 
 // FORUM Queries and Mutations
 const createForumPost = require("./forumPost/createForumPost");
+const forumPosts = require("./forumPost/getAllForumPosts");
+const forumReply = require("./forumPost/forumReply");
+const getForumPost = require("./forumPost/getForumPost");
+const updateForumPost = require("./forumPost/updateForumPost");
+const deleteForumPost = require("./forumPost/deleteForumPost");
 
 const resolvers = {
   Query: {
     colleges,
     universities,
+
     jobs,
     job,
-    staffJobs,
+    // staffJobs,
     viewAllItems,
     viewMyItems,
     getSingleItemData,
+    getStaffJobs,
+
+    forumPosts,
+    getForumPost,
   },
+
   Mutation: {
-    createJob,
     signupStudent,
-    createItem,
-    updateJob,
-    deleteJob,
     signupStaff,
     loginStudent,
     loginStaff,
+
+    createItem,
+
     createForumPost,
+    forumReply,
+    updateForumPost,
+    deleteForumPost,
+
+    createJob,
     saveJob,
     deleteItem,
     removeFromMyItems,
     saveToMyItems,
     removeCommentFromItem,
     addCommentToItem,
+    removeSavedJobs,
+    updateJob,
+    deleteJob,
   },
 };
 

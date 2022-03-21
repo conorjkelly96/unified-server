@@ -30,7 +30,7 @@ const forumPostSchema = {
 const schema = new Schema(forumPostSchema, {
   timestamps: true,
   id: true,
-  toJSON: { getters: true },
+  toJSON: { getters: true, virtuals: true },
 });
 
 // virtual to total the reply count
