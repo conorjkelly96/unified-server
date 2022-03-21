@@ -9,7 +9,7 @@ const deleteForumReply = async (_, { input, postId }, { user }) => {
         throw new AuthenticationError("Failed to delete reply.");
       }
     }
-    const deleteForumReply = await ForumPost.findByIdAndUpdate(postId);
+    const deleteForumReply = await ForumPost.findByIdAndDelete(postId);
 
     return deleteForumReply;
   } catch (error) {

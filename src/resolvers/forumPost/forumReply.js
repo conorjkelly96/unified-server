@@ -11,9 +11,9 @@ const forumReply = async (_, { input, postId }, { user }) => {
       }
       const reply = await ForumPost.findByIdAndUpdate(
         postId,
-        { $push: { replies: { ...input, user: user.username } } },
+        { $push: { replies: { ...input, user: user.id } } },
         { returnDocument: "after" }
-      );
+      ).populate("replies.user");
 
       return reply;
     } else {
