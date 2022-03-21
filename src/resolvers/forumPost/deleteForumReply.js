@@ -2,19 +2,24 @@ const { ApolloError, AuthenticationError } = require("apollo-server");
 
 const { ForumPost } = require("../../models");
 
-const deleteForumReply = async (_, { input, postId }, { user }) => {
+const deleteForumReply = async (_, { id }, { user }) => {
   try {
     if (!user) {
-      if (!input) {
-        throw new AuthenticationError("Failed to delete reply.");
-      }
+      throw new AuthenticationError(
+        "You must be logged in to delete reply from the forum."
+      );
     }
-    const deleteForumReply = await ForumPost.findByIdAndUpdate(postId);
 
-    return deleteForumReply;
+    const deleteForumReply = await ForumPost.findByIdAndUpdate(id);
+
+    if (deleteForumReply) {
+      return deleteForumReply;
+    }
+
+    throw new AuthenticationError("Reply does not exist.");
   } catch (error) {
-    console.log(`[ERROR]: Failed to delete reply | ${error.message}`);
-    throw new ApolloError("Failed to delete reply.");
+    console.log(`[ERROR]: Failed to delete reply from forum| ${error.message}`);
+    throw new ApolloError("Failed to delete reply from forum.");
   }
 };
 
