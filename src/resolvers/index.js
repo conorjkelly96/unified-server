@@ -4,8 +4,8 @@ const jobs = require("./job/jobs");
 const job = require("./job/job");
 const updateJob = require("./job/updateJob");
 const deleteJob = require("./job/deleteJob");
-const saveJob = require("./saveJob");
-const removeSavedJobs = require("./removeSavedJobs");
+const saveJob = require("./job/saveJob");
+const removeSavedJobs = require("./job/removeSavedJobs");
 
 const getStaffJobs = require("./job/getStaffJobs");
 
