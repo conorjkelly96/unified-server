@@ -162,6 +162,16 @@ const typeDefs = gql`
     images: [String]
   }
 
+  input UpdateItemInput {
+    itemName: String!
+    itemDescription: String!
+    category: String!
+    condition: String!
+    price: Float!
+    quantity: Int
+    images: [String]
+  }
+
   input SignupStaffInput {
     firstName: String!
     lastName: String!
@@ -208,6 +218,7 @@ const typeDefs = gql`
 
     deleteItem(itemId: String!): Item
     createItem(input: CreateItemInput!): Item!
+    updateItem(itemId: String!, input: UpdateItemInput!): Item
     removeFromMyItems(itemId: String!): Item
     saveToMyItems(itemId: String!): Item
     removeCommentFromItem(itemId: String!, Comment: ID!): Item
