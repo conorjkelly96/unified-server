@@ -54,17 +54,17 @@ const seed = async () => {
     await ForumPost.insertMany(forumPosts);
     console.log("INFO]: ForumPosts seeded successfully");
 
-    await Transaction.deleteMany({});
-    await Transaction.insertMany(transactions);
-    console.log("INFO]: Transactions seeded successfully");
+    // await Transaction.deleteMany({});
+    // await Transaction.insertMany(transactions);
+    // console.log("INFO]: Transactions seeded successfully");
 
-    await Comment.deleteMany({});
-    await Comment.insertMany(comments);
-    console.log("INFO]: Comments seeded successfully");
+    // await Comment.deleteMany({});
+    // await Comment.insertMany(comments);
+    // console.log("INFO]: Comments seeded successfully");
 
-    await ForumReply.deleteMany({});
-    await ForumReply.insertMany(forumReplies);
-    console.log("INFO]: ForumReplies seeded successfully");
+    // await ForumReply.deleteMany({});
+    // await ForumReply.insertMany(forumReplies);
+    // console.log("INFO]: ForumReplies seeded successfully");
   } catch (error) {
     console.log(`[ERROR]: Database connection failed | ${error.message}`);
   }
