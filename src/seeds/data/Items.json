@@ -1,22 +1,20 @@
 [
   {
-    "itemName": "",
-    "itemDescription": "",
-    "category": "",
-    "status": "",
-    "condition": "",
-    "price": "",
-    "seller": "",
-    "quantity": ""
+    "itemName": "Printer",
+    "itemDescription": "All in One Colour Printer with 6 months of Instant Ink included with HP+",
+    "category": "Electronics",
+    "status": "For Sale",
+    "condition": "Like New",
+    "price": "89.99",
+    "seller": "6239ea0eb158e306e30fd863"
   },
   {
-    "itemName": "",
-    "itemDescription": "",
-    "category": "",
-    "status": "",
-    "condition": "",
-    "price": "",
-    "seller": "",
-    "quantity": ""
+    "itemName": "Snekers",
+    "itemDescription": "Diadora Shoes Snekers Lifestyle Sportswear Magic Basket Low Icon Unisex",
+    "category": "Clothing & Accessories",
+    "status": "Sold",
+    "condition": "Used",
+    "price": "44.34",
+    "seller": "6239ea0eb158e306e30fd864"
   }
 ]
