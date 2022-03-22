@@ -22,6 +22,9 @@ const forumPosts = require("./data/forumPosts.json");
 const forumReplies = require("./data/forumReplies.json");
 
 const seed = async () => {
+  const randomIndex = (number) => {
+    return Math.floor(Math.random() * number);
+  };
   try {
     await mongoose.connect(`mongodb://localhost:27017/${process.env.DB_NAME}`, {
       useNewUrlParser: true,
@@ -31,32 +34,46 @@ const seed = async () => {
     console.log("[INFO]: Database connection successful");
 
     await University.deleteMany({});
+    await Student.deleteMany({});
+    await Staff.deleteMany({});
+    await Item.deleteMany({});
+    await Job.deleteMany({});
+    await ForumPost.deleteMany({});
+
     await University.insertMany(universities);
     console.log("[INFO]: Universities seeded successfully");
 
-    await Student.deleteMany({});
     await Student.insertMany(students);
     console.log("[INFO]: Students seeded successfully");
 
-    await Staff.deleteMany({});
     await Staff.insertMany(staffs);
     console.log("[INFO]: Staffs seeded successfully");
 
-    await Item.deleteMany({});
-    await Item.insertMany(items);
+    const studentsFromDb = await Student.find({});
+
+    const finalTransactions = transactions.map((transaction) => {
+      return {
+        ...transaction,
+        buyer: studentsFromDb[randomIndex(studentsFromDb.length)]._id,
+        collectionDate: new Date(),
+      };
+    });
+
+    const itemsToSeed = items.map((item) => {
+      return {
+        ...item,
+        transactions: finalTransactions,
+      };
+    });
+
+    await Item.insertMany(itemsToSeed);
     console.log("[INFO]: Items seeded successfully");
 
-    await Job.deleteMany({});
     await Job.insertMany(Jobs);
     console.log("[INFO]: Jobs seeded successfully");
 
-    await ForumPost.deleteMany({});
     await ForumPost.insertMany(forumPosts);
     console.log("[INFO]: ForumPosts seeded successfully");
-
-    // await Transaction.deleteMany({});
-    // await Transaction.insertMany(transactions);
-    // console.log("[INFO]: Transactions seeded successfully");
 
     // await Comment.deleteMany({});
     // await Comment.insertMany(comments);

@@ -1,15 +1,11 @@
 [
   {
-    "buyer": "Joe",
     "transactionStatus": "Pending Billing",
-    "collectionDate": "14/03/2022",
     "paymentMethod": "Card",
     "buyerRating": 4
   },
   {
-    "buyer": "Sal",
-    "transactionStatus": "Printer",
-    "collectionDate": "15/03/2022",
+    "transactionStatus": "Pending Billing",
     "paymentMethod": "Card",
     "buyerRating": 5
   }
