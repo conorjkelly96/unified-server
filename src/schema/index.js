@@ -27,6 +27,7 @@ const typeDefs = gql`
     sellerRating: Float
     friends: [Student]
     savedJobs: [Job]
+    type: String
   }
 
   type Comment {
