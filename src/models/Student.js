@@ -20,6 +20,11 @@ const studentSchema = {
     required: true,
     maxLength: 50,
   },
+  profileImageUrl: {
+    type: String,
+    default:
+      "https://images.unsplash.com/photo-1464863979621-258859e62245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1886&q=80",
+  },
   email: {
     type: String,
     trim: true,
@@ -101,12 +106,6 @@ const studentSchema = {
       required: false,
     },
   ],
-
-  // TODO: Investigate further
-  // studentStatus: {
-  //   type: String,
-  //   required: true,
-  // },
 };
 
 const schema = new Schema(studentSchema, {
