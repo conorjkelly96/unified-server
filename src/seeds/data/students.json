@@ -4,25 +4,23 @@
     "firstName": "Joe",
     "lastName": "Bloggs",
     "email": "joebloggs@gmail.com",
-    "password": "password123",
+    "password": "Password123!",
     "bio": "A day in a life of a student",
     "interests": "Travelling",
-    "university": "University of Birmingham",
-    "course": "Computer Science",
-    "sellerRating": "5",
-    "friends": ["Jamie", "Sal"]
+    "university": "6239e5720b6650e00e3dec78",
+    "college": "Computer Science",
+    "sellerRating": "5"
   },
   {
     "username": "saljames@gmail.com",
     "firstName": "Sal",
     "lastName": "James",
     "email": "saljames@gmail.com",
-    "password": "password",
+    "password": "Password123!",
     "bio": "I love to study",
     "interests": "Dancing",
-    "university": "University of Southampton",
-    "course": "Art",
-    "sellerRating": "3",
-    "friends": ["Joe", "Sal"]
+    "university": "6239e5720b6650e00e3dec79",
+    "college": "Art",
+    "sellerRating": "3"
   }
 ]
