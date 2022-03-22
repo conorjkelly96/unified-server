@@ -94,12 +94,6 @@ const studentSchema = {
       required: false,
     },
   ],
-
-  // TODO: Investigate further
-  // studentStatus: {
-  //   type: String,
-  //   required: true,
-  // },
 };
 
 const schema = new Schema(studentSchema, {
