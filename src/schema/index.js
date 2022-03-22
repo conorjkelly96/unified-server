@@ -214,13 +214,13 @@ const typeDefs = gql`
     forumPosts: [ForumPost]
     getForumPost(postId: ID!): ForumPost
     getStaffJobs: [Job]
+    getCommentsOnMyItems: [Item]
   }
 
   # MUTATIONS
   type Mutation {
     signupStudent(input: SignupStudentInput!): SignupStudentSuccess!
     loginStudent(input: LoginInput!): StudentAuth!
-
     deleteItem(itemId: String!): Item
     createItem(input: CreateItemInput!): Item!
     updateItem(itemId: String!, input: UpdateItemInput!): Item
@@ -228,15 +228,12 @@ const typeDefs = gql`
     saveToMyItems(itemId: String!): Item
     removeCommentFromItem(itemId: String!, Comment: ID!): Item
     addCommentToItem(input: ItemCommentInput): Item
-
     createJob(newJobInput: CreateJobInput!): Job!
     updateJob(jobInput: UpdateJobInput!, jobId: ID!): Job!
     deleteJob(jobId: ID!): Job
     saveJob(jobId: ID!): Student!
-
     signupStaff(input: SignupStaffInput!): SignupStaffSuccess!
     loginStaff(input: LoginInput!): StaffAuth!
-
     createForumPost(forumPost: ForumPostInput!): ForumPost
     removeSavedJobs(jobId: ID!): Student
     forumReply(input: ForumReplyInput, postId: ID!): ForumPost

@@ -32,6 +32,7 @@ const addCommentToItem = require("./item/addCommentToItem");
 const getSingleItemData = require("./item/getSingleItemData");
 const updateItem = require("./item/updateItem");
 const getItemsByCategory = require("./item/getItemsByCategory");
+const getCommentsOnMyItems = require("./comment/getCommentsOnMyItems");
 
 // FORUM Queries and Mutations
 const createForumPost = require("./forumPost/createForumPost");
@@ -55,6 +56,7 @@ const resolvers = {
     getItemsByCategory,
     forumPosts,
     getForumPost,
+    getCommentsOnMyItems,
   },
 
   Mutation: {

@@ -1,13 +1,12 @@
 const { Item } = require("../../models");
 
-const getCommentsOnMyItems = (_, __, { user }) => {
+const getCommentsOnMyItems = async (_, __, { user }) => {
   try {
     if (user) {
-      const items = await Item.find({ seller: user.id })
-        .populate("postedBy")
-        .populate("replies");
+      console.log(user.id);
+      const items = await Item.find({ seller: user.id });
 
-      return forumPost;
+      return items;
     } else {
       throw new AuthenticationError(
         "You must be logged in as a student to view items"
