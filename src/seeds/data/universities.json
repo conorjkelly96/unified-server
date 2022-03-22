@@ -13,20 +13,7 @@
       "Accounting College"
     ]
   },
-  {
-    "name": "University of Birmingham",
-    "courses": ["Math", "Arts", "Human Biology", "Accounting"],
-    "addressLine1": "Edgbaston",
-    "addressLine2": "Birmingham",
-    "city": "Birmingham",
-    "postcode": "B15 2TT",
-    "colleges": [
-      "Computer Science College",
-      "Arts College",
-      "Science College",
-      "Accounting College"
-    ]
-  },
+
   {
     "name": "University of Southampton",
     "courses": ["Math", "Arts", "Marketing", "Acoustics with Music"],
@@ -36,15 +23,7 @@
     "postcode": "SO17 1B",
     "colleges": ["Humanities", "Business Department", "Music College"]
   },
-  {
-    "name": "University of Southampton",
-    "courses": ["Math", "Arts", "Marketing", "Acoustics with Music"],
-    "addressLine1": "University Road, Hampshire",
-    "addressLine2": "Southampton",
-    "city": "Southampton",
-    "postcode": "SO17 1B",
-    "colleges": ["Humanities", "Business Department", "Music College"]
-  },
+
   {
     "name": "University of Oxford",
     "courses": ["Math", "Arts", "Politics", "Biology"],
@@ -54,34 +33,7 @@
     "postcode": "OX1 2JD",
     "colleges": ["Humanities", "Business Department", "Science College"]
   },
-  {
-    "name": "University of Oxford",
-    "courses": ["Math", "Arts", "Politics", "Biology"],
-    "addressLine1": "University Offices",
-    "addressLine2": " Wellington Square",
-    "city": "Oxford",
-    "postcode": "OX1 2JD",
-    "colleges": ["Humanities", "Business Department", "Science College"]
-  },
-  {
-    "name": "University of Cambridge",
-    "courses": [
-      "Economics",
-      "Criminology",
-      "Medicine",
-      "Aerospace Engineering"
-    ],
-    "addressLine1": "The Old Schools",
-    "addressLine2": "Trinity Ln",
-    "city": " Cambridge",
-    "postcode": "CB2 1TN",
-    "colleges": [
-      "Economics College",
-      "Criminology College",
-      "Medical College",
-      "Aerospace Engineering College"
-    ]
-  },
+
   {
     "name": "University of Cambridge",
     "courses": [
@@ -120,25 +72,7 @@
       "Aerospace Engineering College"
     ]
   },
-  {
-    "name": "University of Manchester",
-    "courses": [
-      "Economics",
-      "Criminology",
-      "Adult Nursing",
-      "Aerospace Engineering"
-    ],
-    "addressLine1": "Oxford Rd",
-    "addressLine2": "Manchester",
-    "city": "Manchester",
-    "postcode": "M13 9PL",
-    "colleges": [
-      "Economics College",
-      "Criminology College",
-      "Adult Nursing College",
-      "Aerospace Engineering College"
-    ]
-  },
+
   {
     "name": "University of Exeter",
     "courses": ["Business", "Humanities", "Medicine", "Science"],
@@ -153,15 +87,7 @@
       "Science College"
     ]
   },
-  {
-    "name": "University of Exeter",
-    "courses": ["Business", "Humanities", "Medicine", "Science"],
-    "addressLine1": "Stocker Rd",
-    "addressLine2": "Exeter",
-    "city": "Exeter",
-    "postcode": "EX4 4PY",
-    "colleges": ["Business", "Humanities", "Medicine", "Science"]
-  },
+
   {
     "name": "University of Bristol",
     "courses": ["Math", "Arts", "Medical", "Health Science"],
@@ -171,24 +97,7 @@
     "postcode": "BS8 1QU",
     "colleges": ["Math", "Arts", "Medical", "Health Science"]
   },
-  {
-    "name": "University of Bristol",
-    "courses": ["Math", "Arts", "Medical", "Health Science"],
-    "addressLine1": "Beacon House",
-    "addressLine2": "Queens Road",
-    "city": "Bristol",
-    "postcode": "BS8 1QU",
-    "colleges": ["Math", "Arts", "Medical", "Health Science"]
-  },
-  {
-    "name": "University of Leeds",
-    "courses": ["English", "Digital Media", "Fine Art", "Fashion"],
-    "addressLine1": "Wood house Lane",
-    "addressLine2": " Leeds",
-    "city": "Leeds",
-    "postcode": "LS2 9JT",
-    "colleges": ["English", "Digital Media", "Fine Art", "Fashion"]
-  },
+
   {
     "name": "University of Leeds",
     "courses": ["English", "Digital Media", "Fine Art", "Fashion"],
@@ -198,6 +107,7 @@
     "postcode": "LS2 9JT",
     "colleges": ["English", "Digital Media", "Fine Art", "Fashion"]
   },
+
   {
     "name": "Aston University",
     "courses": ["Medical", "Engineering", "Technology", "Digital Engineering"],
@@ -207,24 +117,7 @@
     "postcode": "B4 7ET ",
     "colleges": ["Medical", "Engineering", "Technology", "Digital Engineering"]
   },
-  {
-    "name": "Aston University",
-    "courses": ["Medical", "Engineering", "Technology", "Digital Engineering"],
-    "addressLine1": "Birmingham",
-    "addressLine2": "West Midlands",
-    "city": "Birmingham",
-    "postcode": "B4 7ET ",
-    "colleges": ["Medical", "Engineering", "Technology", "Digital Engineering"]
-  },
-  {
-    "name": "Nottingham Trent University",
-    "courses": ["Accounting", "Business", "Law", "Science"],
-    "addressLine1": "50 Shakespeare Street",
-    "addressLine2": "Nottingham Trent",
-    "city": "Nottingham",
-    "postcode": "NG1 4FQ",
-    "colleges": ["Accounting", "Business", "Law", "Science"]
-  },
+
   {
     "name": "Nottingham Trent University",
     "courses": ["Accounting", "Business", "Law", "Science"],

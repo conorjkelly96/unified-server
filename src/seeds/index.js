@@ -11,15 +11,15 @@ const { Job } = require("../models");
 const { ForumPost } = require("../models");
 const { ForumReply } = require("../models");
 
-const universities = require("./universities.json");
-const students = require("./students.json");
-const comments = require("./Comments.json");
-const Staffs = require("./Staff.json");
-const items = require("./Items.json");
-const transactions = require("./Transaction.json");
-const Jobs = require("./Jobs.json");
-const forumPosts = require("./ForumReply.json");
-const forumReplies = require("./ForumReply.json");
+const universities = require("./data/universities.json");
+const students = require("./data/students.json");
+const comments = require("./data/comments.json");
+const staffs = require("./data/staffs.json");
+const items = require("./data/items.json");
+const transactions = require("./data/transactions.json");
+const Jobs = require("./data/jobs.json");
+const forumPosts = require("./data/forumPosts.json");
+const forumReplies = require("./data/forumReplies.json");
 
 const seed = async () => {
   try {
@@ -41,7 +41,7 @@ const seed = async () => {
     console.log("students seeded successfully");
 
     await Staff.deleteMany({});
-    await Staff.insertMany(Staffs);
+    await Staff.insertMany(staffs);
     console.log("Staff seeded successfully");
 
     await Item.deleteMany({});
