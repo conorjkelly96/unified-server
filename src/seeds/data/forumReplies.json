@@ -1,14 +1,10 @@
 [
   {
-    "forumReplyId": "",
-    "forumReplyBody": "",
-    "username": "",
-    "createdAt": ""
+    "text": "",
+    "user": ""
   },
   {
-    "forumReplyId": "",
-    "forumReplyBody": "",
-    "username": "",
-    "createdAt": ""
+    "text": "",
+    "user": ""
   }
 ]

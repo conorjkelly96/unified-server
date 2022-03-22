@@ -63,6 +63,7 @@ const seed = async () => {
       return {
         ...item,
         transactions: finalTransactions,
+        comments,
       };
     });
 
@@ -74,10 +75,6 @@ const seed = async () => {
 
     await ForumPost.insertMany(forumPosts);
     console.log("[INFO]: ForumPosts seeded successfully");
-
-    // await Comment.deleteMany({});
-    // await Comment.insertMany(comments);
-    // console.log("[INFO]: Comments seeded successfully");
 
     // await ForumReply.deleteMany({});
     // await ForumReply.insertMany(forumReplies);
