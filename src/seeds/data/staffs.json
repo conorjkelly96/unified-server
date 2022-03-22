@@ -2,7 +2,7 @@
   {
     "firstName": "James",
     "lastName": "Bond",
-    "username": "jamesbond@gmail.com",
+    "username": "jamesbond",
     "email": "jamesbond@gmail.com",
     "password": "Password123!",
     "university": "6239e603b2dabbc3eb27e2fb",
@@ -11,7 +11,7 @@
   {
     "firstName": "Sal",
     "lastName": "James",
-    "username": "saljames@gmail.com",
+    "username": "saljames",
     "email": "saljames@gmail.com",
     "password": "Password123!",
     "university": "6239e603b2dabbc3eb27e2fc",

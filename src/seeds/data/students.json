@@ -1,6 +1,6 @@
 [
   {
-    "username": "joebloggs@gmail.com",
+    "username": "joebloggs",
     "firstName": "Joe",
     "lastName": "Bloggs",
     "email": "joebloggs@gmail.com",
@@ -12,7 +12,7 @@
     "sellerRating": "5"
   },
   {
-    "username": "saljames@gmail.com",
+    "username": "saljames",
     "firstName": "Sal",
     "lastName": "James",
     "email": "saljames@gmail.com",
