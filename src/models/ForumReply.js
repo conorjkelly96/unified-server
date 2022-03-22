@@ -13,7 +13,8 @@ const forumReplySchema = {
     maxLength: 280,
   },
   user: {
-    type: String,
+    type: Schema.Types.ObjectId,
+    ref: "Student",
     required: true,
   },
   createdAt: {
