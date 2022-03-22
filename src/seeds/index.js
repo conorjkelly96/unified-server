@@ -5,11 +5,13 @@ const { University } = require("../models");
 const { Comment } = require("../models");
 const { Student } = require("../models");
 const { Staff } = require("../models");
+const { Item } = require("../models");
 
 const universities = require("./universities.json");
 const students = require("./students.json");
 const comments = require("./Comments.json");
 const Staffs = require("./Staff.json");
+const items = require("./Items.json");
 
 const seed = async () => {
   try {
@@ -33,6 +35,10 @@ const seed = async () => {
     await Staff.deleteMany({});
     await Staff.insertMany(Staffs);
     console.log("Staff seeded successfully");
+
+    await Item.deleteMany({});
+    await Item.insertMany(items);
+    console.log("Items seeded successfully");
   } catch (error) {
     console.log(`Failed to seed database | ${error.message}`);
   }
