@@ -51,6 +51,7 @@ const itemSchema = {
     ref: "Student",
     required: true,
   },
+
   comments: [commentSchema],
   images: [
     {
