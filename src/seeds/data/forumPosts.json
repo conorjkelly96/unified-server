@@ -1,14 +1,10 @@
 [
   {
-    "postText": "",
-    "postedBy": "",
-    "createdAt": "",
-    "replies": ""
+    "postText": "forum post 1",
+    "postedBy": "623a0f8885f71fa00794ad3c"
   },
   {
-    "postText": "",
-    "postedBy": "",
-    "createdAt": "",
-    "replies": ""
+    "postText": "forum post 2",
+    "postedBy": "623a0f8885f71fa00794ad3b"
   }
 ]
