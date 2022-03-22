@@ -35,7 +35,7 @@ const typeDefs = gql`
   type Comment {
     commentId: ID!
     commentBody: String!
-    username: String!
+    username: Student!
   }
 
   type Transaction {
