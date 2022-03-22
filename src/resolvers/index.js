@@ -31,6 +31,7 @@ const removeCommentFromItem = require("./item/removeCommentFromItem");
 const addCommentToItem = require("./item/addCommentToItem");
 const getSingleItemData = require("./item/getSingleItemData");
 const updateItem = require("./item/updateItem");
+const getItemsByCategory = require("./item/getItemsByCategory");
 
 // FORUM Queries and Mutations
 const createForumPost = require("./forumPost/createForumPost");
@@ -44,7 +45,6 @@ const resolvers = {
   Query: {
     colleges,
     universities,
-
     jobs,
     job,
     // staffJobs,
@@ -52,7 +52,7 @@ const resolvers = {
     viewMyItems,
     getSingleItemData,
     getStaffJobs,
-
+    getItemsByCategory,
     forumPosts,
     getForumPost,
   },

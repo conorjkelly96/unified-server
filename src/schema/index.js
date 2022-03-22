@@ -195,6 +195,10 @@ const typeDefs = gql`
     itemId: String!
   }
 
+  input GetItemByCategory {
+    category: String!
+  }
+
   # QUERIES
   type Query {
     dashboard: String!
@@ -205,6 +209,7 @@ const typeDefs = gql`
     staffJobs: [Job]
     viewAllItems: [Item]
     viewMyItems: [Item]
+    getItemsByCategory(input: String!): [Item]
     getSingleItemData(id: ID!): Item
     forumPosts: [ForumPost]
     getForumPost(postId: ID!): ForumPost
