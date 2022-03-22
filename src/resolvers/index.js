@@ -41,6 +41,7 @@ const forumReply = require("./forumPost/forumReply");
 const getForumPost = require("./forumPost/getForumPost");
 const updateForumPost = require("./forumPost/updateForumPost");
 const deleteForumPost = require("./forumPost/deleteForumPost");
+const deleteForumReply = require("./forumPost/deleteForumReply");
 
 const resolvers = {
   Query: {
@@ -71,6 +72,7 @@ const resolvers = {
     forumReply,
     updateForumPost,
     deleteForumPost,
+    deleteForumReply,
 
     createJob,
     saveJob,
