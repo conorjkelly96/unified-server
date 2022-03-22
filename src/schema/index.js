@@ -28,6 +28,7 @@ const typeDefs = gql`
     friends: [Student]
     savedJobs: [Job]
     profileImageUrl: String
+    type: String
   }
 
   type Comment {
@@ -212,7 +213,7 @@ const typeDefs = gql`
     updateForumPost(id: ID!, input: ForumPostInput!): ForumPost
     updateForumReply(id: ID!, input: ForumPostInput!): ForumPost
     deleteForumPost(id: ID!): ForumPost
-    deleteForumReply(id: ID!): ForumPost
+    deleteForumReply(postId: ID!, replyId: ID!): ForumPost
 
     createItem(input: CreateItemInput!): Item!
   }
