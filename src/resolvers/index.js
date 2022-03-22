@@ -4,8 +4,8 @@ const jobs = require("./job/jobs");
 const job = require("./job/job");
 const updateJob = require("./job/updateJob");
 const deleteJob = require("./job/deleteJob");
-const saveJob = require("./saveJob");
-const removeSavedJobs = require("./removeSavedJobs");
+const saveJob = require("./job/saveJob");
+const removeSavedJobs = require("./job/removeSavedJobs");
 
 const getStaffJobs = require("./job/getStaffJobs");
 
@@ -27,6 +27,7 @@ const createForumPost = require("./forumPost/createForumPost");
 const forumPosts = require("./forumPost/getAllForumPosts");
 const forumReply = require("./forumPost/forumReply");
 const getForumPost = require("./forumPost/getForumPost");
+const updateForumPost = require("./forumPost/updateForumPost");
 const deleteForumPost = require("./forumPost/deleteForumPost");
 const deleteForumReply = require("./forumPost/deleteForumReply");
 
@@ -53,6 +54,7 @@ const resolvers = {
 
     createForumPost,
     forumReply,
+    updateForumPost,
     deleteForumPost,
     deleteForumReply,
 
