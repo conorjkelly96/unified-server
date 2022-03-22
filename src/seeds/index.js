@@ -73,12 +73,15 @@ const seed = async () => {
     await Job.insertMany(Jobs);
     console.log("[INFO]: Jobs seeded successfully");
 
-    await ForumPost.insertMany(forumPosts);
-    console.log("[INFO]: ForumPosts seeded successfully");
+    const forumPostsToSeed = forumPosts.map((forumPost) => {
+      return {
+        ...forumPost,
+        replies: forumReplies,
+      };
+    });
 
-    // await ForumReply.deleteMany({});
-    // await ForumReply.insertMany(forumReplies);
-    // console.log("INFO]: ForumReplies seeded successfully");
+    await ForumPost.insertMany(forumPostsToSeed);
+    console.log("[INFO]: ForumPosts seeded successfully");
   } catch (error) {
     console.log(`[ERROR]: Database connection failed | ${error.message}`);
   }
