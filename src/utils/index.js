@@ -38,6 +38,12 @@ const formatDate = (date) => {
   return format(dateObject, "MMMM do, yyyy");
 };
 
+const formatDateTime = (date) => {
+  const dateObject = new Date(date);
+  // March 21st, 2022
+  return format(dateObject, "HH:mm MMMM do, yyyy");
+};
+
 const validatePrice = (price) => {
   return Math.round(price * 100) / 100;
 };
@@ -46,5 +52,6 @@ module.exports = {
   signToken,
   authMiddleware,
   formatDate,
+  formatDateTime,
   validatePrice,
 };

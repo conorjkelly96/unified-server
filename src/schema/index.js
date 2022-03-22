@@ -27,6 +27,7 @@ const typeDefs = gql`
     sellerRating: Float
     friends: [Student]
     savedJobs: [Job]
+    profileImageUrl: String
     type: String
   }
 
@@ -101,7 +102,7 @@ const typeDefs = gql`
   type Reply {
     id: ID!
     text: String!
-    user: String!
+    user: Student!
     createdAt: String
   }
 
@@ -111,6 +112,7 @@ const typeDefs = gql`
     postedBy: Student!
     createdAt: String!
     replies: [Reply]
+    replyCount: Int
   }
 
   # INPUTS
@@ -210,6 +212,7 @@ const typeDefs = gql`
     removeSavedJobs(jobId: ID!): Student
     forumReply(input: ForumReplyInput, postId: ID!): ForumPost
     updateForumPost(id: ID!, input: ForumPostInput!): ForumPost
+    updateForumReply(id: ID!, input: ForumPostInput!): ForumPost
     deleteForumPost(id: ID!): ForumPost
     deleteForumReply(postId: ID!, replyId: ID!): ForumPost
 

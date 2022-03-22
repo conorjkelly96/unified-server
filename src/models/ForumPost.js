@@ -1,5 +1,5 @@
 const { model, Schema } = require("mongoose");
-const { formatDate } = require("../utils");
+const { formatDateTime } = require("../utils");
 
 // import reaction schema
 const replies = require("./ForumReply");
@@ -20,7 +20,7 @@ const forumPostSchema = {
   createdAt: {
     type: Date,
     default: Date.now,
-    get: formatDate,
+    get: formatDateTime,
   },
 
   //   replies is subdocument schema
@@ -35,7 +35,7 @@ const schema = new Schema(forumPostSchema, {
 
 // virtual to total the reply count
 schema.virtual("replyCount").get(function () {
-  return this.replies.length;
+  return this?.replies?.length || 0;
 });
 
 const ForumPost = model("forumPost", schema);
