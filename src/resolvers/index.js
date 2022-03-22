@@ -4,6 +4,10 @@ const jobs = require("./job/jobs");
 const job = require("./job/job");
 const updateJob = require("./job/updateJob");
 const deleteJob = require("./job/deleteJob");
+const saveJob = require("./job/saveJob");
+const removeSavedJobs = require("./job/removeSavedJobs");
+
+const getStaffJobs = require("./job/getStaffJobs");
 
 // STUDENT and STAFF AUTH Queries and Mutations
 const signupStudent = require("./signupStudent");
@@ -20,24 +24,45 @@ const createItem = require("./createItem");
 
 // FORUM Queries and Mutations
 const createForumPost = require("./forumPost/createForumPost");
+const forumPosts = require("./forumPost/getAllForumPosts");
+const forumReply = require("./forumPost/forumReply");
+const getForumPost = require("./forumPost/getForumPost");
+const updateForumPost = require("./forumPost/updateForumPost");
+const deleteForumPost = require("./forumPost/deleteForumPost");
+const deleteForumReply = require("./forumPost/deleteForumReply");
 
 const resolvers = {
   Query: {
     colleges,
     universities,
+
     jobs,
     job,
+    getStaffJobs,
+
+    forumPosts,
+    getForumPost,
   },
+
   Mutation: {
-    createJob,
     signupStudent,
-    createItem,
-    updateJob,
-    deleteJob,
     signupStaff,
     loginStudent,
     loginStaff,
+
+    createItem,
+
     createForumPost,
+    forumReply,
+    updateForumPost,
+    deleteForumPost,
+    deleteForumReply,
+
+    createJob,
+    saveJob,
+    removeSavedJobs,
+    updateJob,
+    deleteJob,
   },
 };
 

@@ -23,7 +23,7 @@ const loginStaff = async (_, { input }) => {
 
     return {
       token: signToken(staff),
-      staff: {
+      user: {
         id: staff.id,
         firstName: staff.firstName,
         lastName: staff.lastName,
@@ -31,6 +31,7 @@ const loginStaff = async (_, { input }) => {
         username: staff.username,
         university: staff.university,
         college: staff.college,
+        type: "staff",
       },
     };
   } catch (error) {

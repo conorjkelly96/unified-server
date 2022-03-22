@@ -20,12 +20,13 @@ const typeDefs = gql`
     lastName: String!
     username: String!
     email: String!
-    interests: [String]
     university: University
     bio: String
-    course: String
+    interests: [String]
+    college: String
     sellerRating: Float
     friends: [Student]
+    savedJobs: [Job]
   }
 
   type Comment {
@@ -50,7 +51,7 @@ const typeDefs = gql`
     category: String!
     status: String!
     condition: String!
-    price: Int!
+    price: Float!
     quantity: Int!
     seller: Student!
     comments: [Comment]
@@ -71,6 +72,7 @@ const typeDefs = gql`
   type Job {
     id: ID!
     title: String!
+    company: String!
     description: String!
     url: String!
     createdAt: String!
@@ -80,24 +82,33 @@ const typeDefs = gql`
   }
 
   type SignupStudentSuccess {
-    student: Student!
+    success: Boolean!
+    student: Student
   }
 
   type StudentAuth {
     token: ID!
-    student: Student!
+    user: Student!
   }
 
   type StaffAuth {
     token: ID!
-    staff: Staff!
+    user: Staff!
+  }
+
+  type Reply {
+    id: ID!
+    text: String!
+    user: String!
+    createdAt: String
   }
 
   type ForumPost {
+    id: ID!
     postText: String!
     postedBy: Student!
     createdAt: String!
-    replies: [String]
+    replies: [Reply]
   }
 
   # INPUTS
@@ -111,9 +122,9 @@ const typeDefs = gql`
   }
 
   input UpdateJobInput {
-    jobTitle: String!
-    jobDescription: String!
-    jobPostUrl: String!
+    title: String!
+    description: String!
+    url: String!
     salary: String!
     closingDate: String
   }
@@ -134,10 +145,10 @@ const typeDefs = gql`
     username: String!
     email: String!
     password: String!
-    interests: [String]
-    university: String
+    university: String!
+    college: String!
     bio: String
-    course: String
+    interests: [String]
   }
 
   input CreateItemInput {
@@ -145,7 +156,7 @@ const typeDefs = gql`
     itemDescription: String!
     category: String!
     condition: String!
-    price: Int!
+    price: Float!
     quantity: Int
     images: [String]
   }
@@ -164,6 +175,10 @@ const typeDefs = gql`
     postText: String!
   }
 
+  input ForumReplyInput {
+    text: String!
+  }
+
   # QUERIES
   type Query {
     dashboard: String!
@@ -171,22 +186,32 @@ const typeDefs = gql`
     universities: [University]!
     jobs: [Job]
     job(jobId: ID!): Job!
+    forumPosts: [ForumPost]
+    getForumPost(postId: ID!): ForumPost
+    getStaffJobs: [Job]
   }
 
   # MUTATIONS
   type Mutation {
     signupStudent(input: SignupStudentInput!): SignupStudentSuccess!
-    createItem(input: CreateItemInput!): Item!
     loginStudent(input: LoginInput!): StudentAuth!
 
     createJob(newJobInput: CreateJobInput!): Job!
     updateJob(jobInput: UpdateJobInput!, jobId: ID!): Job!
     deleteJob(jobId: ID!): Job
+    saveJob(jobId: ID!): Student!
 
     signupStaff(input: SignupStaffInput!): SignupStaffSuccess!
     loginStaff(input: LoginInput!): StaffAuth!
 
     createForumPost(forumPost: ForumPostInput!): ForumPost
+    removeSavedJobs(jobId: ID!): Student
+    forumReply(input: ForumReplyInput, postId: ID!): ForumPost
+    updateForumPost(id: ID!, input: ForumPostInput!): ForumPost
+    deleteForumPost(id: ID!): ForumPost
+    deleteForumReply(id: ID!): ForumPost
+
+    createItem(input: CreateItemInput!): Item!
   }
 `;
 

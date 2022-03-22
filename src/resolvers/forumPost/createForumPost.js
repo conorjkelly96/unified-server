@@ -7,8 +7,10 @@ const createForumPost = async (_, { forumPost }, { user }) => {
     if (user) {
       const postedBy = user.id;
       const newForumPost = await ForumPost.create({ ...forumPost, postedBy });
-
-      return newForumPost;
+      const post = await ForumPost.findById(newForumPost._id).populate(
+        "postedBy"
+      );
+      return post;
     } else {
       throw new AuthenticationError(
         "You must be logged in to post to the forum."
