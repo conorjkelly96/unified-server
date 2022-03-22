@@ -7,7 +7,7 @@ const getForumPost = async (_, { postId }, { user }) => {
     if (user) {
       const forumPost = await ForumPost.findById(postId)
         .populate("postedBy")
-        .populate("replies");
+        .populate("replies.user");
 
       return forumPost;
     } else {
