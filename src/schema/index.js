@@ -207,7 +207,7 @@ const typeDefs = gql`
     jobs: [Job]
     job(jobId: ID!): Job!
     staffJobs: [Job]
-    viewAllItems: [Item]
+    viewAllItems(category: String): [Item]
     viewMyItems: [Item]
     getItemsByCategory(input: String!): [Item]
     getSingleItemData(id: ID!): Item
@@ -240,7 +240,6 @@ const typeDefs = gql`
     updateForumPost(id: ID!, input: ForumPostInput!): ForumPost
     deleteForumPost(id: ID!): ForumPost
     deleteForumReply(id: ID!): ForumPost
-    createItem(input: CreateItemInput!): Item!
   }
 `;
 
