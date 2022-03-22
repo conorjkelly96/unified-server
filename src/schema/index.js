@@ -225,7 +225,6 @@ const typeDefs = gql`
     signupStudent(input: SignupStudentInput!): SignupStudentSuccess!
     loginStudent(input: LoginInput!): StudentAuth!
     deleteItem(itemId: String!): Item
-    createItem(input: CreateItemInput!): Item!
     updateItem(itemId: String!, input: UpdateItemInput!): Item
     removeFromMyItems(itemId: String!): Item
     saveToMyItems(itemId: String!): Item
