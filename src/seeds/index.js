@@ -28,43 +28,45 @@ const seed = async () => {
       useUnifiedTopology: true,
     });
 
+    console.log("[INFO]: Database connection successful");
+
     await University.deleteMany({});
     await University.insertMany(universities);
-    console.log("Universities seeded successfully");
+    console.log("[INFO]: Universities seeded successfully");
 
     await Comment.deleteMany({});
     await Comment.insertMany(comments);
-    console.log("Comment seeded successfully");
+    console.log("INFO]: Comments seeded successfully");
 
     await Student.deleteMany({});
     await Student.insertMany(students);
-    console.log("students seeded successfully");
+    console.log("INFO]: Students seeded successfully");
 
     await Staff.deleteMany({});
     await Staff.insertMany(staffs);
-    console.log("Staff seeded successfully");
+    console.log("INFO]: Staffs seeded successfully");
 
     await Item.deleteMany({});
     await Item.insertMany(items);
-    console.log("Items seeded successfully");
+    console.log("INFO]: Items seeded successfully");
 
     await Transaction.deleteMany({});
     await Transaction.insertMany(transactions);
-    console.log("Transaction seeded successfully");
+    console.log("INFO]: Transactions seeded successfully");
 
     await Job.deleteMany({});
     await Job.insertMany(Jobs);
-    console.log("Jobs seeded successfully");
+    console.log("INFO]: Jobs seeded successfully");
 
     await ForumPost.deleteMany({});
     await ForumPost.insertMany(forumPosts);
-    console.log("ForumPosts seeded successfully");
+    console.log("INFO]: ForumPosts seeded successfully");
 
     await ForumReply.deleteMany({});
     await ForumReply.insertMany(forumReplies);
-    console.log("ForumReply seeded successfully");
+    console.log("INFO]: ForumReplies seeded successfully");
   } catch (error) {
-    console.log(`Failed to seed database | ${error.message}`);
+    console.log(`[ERROR]: Database connection failed | ${error.message}`);
   }
 
   process.exit(0);
