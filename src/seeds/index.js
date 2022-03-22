@@ -2,8 +2,14 @@ require("dotenv").config();
 const mongoose = require("mongoose");
 
 const { University } = require("../models");
+const { Comment } = require("../models");
+const { Student } = require("../models");
+const { Staff } = require("../models");
 
 const universities = require("./universities.json");
+const students = require("./students.json");
+const comments = require("./Comments.json");
+const Staffs = require("./Staff.json");
 
 const seed = async () => {
   try {
@@ -13,9 +19,20 @@ const seed = async () => {
     });
 
     await University.deleteMany({});
-
     await University.insertMany(universities);
     console.log("Universities seeded successfully");
+
+    await Comment.deleteMany({});
+    await Comment.insertMany(comments);
+    console.log("Comment seeded successfully");
+
+    await Student.deleteMany({});
+    await student.insertMany(students);
+    console.log("students seeded successfully");
+
+    await Staff.deleteMany({});
+    await Staff.insertMany(Staffs);
+    console.log("Staff seeded successfully");
   } catch (error) {
     console.log(`Failed to seed database | ${error.message}`);
   }
