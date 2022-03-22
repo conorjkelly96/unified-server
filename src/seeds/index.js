@@ -46,14 +46,6 @@ const seed = async () => {
     await Item.insertMany(items);
     console.log("INFO]: Items seeded successfully");
 
-    await Comment.deleteMany({});
-    await Comment.insertMany(comments);
-    console.log("INFO]: Comments seeded successfully");
-
-    await Transaction.deleteMany({});
-    await Transaction.insertMany(transactions);
-    console.log("INFO]: Transactions seeded successfully");
-
     await Job.deleteMany({});
     await Job.insertMany(Jobs);
     console.log("INFO]: Jobs seeded successfully");
@@ -61,6 +53,14 @@ const seed = async () => {
     await ForumPost.deleteMany({});
     await ForumPost.insertMany(forumPosts);
     console.log("INFO]: ForumPosts seeded successfully");
+
+    await Transaction.deleteMany({});
+    await Transaction.insertMany(transactions);
+    console.log("INFO]: Transactions seeded successfully");
+
+    await Comment.deleteMany({});
+    await Comment.insertMany(comments);
+    console.log("INFO]: Comments seeded successfully");
 
     await ForumReply.deleteMany({});
     await ForumReply.insertMany(forumReplies);
