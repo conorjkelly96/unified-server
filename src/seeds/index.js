@@ -8,6 +8,7 @@ const { Staff } = require("../models");
 const { Item } = require("../models");
 const { Transaction } = require("../models");
 const { Job } = require("../models");
+const { ForumPost } = require("../models");
 
 const universities = require("./universities.json");
 const students = require("./students.json");
@@ -16,6 +17,7 @@ const Staffs = require("./Staff.json");
 const items = require("./Items.json");
 const transactions = require("./Transaction.json");
 const Jobs = require("./Jobs.json");
+const forumPosts = require("./ForumReply.json");
 
 const seed = async () => {
   try {
@@ -51,6 +53,10 @@ const seed = async () => {
     await Job.deleteMany({});
     await Job.insertMany(Jobs);
     console.log("Jobs seeded successfully");
+
+    await ForumPost.deleteMany({});
+    await ForumPost.insertMany(forumPosts);
+    console.log("ForumReply seeded successfully");
   } catch (error) {
     console.log(`Failed to seed database | ${error.message}`);
   }
