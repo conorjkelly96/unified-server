@@ -13,7 +13,6 @@
       "Accounting College"
     ]
   },
-
   {
     "name": "University of Southampton",
     "courses": ["Math", "Arts", "Marketing", "Acoustics with Music"],
@@ -23,7 +22,6 @@
     "postcode": "SO17 1B",
     "colleges": ["Humanities", "Business Department", "Music College"]
   },
-
   {
     "name": "University of Oxford",
     "courses": ["Math", "Arts", "Politics", "Biology"],
@@ -33,7 +31,6 @@
     "postcode": "OX1 2JD",
     "colleges": ["Humanities", "Business Department", "Science College"]
   },
-
   {
     "name": "University of Cambridge",
     "courses": [
@@ -72,7 +69,6 @@
       "Aerospace Engineering College"
     ]
   },
-
   {
     "name": "University of Exeter",
     "courses": ["Business", "Humanities", "Medicine", "Science"],
@@ -87,7 +83,6 @@
       "Science College"
     ]
   },
-
   {
     "name": "University of Bristol",
     "courses": ["Math", "Arts", "Medical", "Health Science"],
@@ -97,7 +92,6 @@
     "postcode": "BS8 1QU",
     "colleges": ["Math", "Arts", "Medical", "Health Science"]
   },
-
   {
     "name": "University of Leeds",
     "courses": ["English", "Digital Media", "Fine Art", "Fashion"],
@@ -107,7 +101,6 @@
     "postcode": "LS2 9JT",
     "colleges": ["English", "Digital Media", "Fine Art", "Fashion"]
   },
-
   {
     "name": "Aston University",
     "courses": ["Medical", "Engineering", "Technology", "Digital Engineering"],
@@ -117,7 +110,6 @@
     "postcode": "B4 7ET ",
     "colleges": ["Medical", "Engineering", "Technology", "Digital Engineering"]
   },
-
   {
     "name": "Nottingham Trent University",
     "courses": ["Accounting", "Business", "Law", "Science"],
@@ -126,5 +118,111 @@
     "city": "Nottingham",
     "postcode": "NG1 4FQ",
     "colleges": ["Accounting", "Business", "Law", "Science"]
+  },
+  {
+    "name": "University of Wolverhampton",
+    "courses": ["Accounting", "Law", "Science"],
+    "addressLine1": "Wolverhampton WV1 1LY",
+    "addressLine2": "Wulfruna St",
+    "city": "Wolverhampton",
+    "postcode": "WV1 1LY",
+    "colleges": ["Accounting", "Law", "Science"]
+  },
+  {
+    "name": "University of Brighton",
+    "courses": ["Accounting", "Marketing", "Science"],
+    "addressLine1": "Mithras House",
+    "addressLine2": "Lewes Road",
+    "city": "Brighton",
+    "postcode": "BN2 4AT",
+    "colleges": ["Accounting", "Marketing", "Science"]
+  },
+  {
+    "name": "Cardiff University",
+    "courses": [
+      "Business",
+      "Social Sciences",
+      "Politics and International Relations"
+    ],
+    "addressLine1": "Cardiff CF10 3AT",
+    "addressLine2": "Wales",
+    "city": "Wales",
+    "postcode": "CF10 3AT",
+    "colleges": [
+      "Business",
+      "Social Sciences",
+      "Politics and International Relations"
+    ]
+  },
+  {
+    "name": "University of Cambridge",
+    "courses": ["Computer Science", "Architecture", "Engineering"],
+    "addressLine1": "he Old Schools, Trinity Ln",
+    "addressLine2": "Cambridge CB2 1TN",
+    "city": "Cambridge",
+    "postcode": "CB2 1TN",
+    "colleges": ["Computer Science", "Architecture", "Engineering"]
+  },
+  {
+    "name": "University of Greenwich",
+    "courses": ["Computer Science", "Architecture", "Social Science"],
+    "addressLine1": "Old Royal Naval College",
+    "addressLine2": "Park Row",
+    "city": "London",
+    "postcode": "SE10 9LS",
+    "colleges": ["Computer Science", "Architecture", "Social Science"]
+  },
+  {
+    "name": "University of Westminster",
+    "courses": ["Computer Science", "English", "Finance"],
+    "addressLine1": "Old Royal Naval College",
+    "addressLine2": "Park Row",
+    "city": "London",
+    "postcode": "SE10 9LS",
+    "colleges": ["Computer Science", "English", "Finance"]
+  },
+  {
+    "name": "University of London",
+    "courses": [
+      "Accounting and Finance",
+      "Biomedical and Forensic Sciences",
+      "Art, Design and Fashion"
+    ],
+    "addressLine1": "Senate House",
+    "addressLine2": "Malet St",
+    "city": "London",
+    "postcode": "WC1E 7HU",
+    "colleges": [
+      "Accounting and Finance",
+      "Biomedical and Forensic Sciences",
+      "Art, Design and Fashion"
+    ]
+  },
+  {
+    "name": "University of Warwick",
+    "courses": ["Computer Science", "Architecture", "Social Science"],
+    "addressLine1": "Coventry CV4 7AL",
+    "addressLine2": "Coventry",
+    "city": "Coventry",
+    "postcode": "CV4 7AL",
+    "colleges": ["Computer Science", "Architecture", "Social Science"]
+  },
+  {
+    "name": "Aston University",
+    "courses": ["English", "Architecture", "Social Science"],
+    "addressLine1": "Aston St",
+    "addressLine2": "Birmingham B4 7ET",
+    "city": "Birmingham",
+    "postcode": "B4 7ET",
+    "colleges": ["English", "Architecture", "Social Science"]
+  },
+  {
+    "name": "The University of Manchester",
+    "courses": ["Biological Sciences", "Clinical Pharmacy", "Criminology"],
+    "addressLine1": " Oxford Rd,",
+    "addressLine2": "Manchester M13 9PL",
+    "city": "Manchester",
+    "postcode": "M13 9PL",
+    "colleges": ["Biological Sciences", "Clinical Pharmacy", "Criminology"]
   }
 ]

@@ -36,31 +36,31 @@ const seed = async () => {
 
     await Student.deleteMany({});
     await Student.insertMany(students);
-    console.log("INFO]: Students seeded successfully");
+    console.log("[INFO]: Students seeded successfully");
 
     await Staff.deleteMany({});
     await Staff.insertMany(staffs);
-    console.log("INFO]: Staffs seeded successfully");
+    console.log("[INFO]: Staffs seeded successfully");
 
     await Item.deleteMany({});
     await Item.insertMany(items);
-    console.log("INFO]: Items seeded successfully");
+    console.log("[INFO]: Items seeded successfully");
 
     await Job.deleteMany({});
     await Job.insertMany(Jobs);
-    console.log("INFO]: Jobs seeded successfully");
+    console.log("[INFO]: Jobs seeded successfully");
 
     await ForumPost.deleteMany({});
     await ForumPost.insertMany(forumPosts);
-    console.log("INFO]: ForumPosts seeded successfully");
+    console.log("[INFO]: ForumPosts seeded successfully");
 
     // await Transaction.deleteMany({});
     // await Transaction.insertMany(transactions);
-    // console.log("INFO]: Transactions seeded successfully");
+    // console.log("[INFO]: Transactions seeded successfully");
 
     // await Comment.deleteMany({});
     // await Comment.insertMany(comments);
-    // console.log("INFO]: Comments seeded successfully");
+    // console.log("[INFO]: Comments seeded successfully");
 
     // await ForumReply.deleteMany({});
     // await ForumReply.insertMany(forumReplies);
