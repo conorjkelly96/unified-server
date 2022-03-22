@@ -4,6 +4,7 @@ const { ForumPost } = require("../../models");
 
 const getForumPost = async (_, { postId }, { user }) => {
   try {
+    console.log(user);
     if (user) {
       const forumPost = await ForumPost.findById(postId)
         .populate("postedBy")

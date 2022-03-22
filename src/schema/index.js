@@ -68,6 +68,7 @@ const typeDefs = gql`
     email: String!
     university: University!
     college: String!
+    type: String
   }
 
   type Job {
