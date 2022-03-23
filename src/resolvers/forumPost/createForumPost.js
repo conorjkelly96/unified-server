@@ -1,4 +1,5 @@
 const { ApolloError, AuthenticationError } = require("apollo-server-errors");
+const { Tag } = require("../../models");
 const ForumPost = require("../../models/ForumPost");
 
 // TODO: restrict to Student users
@@ -7,6 +8,22 @@ const createForumPost = async (_, { forumPost }, { user }) => {
     if (user) {
       const postedBy = user.id;
       const newForumPost = await ForumPost.create({ ...forumPost, postedBy });
+      if (forumPost.tags) {
+        const tags = forumPost.tags;
+
+        const normalizedTags = tags.map((tag) => {
+          return { name: tag.toLowerCase().trim() };
+        });
+
+        const tagsFromDB = await Tag.find({});
+        const filteredTags = normalizedTags.filter((normalizedTag) => {
+          return !tagsFromDB.find((tagFromDB) => {
+            return tagFromDB.name === normalizedTag.name;
+          });
+        });
+
+        await Tag.insertMany(filteredTags);
+      }
       const post = await ForumPost.findById(newForumPost._id).populate(
         "postedBy"
       );
