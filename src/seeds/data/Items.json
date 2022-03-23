@@ -15,6 +15,123 @@
     "status": "Sold",
     "condition": "Used",
     "price": "44.34",
-    "seller": "6239ea0eb158e306e30fd864"
+    "seller": "623b51449e6388a33cb96ece"
+  },
+  {
+    "itemName": "ASUS Laptop",
+    "itemDescription": "ASUS Laptop with 3 Year Warranty,Operating System : Windows 10 Pro,Bluetooth; Display size: 11.6 inches",
+    "category": "Electronics",
+    "status": "For Sale",
+    "condition": "Fair",
+    "price": "144.34",
+    "seller": "623b51449e6388a33cb96ecf"
+  },
+  {
+    "itemName": "NIKE Unisex Football Shoes",
+    "itemDescription": "Outer Material is Synthetic,Inner Material is Manmade,Sole Rubber,Closure is Lace-Up,Shoe Width is Medium",
+    "category": "Sporting Goods",
+    "status": "For Sale",
+    "condition": "Like New",
+    "price": "50",
+    "seller": "623b51449e6388a33cb96ed0"
+  },
+  {
+    "itemName": "Smart Watch",
+    "itemDescription": "Sekonda Mens 45mm Smart Watch with Heart Rate and Sleep Monitor, Daily Activity, Sports, Music, Weather & Message Functions, with Rubber Strap.",
+    "category": "Clothing & Accessories",
+    "status": "For Sale",
+    "condition": "Like New",
+    "price": "199",
+    "seller": "623b51449e6388a33cb96ed1"
+  },
+  {
+    "itemName": "Cycling Bike",
+    "itemDescription": "YOSUDA Indoor Cycling Bike Stationary - Cycle Bike with Ipad Mount & Comfortable Seat Cushion.",
+    "category": "Sporting Goods",
+    "status": "For Sale",
+    "condition": "Like New",
+    "price": "499",
+    "seller": "623b51449e6388a33cb96ed2"
+  },
+  {
+    "itemName": "Gaming Keyboard",
+    "itemDescription": "Bactlit Gaming Keyboard,Rii RK100 Plus 7 Color Rainbow LED Backlit Mechanical Feeling USB Wired Gaming Keyboard",
+    "category": "Electronics",
+    "status": "Sold",
+    "condition": "New",
+    "price": "42",
+    "seller": "623b51449e6388a33cb96ed3"
+  },
+  {
+    "itemName": "Sports Backpack",
+    "itemDescription": "Padded and adjustable shoulder straps,Large main compartment,Synthetic,Fastening: Zipper,Durable fabric",
+    "category": "Sporting Goods",
+    "status": "For Sale",
+    "condition": "New",
+    "price": "71",
+    "seller": "623b51449e6388a33cb96ed4"
+  },
+  {
+    "itemName": "adidas Women's 3 Stripes Tee T-Shirt",
+    "itemDescription": "Loose fit,3 stripes along the,100% Cotton,Machine Wash,Fastening: Pull On,Collar Style: Crew neck,Regular",
+    "category": "Clothing & Accessories",
+    "status": "Sold",
+    "condition": "New",
+    "price": "21",
+    "seller": "623b51449e6388a33cb96ed5"
+  },
+  {
+    "itemName": "Apple iPhone 7",
+    "itemDescription": "This pre-owned product is not Apple certified, but has been professionally inspected, tested and cleaned",
+    "category": "Electronics",
+    "status": "For Sale",
+    "condition": "Fair",
+    "price": "121",
+    "seller": "623b51449e6388a33cb96ed6"
+  },
+  {
+    "itemName": " Desk Chair",
+    "itemDescription": "Swivel Gaming Chair / Seat and Armrest Material is PU Leather / Adjustable Height between 108/118 cm/ Tilt and Upright Lock Function",
+    "category": "Other",
+    "status": "For Sale",
+    "condition": "Fair",
+    "price": "99",
+    "seller": "623b51449e6388a33cb96ed7"
+  },
+  {
+    "itemName": "Wireless Headphones",
+    "itemDescription": "Waterproof Wireless Earphones Touch Control, Bluetooth ",
+    "category": "Clothing & Accessories",
+    "status": "For Sale",
+    "condition": "New",
+    "price": "20",
+    "seller": "623b51449e6388a33cb96ee1"
+  },
+  {
+    "itemName": "Earrings",
+    "itemDescription": "Swarovski Swan Pierced Stud Earrings for Women, Brilliant White Crystals with Rose-Gold Tone Plating, from the Swarovski Swan Collection",
+    "category": "Clothing & Accessories",
+    "status": "For Sale",
+    "condition": "New",
+    "price": "51",
+    "seller": "623b51449e6388a33cb96ee1"
+  },
+  {
+    "itemName": "Xbox Series S",
+    "itemDescription": "Xbox Series S - Fortnite & Rocket League Bundle (Xbox One)",
+    "category": "Sporting Goods",
+    "status": "For Sale",
+    "condition": "New",
+    "price": "247.83 ",
+    "seller": "623b51449e6388a33cb96ee0"
+  },
+  {
+    "itemName": "Gaming Headset",
+    "itemDescription": "Turtle Beach Recon 70X Gaming Headset for Xbox Series X|S, Xbox One, PS5, PS4, Nintendo Switch & PC",
+    "category": "Sporting Goods",
+    "status": "For Sale",
+    "condition": "Fair",
+    "price": "25",
+    "seller": "623b51449e6388a33cb96ede"
   }
 ]
