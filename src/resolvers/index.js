@@ -5,22 +5,34 @@ const job = require("./job/job");
 const updateJob = require("./job/updateJob");
 const deleteJob = require("./job/deleteJob");
 const saveJob = require("./job/saveJob");
+// const staffJobs = require("./job/staffJobs");
 const removeSavedJobs = require("./job/removeSavedJobs");
 
 const getStaffJobs = require("./job/getStaffJobs");
 
 // STUDENT and STAFF AUTH Queries and Mutations
-const signupStudent = require("./signupStudent");
-const loginStudent = require("./loginStudent");
-const signupStaff = require("./signupStaff");
-const loginStaff = require("./loginStaff");
+const signupStudent = require("./student/signupStudent");
+const loginStudent = require("./student/loginStudent");
+const signupStaff = require("./staff/signupStaff");
+const loginStaff = require("./staff/loginStaff");
 
 // UNIVERSITY Queries and Mutations
-const colleges = require("./colleges");
-const universities = require("./universities");
+const colleges = require("./university/colleges");
+const universities = require("./university/universities");
 
 // ITEM Queries and Mutations
-const createItem = require("./createItem");
+const deleteItem = require("./item/deleteItem");
+const createItem = require("./item/createItem");
+const viewAllItems = require("./item/viewAllItems");
+const viewMyItems = require("./item/viewMyItems");
+const removeFromMyItems = require("./item/removeFromMyItems");
+const saveToMyItems = require("./item/saveToMyItems");
+const removeCommentFromItem = require("./item/removeCommentFromItem");
+const addCommentToItem = require("./item/addCommentToItem");
+const getSingleItemData = require("./item/getSingleItemData");
+const updateItem = require("./item/updateItem");
+const getItemsByCategory = require("./item/getItemsByCategory");
+const getCommentsOnMyItems = require("./comment/getCommentsOnMyItems");
 
 // FORUM Queries and Mutations
 const createForumPost = require("./forumPost/createForumPost");
@@ -32,19 +44,25 @@ const updateForumPost = require("./forumPost/updateForumPost");
 const updateForumReply = require("./forumPost/updateForumReply");
 const deleteForumPost = require("./forumPost/deleteForumPost");
 const deleteForumReply = require("./forumPost/deleteForumReply");
+const tags = require("./tags");
 
 const resolvers = {
   Query: {
     colleges,
     universities,
-
+    tags,
     jobs,
     job,
+    // staffJobs,
+    viewAllItems,
+    viewMyItems,
+    getSingleItemData,
     getStaffJobs,
     getStudentJobs,
-
+    getItemsByCategory,
     forumPosts,
     getForumPost,
+    getCommentsOnMyItems,
   },
 
   Mutation: {
@@ -64,6 +82,12 @@ const resolvers = {
 
     createJob,
     saveJob,
+    deleteItem,
+    updateItem,
+    removeFromMyItems,
+    saveToMyItems,
+    removeCommentFromItem,
+    addCommentToItem,
     removeSavedJobs,
     updateJob,
     deleteJob,

@@ -27,6 +27,7 @@ const typeDefs = gql`
     sellerRating: Float
     friends: [Student]
     savedJobs: [Job]
+    savedItem: [Item]
     profileImageUrl: String
     type: String
   }
@@ -34,7 +35,7 @@ const typeDefs = gql`
   type Comment {
     commentId: ID!
     commentBody: String!
-    username: String!
+    username: Student!
   }
 
   type Transaction {
@@ -69,6 +70,7 @@ const typeDefs = gql`
     email: String!
     university: University!
     college: String!
+    type: String
   }
 
   type Job {
@@ -108,6 +110,7 @@ const typeDefs = gql`
   type ForumPost {
     id: ID!
     postText: String!
+    tags: [String]
     postedBy: Student!
     createdAt: String!
     replies: [Reply]
@@ -137,6 +140,10 @@ const typeDefs = gql`
     staff: Staff
   }
 
+  type Tag {
+    name: String!
+  }
+
   input LoginInput {
     email: String!
     password: String!
@@ -164,6 +171,16 @@ const typeDefs = gql`
     images: [String]
   }
 
+  input UpdateItemInput {
+    itemName: String!
+    itemDescription: String!
+    category: String!
+    condition: String!
+    price: Float!
+    quantity: Int
+    images: [String]
+  }
+
   input SignupStaffInput {
     firstName: String!
     lastName: String!
@@ -176,10 +193,20 @@ const typeDefs = gql`
 
   input ForumPostInput {
     postText: String!
+    tags: [String]
   }
 
   input ForumReplyInput {
     text: String!
+  }
+
+  input ItemCommentInput {
+    commentBody: String!
+    itemId: String!
+  }
+
+  input GetItemByCategory {
+    category: String!
   }
 
   # QUERIES
@@ -189,25 +216,35 @@ const typeDefs = gql`
     universities: [University]!
     jobs: [Job]
     job(jobId: ID!): Job!
+    staffJobs: [Job]
+    viewAllItems(category: String): [Item]
+    viewMyItems: [Item]
+    getItemsByCategory(input: String!): [Item]
+    getSingleItemData(id: ID!): Item
     forumPosts: [ForumPost]
     getForumPost(postId: ID!): ForumPost
     getStaffJobs: [Job]
     getStudentJobs: [Job]
+    getCommentsOnMyItems: [Item]
+    tags: [Tag]
   }
 
   # MUTATIONS
   type Mutation {
     signupStudent(input: SignupStudentInput!): SignupStudentSuccess!
     loginStudent(input: LoginInput!): StudentAuth!
-
+    deleteItem(itemId: String!): Item
+    updateItem(itemId: String!, input: UpdateItemInput!): Item
+    removeFromMyItems(itemId: String!): Item
+    saveToMyItems(itemId: String!): Item
+    removeCommentFromItem(itemId: String!, Comment: ID!): Item
+    addCommentToItem(input: ItemCommentInput): Item
     createJob(newJobInput: CreateJobInput!): Job!
     updateJob(jobInput: UpdateJobInput!, jobId: ID!): Job!
     deleteJob(jobId: ID!): Job
     saveJob(jobId: ID!): Student!
-
     signupStaff(input: SignupStaffInput!): SignupStaffSuccess!
     loginStaff(input: LoginInput!): StaffAuth!
-
     createForumPost(forumPost: ForumPostInput!): ForumPost
     removeSavedJobs(jobId: ID!): Student
     forumReply(input: ForumReplyInput, postId: ID!): ForumPost
@@ -215,7 +252,6 @@ const typeDefs = gql`
     updateForumReply(id: ID!, input: ForumPostInput!): ForumPost
     deleteForumPost(id: ID!): ForumPost
     deleteForumReply(postId: ID!, replyId: ID!): ForumPost
-
     createItem(input: CreateItemInput!): Item!
   }
 `;

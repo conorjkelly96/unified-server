@@ -1,5 +1,4 @@
 const { model, Schema } = require("mongoose");
-const jobSchema = require("./Job");
 
 const bcrypt = require("bcrypt");
 
@@ -96,6 +95,14 @@ const studentSchema = {
     {
       type: Schema.Types.ObjectId,
       ref: "Job",
+      required: false,
+    },
+  ],
+
+  savedItems: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Item",
       required: false,
     },
   ],

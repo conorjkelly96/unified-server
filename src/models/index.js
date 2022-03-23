@@ -4,6 +4,7 @@ const Student = require("./Student");
 const University = require("./University");
 const ForumPost = require("./ForumPost");
 const Item = require("./Item");
+const Tag = require("./Tag");
 
 module.exports = {
   Student,
@@ -12,4 +13,5 @@ module.exports = {
   Job,
   Staff,
   ForumPost,
+  Tag,
 };
