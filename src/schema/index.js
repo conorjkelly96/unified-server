@@ -69,6 +69,7 @@ const typeDefs = gql`
     email: String!
     university: University!
     college: String!
+    type: String
   }
 
   type Job {
@@ -108,6 +109,7 @@ const typeDefs = gql`
   type ForumPost {
     id: ID!
     postText: String!
+    tags: [String]
     postedBy: Student!
     createdAt: String!
     replies: [Reply]
@@ -176,10 +178,15 @@ const typeDefs = gql`
 
   input ForumPostInput {
     postText: String!
+    tags: [String]
   }
 
   input ForumReplyInput {
     text: String!
+  }
+
+  type Tag {
+    name: String!
   }
 
   # QUERIES
@@ -192,6 +199,7 @@ const typeDefs = gql`
     forumPosts: [ForumPost]
     getForumPost(postId: ID!): ForumPost
     getStaffJobs: [Job]
+    tags: [Tag]
   }
 
   # MUTATIONS
