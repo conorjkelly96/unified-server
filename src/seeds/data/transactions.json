@@ -1,0 +1,27 @@
+[
+  {
+    "transactionStatus": "Pending Billing",
+    "paymentMethod": "Card",
+    "buyerRating": 4
+  },
+  {
+    "transactionStatus": "Pending Billing",
+    "paymentMethod": "Card",
+    "buyerRating": 5
+  },
+  {
+    "transactionStatus": "Pending Collection",
+    "paymentMethod": "Cash",
+    "buyerRating": 4
+  },
+  {
+    "transactionStatus": "Failed",
+    "paymentMethod": "Cash",
+    "buyerRating": 3
+  },
+  {
+    "transactionStatus": "Pending Billing",
+    "paymentMethod": "Card",
+    "buyerRating": 5
+  }
+]

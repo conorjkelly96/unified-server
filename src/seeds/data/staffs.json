@@ -1,0 +1,182 @@
+[
+  {
+    "firstName": "James",
+    "lastName": "Bond",
+    "username": "jamesbond",
+    "email": "jamesbond@gmail.com",
+    "password": "Password123!",
+    "university": "623b0464e2cfc2d7b4b1d13b",
+    "college": "Computer Science College"
+  },
+  {
+    "firstName": "Sal",
+    "lastName": "James",
+    "username": "saljames",
+    "email": "saljames@gmail.com",
+    "password": "Password123!",
+    "university": "623b0464e2cfc2d7b4b1d13c",
+    "college": "Humanities"
+  },
+  {
+    "firstName": "Ronald",
+    "lastName": "Harrison",
+    "username": "Ronald Harrison",
+    "email": "r.harrison@gmail.com",
+    "password": "Password123!",
+    "university": "623b0464e2cfc2d7b4b1d13d",
+    "college": "Business Department"
+  },
+  {
+    "firstName": "Claire",
+    "lastName": "Howell",
+    "username": "Claire Howell",
+    "email": "claire.howell@gmail.com",
+    "password": "Password123!",
+    "university": "623b0464e2cfc2d7b4b1d13e",
+    "college": "Criminology College"
+  },
+  {
+    "firstName": "Mathew",
+    "lastName": "Davidson",
+    "username": "Mathew Davidson",
+    "email": "mathew.davidson@gmail.com",
+    "password": "Password123!",
+    "university": "623b0464e2cfc2d7b4b1d13f",
+    "college": "Adult Nursing College"
+  },
+  {
+    "firstName": "Olivia",
+    "lastName": "Cook",
+    "username": "Olivia Cook",
+    "email": "olivia.cook@gmail.com",
+    "password": "Password123!",
+    "university": "623b0464e2cfc2d7b4b1d140",
+    "college": "Medicine College"
+  },
+  {
+    "firstName": "Tina",
+    "lastName": "Rose",
+    "username": "Tina Rose",
+    "email": "tina.rose@gmail.com",
+    "password": "Password123!",
+    "university": "623b0464e2cfc2d7b4b1d140",
+    "college": "Humanities"
+  },
+  {
+    "firstName": "Levi",
+    "lastName": "Warren",
+    "username": "Levi Warren",
+    "email": "levi.warren@gmail.com",
+    "password": "Password123!",
+    "university": "623b0464e2cfc2d7b4b1d141",
+    "college": "Math"
+  },
+  {
+    "firstName": "Maureen",
+    "lastName": "Holland",
+    "username": "Maureen Holland",
+    "email": "maureen.holland@gmail.com",
+    "password": "Password123!",
+    "university": "623b0464e2cfc2d7b4b1d142",
+    "college": "Digital Media"
+  },
+  {
+    "firstName": "Ted",
+    "lastName": "Harvey",
+    "username": "Ted Harvey",
+    "email": "ted.harvey@gmail.com",
+    "password": "Password123!",
+    "university": "623b0464e2cfc2d7b4b1d142",
+    "college": "Digital Media"
+  },
+  {
+    "firstName": "Kent",
+    "lastName": "Allen",
+    "username": "Kent Allen",
+    "email": "kent.allen@gmail.com",
+    "password": "Password123!",
+    "university": "623b0464e2cfc2d7b4b1d143",
+    "college": "Digital Engineering"
+  },
+  {
+    "firstName": "Robin",
+    "lastName": "Mitchelle",
+    "username": "Robin Mitchelle",
+    "email": "robin.mitchelle@gmail.com",
+    "password": "Password123!",
+    "university": "623b0464e2cfc2d7b4b1d143",
+    "college": "Digital Engineering"
+  },
+  {
+    "firstName": "Robin",
+    "lastName": "Hood",
+    "username": "Robin Hood",
+    "email": "robin.hood@gmail.com",
+    "password": "Password123!",
+    "university": "623b0464e2cfc2d7b4b1d144",
+    "college": "Accounting"
+  },
+  {
+    "firstName": "Sani",
+    "lastName": "Alam",
+    "username": "Sani Alam",
+    "email": "s.alam@gmail.com",
+    "password": "Password123!",
+    "university": "623b0464e2cfc2d7b4b1d145",
+    "college": "Law"
+  },
+  {
+    "firstName": "Irani",
+    "lastName": "Stan",
+    "username": "Irani Stan",
+    "email": "irani.stan@gmail.com",
+    "password": "Password123!",
+    "university": "623b0464e2cfc2d7b4b1d146",
+    "college": "Marketing"
+  },
+  {
+    "firstName": "Jenny",
+    "lastName": "Henry",
+    "username": "Jenny Henry",
+    "email": "jenny.henry@gmail.com",
+    "password": "Password123!",
+    "university": "623b0464e2cfc2d7b4b1d147",
+    "college": "Politics and International Relations"
+  },
+  {
+    "firstName": "Caleb",
+    "lastName": "Davis",
+    "username": "Caleb Davis",
+    "email": "caleb.davis@gmail.com",
+    "password": "Password123!",
+    "university": "623b0464e2cfc2d7b4b1d149",
+    "college": "Architecture"
+  },
+  {
+    "firstName": "Yoda",
+    "lastName": "Lee",
+    "username": "Yoda Lee",
+    "email": "yoda.lee@gmail.com",
+    "password": "Password123!",
+    "university": "623b0464e2cfc2d7b4b1d14a",
+    "college": "English"
+  },
+  {
+    "firstName": "Kelly",
+    "lastName": "Owens",
+    "username": "Kelly Owens",
+    "email": "k.owens@gmail.com",
+    "password": "Password123!",
+    "university": "623b0464e2cfc2d7b4b1d14b",
+    "college": "Accounting and Finance"
+  },
+  {
+    "firstName": "Oliver",
+    "lastName": "Queen",
+    "username": "Oliver Queen",
+    "email": "oliver.queen@gmail.com",
+    "password": "Password123!",
+    "university": "623b0464e2cfc2d7b4b1d14d",
+    "college": "Social Science"
+  }
+]
