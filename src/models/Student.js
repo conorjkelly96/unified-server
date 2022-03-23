@@ -52,7 +52,7 @@ const studentSchema = {
   bio: {
     type: String,
     minLength: 1,
-    maxLength: 250,
+    maxLength: 2000,
   },
   interests: [
     {
