@@ -8,7 +8,7 @@ const getSingleItemData = async (_, { id }, { user }) => {
       throw new AuthenticationError("You must be logged in to view an item.");
     }
 
-    const selectedItem = await Item.findById(id);
+    const selectedItem = await Item.findById(id).populate("seller");
 
     return selectedItem;
   } catch (error) {
