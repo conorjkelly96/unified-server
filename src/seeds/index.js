@@ -64,6 +64,7 @@ const seed = async () => {
         ...item,
         transactions: finalTransactions,
         comments,
+        seller: studentsFromDb[randomIndex(studentsFromDb.length)]._id,
       };
     });
 
