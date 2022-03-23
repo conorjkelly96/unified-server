@@ -31,7 +31,7 @@ const loginStaff = async (_, { input }) => {
         username: staff.username,
         university: staff.university,
         college: staff.college,
-        type: "staff",
+        // type: "staff",
       },
     };
   } catch (error) {
