@@ -51,6 +51,7 @@ const itemSchema = {
     ref: "Student",
     required: true,
   },
+
   comments: [commentSchema],
   images: [
     {
@@ -67,6 +68,6 @@ const schema = new Schema(itemSchema, {
   id: true,
 });
 
-const Item = model("item", schema);
+const Item = model("Item", schema);
 
 module.exports = Item;
