@@ -1,10 +1,82 @@
 [
   {
-    "title": "Junior Front End Developer ",
+    "title": "Store Assistant",
+    "company": "Aldi,Wolverhampton",
+    "description": "At Aldi, you'll never find yourself bored and twiddling your thumbs on the till as a Store Assistant. In fact, time will fly by.You'll do everything from checking off deliveries to dealing with enquiries or ensuring that the shelves are fully stocked with well-presented products. And, of course, you'll provide excellent customer service at all times by attending to customer needs in a prompt and friendly way. It's a really fast-paced environment, and everyone understands exactly what needs to happen to make their store a success - and gets on with doing it. There's a real family feel here, and we all pitch in as part of a close-knit team.",
+    "url": "https://g.co/kgs/co6HqK",
+    "salary": "£2500",
+    "postedBy": "623b6d010313197cdb9726bc"
+  },
+  {
+    "title": "Home Managerr",
+    "company": "Sanctuary Group, Worcester",
+    "description": "At Sanctuary Care, we believe in providing high quality care homes where people are looked after with the utmost dignity and respect. It goes without saying that kindness is what care is all about, so first and foremost, we carefully choose our staff for their kind and compassionate nature. We aim to care, nurture and enrich the lives of all in our ‘family’ at Sanctuary Care, whether that’s our staff, residents or family members",
+    "url": "https://g.co/kgs/uJxZSr",
+    "salary": "£20000",
+    "postedBy": "623b6d010313197cdb9726bd"
+  },
+  {
+    "title": "Business Administrator",
+    "company": "Wyndham Hall Care, Home Biceste",
+    "description": "If you are an experienced Administrator with great communication.skills, have a bubbly personality, emanate warmth and professionalism and want to work with a great team, then this role will definitely be of interest to you",
+    "url": "https://g.co/kgs/vL2s7L",
+    "salary": "£30000",
+    "postedBy": "623b6d010313197cdb9726be"
+  },
+  {
+    "title": "Forensic Accountant",
+    "company": "Matson Driscoll & Damico UK LLP,London",
+    "description": "As a Forensic Accountant, you will assist with modeling the performance of businesses in a “what if” scenario so as to calculate financial losses sustained as well as business valuations and fraud investigations.You will be exposed to an array of businesses and industries located all over the world and will benefit professionally from working with many experienced and knowledgeable individuals.",
+    "url": "https://g.co/kgs/xZG2VX",
+    "salary": "£29,501",
+    "postedBy": "623b6d010313197cdb9726bf"
+  },
+  {
+    "title": "Healthcare Partner",
+    "company": "LloydsPharmacy,Bognor Regis",
+    "description": "As one of our highly valued Healthcare Partners, you will be integral to the efficient running of our community or supermarket pharmacies across the UK. Supporting our customers on the shop floor, you will be providing life enhancing support and advice to improve people’s wellbeing whilst creating a warm and friendly environment to which they are keen to return to time and time again.",
+    "url": "https://g.co/kgs/RNRkzx",
+    "salary": "£31,501",
+    "postedBy": "623b6d010313197cdb9726c0"
+  },
+  {
+    "title": "Warehouse Operative",
+    "company": "Kuehne Nagel,Manchester",
+    "description": "As one of our highly valued Healthcare Partners, you will be integral to the efficient running of our community or supermarket pharmacies across the UK. Supporting our customers on the shop floor, you will be providing life enhancing support and advice to improve people’s wellbeing whilst creating a warm and friendly environment to which they are keen to return to time and time again.",
+    "url": "https://g.co/kgs/cSQ7RB",
+    "salary": "£31,501",
+    "postedBy": "623b6d010313197cdb9726c0"
+  },
+  {
+    "title": "Junior Front End Developer",
     "company": "Senitor Associates Limited jobs",
     "description": "Front End Developer",
     "url": "https://www.totaljobs.com/job/junior-front-end-developer/senitor-associates-limited-job96956718",
-    "salary": "£25000 - £30000 per annum",
-    "postedBy": "623a0f250bd56b29ae4c0952"
+    "salary": "£25000",
+    "postedBy": "623b6d010313197cdb9726bb"
+  },
+  {
+    "title": "Night Care Assistant",
+    "company": "Lavender Fields,Sevenoaks",
+    "description": "We are proud to recognise and nurture the skills of our staff and are passionate about supporting career progression. Our staff have moved from Care roles to Senior Care Assistant, Care Supervisors and right up to Home Manager level. Your career with us could start here!",
+    "url": "https://g.co/kgs/JQjEJ6",
+    "salary": "£12000",
+    "postedBy": "623b6d010313197cdb9726c2"
+  },
+  {
+    "title": "Data Scientist",
+    "company": "MediaCom UK,Manchester",
+    "description": "You will have an analytical mindset and a passion for solving problems. It is essential that you have experience with statistical modelling methods and machine learning models that allow us to find and build audiences based on propensity scoring or categorisation using media, web analytics, or client-provided data. Ability to code in Python (or R) essential. Other programming languages are useful but the Google Practise – Advanced Analytics team runs a predominantly Python environment.",
+    "url": "https://g.co/kgs/xnTsDA",
+    "salary": "£39000",
+    "postedBy": "623b6d010313197cdb9726cd"
+  },
+  {
+    "title": "IT Project Manager",
+    "company": "Sanderson,London",
+    "description": " This role will be best suited to a Project Manager or PMO,ideally 18 months to 5 years’ experience.Experienced in delivering a variety of IT projects e.g. Software, Data or Digital (including Mobile Applications, Web based or Cloud),Proven background working throughout the full project lifecycleUnderstanding of different methodologies including Agile, Waterfall, PRINCE2,Ideally Consultancy or Client facing experience",
+    "url": "https://g.co/kgs/GC3WDN",
+    "salary": "£42000",
+    "postedBy": "623b6d010313197cdb9726ce"
   }
 ]
