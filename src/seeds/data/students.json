@@ -238,5 +238,17 @@
     "university": "623b00036428783fe5a906bb",
     "college": "Biomedical and Forensic Sciences",
     "sellerRating": "4"
+  },
+  {
+    "username": "Sky Irani",
+    "firstName": "Sky",
+    "lastName": "Irani",
+    "email": "sky.irani@gmail.com",
+    "password": "Password123!",
+    "bio": "I am interested study in Clinical Pharmacy",
+    "interests": "Cooking",
+    "university": "623b0464e2cfc2d7b4b1d14e",
+    "college": "Clinical Pharmacy",
+    "sellerRating": "4"
   }
 ]
