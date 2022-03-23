@@ -43,11 +43,13 @@ const updateForumPost = require("./forumPost/updateForumPost");
 const updateForumReply = require("./forumPost/updateForumReply");
 const deleteForumPost = require("./forumPost/deleteForumPost");
 const deleteForumReply = require("./forumPost/deleteForumReply");
+const tags = require("./tags");
 
 const resolvers = {
   Query: {
     colleges,
     universities,
+    tags,
     jobs,
     job,
     // staffJobs,

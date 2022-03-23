@@ -70,6 +70,7 @@ const typeDefs = gql`
     email: String!
     university: University!
     college: String!
+    type: String
   }
 
   type Job {
@@ -109,6 +110,7 @@ const typeDefs = gql`
   type ForumPost {
     id: ID!
     postText: String!
+    tags: [String]
     postedBy: Student!
     createdAt: String!
     replies: [Reply]
@@ -136,6 +138,10 @@ const typeDefs = gql`
   type SignupStaffSuccess {
     success: Boolean!
     staff: Staff
+  }
+
+  type Tag {
+    name: String!
   }
 
   input LoginInput {
@@ -187,6 +193,7 @@ const typeDefs = gql`
 
   input ForumPostInput {
     postText: String!
+    tags: [String]
   }
 
   input ForumReplyInput {
@@ -218,6 +225,7 @@ const typeDefs = gql`
     getForumPost(postId: ID!): ForumPost
     getStaffJobs: [Job]
     getCommentsOnMyItems: [Item]
+    tags: [Tag]
   }
 
   # MUTATIONS
