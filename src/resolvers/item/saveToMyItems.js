@@ -7,7 +7,6 @@ const saveToMyItems = async (_, { itemId }, { user }) => {
       const studentData = await Student.findById(user.id);
 
       const savedItems = studentData.savedItems;
-      console.log(savedItems);
 
       const alreadySaved = savedItems.includes(itemId);
 

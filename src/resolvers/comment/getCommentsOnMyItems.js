@@ -4,7 +4,6 @@ const { Item } = require("../../models");
 const getCommentsOnMyItems = async (_, __, { user }) => {
   try {
     if (user) {
-      console.log(user.id);
       const items = await Item.find({ seller: user.id })
         .populate("comments")
         .populate({
@@ -14,8 +13,6 @@ const getCommentsOnMyItems = async (_, __, { user }) => {
             path: "username",
           },
         });
-
-      console.log(items);
 
       return items;
     } else {
