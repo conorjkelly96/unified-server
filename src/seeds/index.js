@@ -113,10 +113,17 @@ const seed = async () => {
     await Item.insertMany(itemsToSeed);
     console.log("[INFO]: Items seeded successfully");
 
+    const forumRepliesToSeed = forumReplies.map((reply) => {
+      return {
+        ...reply,
+        user: studentsFromDb[randomIndex(studentsFromDb.length)]._id,
+      };
+    });
+
     const forumPostsToSeed = forumPosts.map((forumPost) => {
       return {
         ...forumPost,
-        replies: forumReplies,
+        replies: forumRepliesToSeed,
         postedBy: studentsFromDb[randomIndex(studentsFromDb.length)]._id,
       };
     });
