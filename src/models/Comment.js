@@ -12,7 +12,7 @@ const commentSchema = {
     maxLength: 280,
   },
   username: {
-    type: String,
+    type: Schema.Types.ObjectId,
     ref: "Student",
     required: true,
   },
