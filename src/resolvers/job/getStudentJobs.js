@@ -5,10 +5,8 @@ const { Job, Student } = require("../../models");
 const getStudentJobs = async (_, __, { user }) => {
   try {
     const student = await Student.findById(user.id).populate("savedJobs");
-    console.log(student);
 
     if (student) {
-      console.log(student.savedJobs);
       return student.savedJobs;
     }
 

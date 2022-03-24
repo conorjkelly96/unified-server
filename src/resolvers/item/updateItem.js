@@ -10,7 +10,6 @@ const updateItem = async (_, itemInput, { user }) => {
 
     const { itemId } = itemInput;
     const { input } = itemInput;
-    console.log(input);
 
     const updatedItem = await Item.findByIdAndUpdate(
       itemId,
