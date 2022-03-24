@@ -52,11 +52,6 @@ const staffSchema = {
     type: String,
     required: true,
   },
-
-  // department: {
-  //   type: String,
-  //   enum: [],
-  // },
 };
 
 const schema = new Schema(staffSchema, {

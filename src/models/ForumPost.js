@@ -29,7 +29,6 @@ const forumPostSchema = {
     get: formatDateTime,
   },
 
-  //   replies is subdocument schema
   replies: [replies],
 };
 
