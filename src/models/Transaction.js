@@ -11,13 +11,11 @@ const transactionSchema = {
     ref: "user",
     required: true,
   },
-  transactionStatus: [
-    {
-      type: String,
-      enum: ["Pending Billing", "Pending Collection", "Failed"],
-      required: true,
-    },
-  ],
+  transactionStatus: {
+    type: String,
+    enum: ["Pending Billing", "Pending Collection", "Failed"],
+    required: true,
+  },
   collectionDate: {
     type: Date,
     required: true,

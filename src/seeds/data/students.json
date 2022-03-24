@@ -6,10 +6,9 @@
     "email": "bob.smith@gmail.com",
     "password": "Password123!",
     "bio": "I am interested study in Computer Science College",
-    "interests": "Travelling",
-    "university": "623b00036428783fe5a906ab",
+    "interests": ["Travelling"],
     "college": "Computer Science College",
-    "sellerRating": "5"
+    "sellerRating": 5
   },
   {
     "username": "MickyJordan",
@@ -18,10 +17,9 @@
     "email": "m.jordan@gmail.com",
     "password": "Password123!",
     "bio": "A day in a life of a student",
-    "interests": "Travelling",
-    "university": "623a2370e000307ecd76bda1",
+    "interests": ["Travelling"],
     "college": "Computer Science College",
-    "sellerRating": "5"
+    "sellerRating": 5
   },
   {
     "username": "VinaPatton",
@@ -30,10 +28,9 @@
     "email": "v.patton@gmail.com",
     "password": "Password123!",
     "bio": "I love to study and travelling",
-    "interests": "Travelling",
-    "university": "623a2370e000307ecd76bda2",
+    "interests": ["Travelling"],
     "college": "Marketing",
-    "sellerRating": "3"
+    "sellerRating": 3
   },
   {
     "username": "TonyStark",
@@ -42,10 +39,9 @@
     "email": "tony.stark@gmail.com",
     "password": "Password123!",
     "bio": "I love to study and dancing",
-    "interests": "Dancing",
-    "university": "623a2370e000307ecd76bda3",
+    "interests": ["Dancing"],
     "college": "Business Department",
-    "sellerRating": "3"
+    "sellerRating": 3
   },
   {
     "username": "NatashaRomanoff",
@@ -54,10 +50,9 @@
     "email": "r.natasha@gmail.com",
     "password": "Password123!",
     "bio": "I love to study mathematics and Cooking",
-    "interests": "Cooking",
-    "university": "623a2370e000307ecd76bda3",
+    "interests": ["Cooking"],
     "college": "Math",
-    "sellerRating": "4"
+    "sellerRating": 4
   },
   {
     "username": "LinkinPark",
@@ -66,10 +61,9 @@
     "email": "l.park@gmail.com",
     "password": "Password123!",
     "bio": "I love to study and I have 2 pets",
-    "interests": "Pets",
-    "university": "623a2370e000307ecd76bda3",
+    "interests": ["Pets"],
     "college": "Math",
-    "sellerRating": "4"
+    "sellerRating": 4
   },
   {
     "username": "John James",
@@ -78,10 +72,9 @@
     "email": "john@email.com",
     "password": "Password123!",
     "bio": "I am interested study in Criminology",
-    "interests": "Exercise",
-    "university": "623a5d6e1f6aa9c7a22fa222",
+    "interests": ["Exercise"],
     "college": "Criminology College",
-    "sellerRating": "4"
+    "sellerRating": 4
   },
   {
     "username": "Eli Wood",
@@ -90,10 +83,9 @@
     "email": "eli.wood@example.com",
     "password": "Password123!",
     "bio": "I am interested study in Humanities",
-    "interests": "Exercise",
-    "university": "623a5d6e1f6aa9c7a22fa223",
+    "interests": ["Exercise"],
     "college": "Humanities",
-    "sellerRating": "4"
+    "sellerRating": 4
   },
   {
     "username": "Harvey Gardner",
@@ -102,10 +94,9 @@
     "email": "harvey.gardner@example.com",
     "password": "Password123!",
     "bio": "I am interested study in Medical",
-    "interests": "Exercise",
-    "university": "623a5d6e1f6aa9c7a22fa224",
+    "interests": ["Exercise"],
     "college": "Medical",
-    "sellerRating": "5"
+    "sellerRating": 5
   },
   {
     "username": "Lonnie Stephens",
@@ -114,10 +105,9 @@
     "email": "lonnie.stephens@example.com",
     "password": "Password123!",
     "bio": "I am interested study in Medical",
-    "interests": "Movies",
-    "university": "623a5d6e1f6aa9c7a22fa224",
+    "interests": ["Movies"],
     "college": "Medical",
-    "sellerRating": "5"
+    "sellerRating": 5
   },
   {
     "username": "Samuel Burton",
@@ -126,10 +116,9 @@
     "email": "samuel.burton@example.com",
     "password": "Password123!",
     "bio": "I am interested study in English",
-    "interests": "Travelling",
-    "university": "623b00036428783fe5a906b2",
+    "interests": ["Travelling"],
     "college": "English",
-    "sellerRating": "4"
+    "sellerRating": 4
   },
   {
     "username": "Marilyn Jackson",
@@ -138,10 +127,9 @@
     "email": "marilyn.jackson@example.com",
     "password": "Password123!",
     "bio": "I am interested study in Engineering",
-    "interests": "Travelling",
-    "university": "623b00036428783fe5a906b3",
+    "interests": ["Travelling"],
     "college": "Engineering",
-    "sellerRating": "4"
+    "sellerRating": 4
   },
   {
     "username": "Denise Watts",
@@ -150,10 +138,9 @@
     "email": "denise.watts@example.com",
     "password": "Password123!",
     "bio": "I am interested study in Business",
-    "interests": "Cooking",
-    "university": "623b00036428783fe5a906b4",
+    "interests": ["Cooking"],
     "college": "Business",
-    "sellerRating": "4"
+    "sellerRating": 4
   },
   {
     "username": "Misty Cargo",
@@ -162,10 +149,9 @@
     "email": "misty.cargo@gmail.com",
     "password": "Password123!",
     "bio": "I am interested study in Accounting",
-    "interests": "Exercise",
-    "university": "623b00036428783fe5a906b5",
+    "interests": ["Exercise"],
     "college": "Accounting",
-    "sellerRating": "5"
+    "sellerRating": 5
   },
   {
     "username": "Yoda Lee",
@@ -174,10 +160,9 @@
     "email": "yoda.lee@gmail.com",
     "password": "Password123!",
     "bio": "I am interested study in Marketing",
-    "interests": "Travelling",
-    "university": "623b00036428783fe5a906b6",
+    "interests": ["Travelling"],
     "college": "Marketing",
-    "sellerRating": "4"
+    "sellerRating": 4
   },
   {
     "username": "Jenny Henry",
@@ -186,10 +171,9 @@
     "email": "Jenny.henry@gmail.com",
     "password": "Password123!",
     "bio": "I am interested study in Social Sciences",
-    "interests": "Cooking",
-    "university": "623b00036428783fe5a906b7",
+    "interests": ["Cooking"],
     "college": "Social Sciences",
-    "sellerRating": "4"
+    "sellerRating": 4
   },
   {
     "username": "Kent Allen",
@@ -198,10 +182,9 @@
     "email": "kent.allen@gmail.com",
     "password": "Password123!",
     "bio": "I am interested study in Architecture",
-    "interests": "Cooking",
-    "university": "623b00036428783fe5a906b8",
+    "interests": ["Cooking"],
     "college": "Architecture",
-    "sellerRating": "4"
+    "sellerRating": 4
   },
   {
     "username": "Ted Harvey",
@@ -210,10 +193,9 @@
     "email": "ted.harvey@gmail.com",
     "password": "Password123!",
     "bio": "I am interested study in Politics",
-    "interests": "Cooking",
-    "university": "623b00036428783fe5a906b9",
+    "interests": ["Cooking"],
     "college": "Politics",
-    "sellerRating": "4"
+    "sellerRating": 4
   },
   {
     "username": "Courtney Ross",
@@ -222,10 +204,9 @@
     "email": "courtney.ross@gmail.com",
     "password": "Password123!",
     "bio": "I am interested study in Finance",
-    "interests": "Cooking",
-    "university": "623b00036428783fe5a906ba",
+    "interests": ["Cooking"],
     "college": "Finance",
-    "sellerRating": "4"
+    "sellerRating": 4
   },
   {
     "username": "Maureen Holland",
@@ -234,10 +215,9 @@
     "email": "maureen.holland@gmail.com",
     "password": "Password123!",
     "bio": "I am interested study in Biomedical and Forensic Sciences",
-    "interests": "Cooking",
-    "university": "623b00036428783fe5a906bb",
+    "interests": ["Cooking"],
     "college": "Biomedical and Forensic Sciences",
-    "sellerRating": "4"
+    "sellerRating": 4
   },
   {
     "username": "Sky Irani",
@@ -246,9 +226,8 @@
     "email": "sky.irani@gmail.com",
     "password": "Password123!",
     "bio": "I am interested study in Clinical Pharmacy",
-    "interests": "Cooking",
-    "university": "623b0464e2cfc2d7b4b1d14e",
+    "interests": ["Cooking"],
     "college": "Clinical Pharmacy",
-    "sellerRating": "4"
+    "sellerRating": 4
   }
 ]

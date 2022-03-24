@@ -5,9 +5,10 @@
     "category": "Electronics",
     "status": "For Sale",
     "condition": "Like New",
-    "price": "89.99",
-    "seller": "6239ea0eb158e306e30fd863",
-    "images": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+    "price": 89.99,
+    "images": [
+      "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+    ]
   },
   {
     "itemName": "Snekers",
@@ -15,9 +16,10 @@
     "category": "Clothing & Accessories",
     "status": "Sold",
     "condition": "Used",
-    "price": "44.34",
-    "seller": "623b51449e6388a33cb96ece",
-    "images": "https://www.diadora.com/dw/image/v2/BBPK_PRD/on/demandware.static/-/Sites-diadora-master/default/dw855a7cdf/images/hi-res/501.177730_C0823_00_HR.jpg?sw=1920"
+    "price": 44.34,
+    "images": [
+      "https://www.diadora.com/dw/image/v2/BBPK_PRD/on/demandware.static/-/Sites-diadora-master/default/dw855a7cdf/images/hi-res/501.177730_C0823_00_HR.jpg?sw=1920"
+    ]
   },
   {
     "itemName": "ASUS Laptop",
@@ -25,9 +27,10 @@
     "category": "Electronics",
     "status": "For Sale",
     "condition": "Fair",
-    "price": "144.34",
-    "seller": "623b51449e6388a33cb96ecf",
-    "images": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.co.uk%2FASUS-Laptop-Year-Warranty-Professional%2Fdp%2FB095C2YDW2&psig=AOvVaw2CFPHm5iU_io50A-iR6MMj&ust=1648150652326000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCOCZn-P93PYCFQAAAAAdAAAAABAG"
+    "price": 144.34,
+    "images": [
+      "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.co.uk%2FASUS-Laptop-Year-Warranty-Professional%2Fdp%2FB095C2YDW2&psig=AOvVaw2CFPHm5iU_io50A-iR6MMj&ust=1648150652326000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCOCZn-P93PYCFQAAAAAdAAAAABAG"
+    ]
   },
   {
     "itemName": "NIKE Unisex Football Shoes",
@@ -35,9 +38,10 @@
     "category": "Sporting Goods",
     "status": "For Sale",
     "condition": "Like New",
-    "price": "50",
-    "seller": "623b51449e6388a33cb96ed0",
-    "images": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.nike.com%2Fgb%2Fu%2Fcustom-nike-phantom-gt-elite-by-you-10000983&psig=AOvVaw26cI_hRy2JfK174h2WxhaD&ust=1648150733537000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJj634v-3PYCFQAAAAAdAAAAABAH"
+    "price": 50,
+    "images": [
+      "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.nike.com%2Fgb%2Fu%2Fcustom-nike-phantom-gt-elite-by-you-10000983&psig=AOvVaw26cI_hRy2JfK174h2WxhaD&ust=1648150733537000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJj634v-3PYCFQAAAAAdAAAAABAH"
+    ]
   },
   {
     "itemName": "Smart Watch",
@@ -45,9 +49,10 @@
     "category": "Clothing & Accessories",
     "status": "For Sale",
     "condition": "Like New",
-    "price": "199",
-    "seller": "623b51449e6388a33cb96ed1",
-    "images": "http://media.4rgos.it/s/Argos/9488180_R_SET?$Main768$&w=620&h=620"
+    "price": 199,
+    "images": [
+      "http://media.4rgos.it/s/Argos/9488180_R_SET?$Main768$&w=620&h=620"
+    ]
   },
   {
     "itemName": "Cycling Bike",
@@ -55,9 +60,10 @@
     "category": "Sporting Goods",
     "status": "For Sale",
     "condition": "Like New",
-    "price": "499",
-    "seller": "623b51449e6388a33cb96ed2",
-    "images": "https://static.onecms.io/wp-content/uploads/sites/20/2021/03/23/yosuda-indoor-cycling-bike-tout.jpg"
+    "price": 499,
+    "images": [
+      "https://static.onecms.io/wp-content/uploads/sites/20/2021/03/23/yosuda-indoor-cycling-bike-tout.jpg"
+    ]
   },
   {
     "itemName": "Gaming Keyboard",
@@ -65,9 +71,10 @@
     "category": "Electronics",
     "status": "Sold",
     "condition": "New",
-    "price": "42",
-    "seller": "623b51449e6388a33cb96ed3",
-    "images": "https://m.media-amazon.com/images/I/71HZKNMx3EL._AC_SL1500_.jpg"
+    "price": 42,
+    "images": [
+      "https://m.media-amazon.com/images/I/71HZKNMx3EL._AC_SL1500_.jpg"
+    ]
   },
   {
     "itemName": "Sports Backpack",
@@ -75,9 +82,10 @@
     "category": "Sporting Goods",
     "status": "For Sale",
     "condition": "New",
-    "price": "71",
-    "seller": "623b51449e6388a33cb96ed4",
-    "images": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.harrowsports.com%2Fproducts%2Felite-backpack&psig=AOvVaw2uzPl84jzajU7aA5CzxL14&ust=1648150892959000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCPi1rtf-3PYCFQAAAAAdAAAAABAO"
+    "price": 71,
+    "images": [
+      "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.harrowsports.com%2Fproducts%2Felite-backpack&psig=AOvVaw2uzPl84jzajU7aA5CzxL14&ust=1648150892959000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCPi1rtf-3PYCFQAAAAAdAAAAABAO"
+    ]
   },
   {
     "itemName": "adidas Women's 3 Stripes Tee T-Shirt",
@@ -85,9 +93,10 @@
     "category": "Clothing & Accessories",
     "status": "Sold",
     "condition": "New",
-    "price": "21",
-    "seller": "623b51449e6388a33cb96ed5",
-    "images": "https://assets.adidas.com/images/w_600,f_auto,q_auto/af49037befaa411fba3ea9f4013c0c5b_9366/3-Stripes_T-Shirt_Black_ED7482_01_laydown.jpg"
+    "price": 21,
+    "images": [
+      "https://assets.adidas.com/images/w_600,f_auto,q_auto/af49037befaa411fba3ea9f4013c0c5b_9366/3-Stripes_T-Shirt_Black_ED7482_01_laydown.jpg"
+    ]
   },
   {
     "itemName": "Apple iPhone 7",
@@ -95,9 +104,10 @@
     "category": "Electronics",
     "status": "For Sale",
     "condition": "Fair",
-    "price": "121",
-    "seller": "623b51449e6388a33cb96ed6",
-    "images": "https://www.laptopsdirect.co.uk/Images/A1MN8X2BAMV_1_Supersize.jpg?v=6"
+    "price": 121,
+    "images": [
+      "https://www.laptopsdirect.co.uk/Images/A1MN8X2BAMV_1_Supersize.jpg?v=6"
+    ]
   },
   {
     "itemName": "Desk Chair",
@@ -105,9 +115,10 @@
     "category": "Other",
     "status": "For Sale",
     "condition": "Fair",
-    "price": "99",
-    "seller": "623b51449e6388a33cb96ed7",
-    "images": "https://media.4rgos.it/s/Argos/7248353_R_SET?$Main768$&w=620&h=620"
+    "price": 99,
+    "images": [
+      "https://media.4rgos.it/s/Argos/7248353_R_SET?$Main768$&w=620&h=620"
+    ]
   },
   {
     "itemName": "Wireless Headphones",
@@ -115,9 +126,10 @@
     "category": "Clothing & Accessories",
     "status": "For Sale",
     "condition": "New",
-    "price": "20",
-    "seller": "623b51449e6388a33cb96ee1",
-    "images": "https://m.media-amazon.com/images/I/61GhCnDkVuL._AC_SL1500_.jpg"
+    "price": 20,
+    "images": [
+      "https://m.media-amazon.com/images/I/61GhCnDkVuL._AC_SL1500_.jpg"
+    ]
   },
   {
     "itemName": "Earrings",
@@ -125,9 +137,8 @@
     "category": "Clothing & Accessories",
     "status": "For Sale",
     "condition": "New",
-    "price": "51",
-    "seller": "623b51449e6388a33cb96ee1",
-    "images": "https://m.media-amazon.com/images/I/71FF+-qKLuL._AC_UY675_.jpg"
+    "price": 51,
+    "images": ["https://m.media-amazon.com/images/I/71FF+-qKLuL._AC_UY675_.jpg"]
   },
   {
     "itemName": "Xbox Series S",
@@ -135,9 +146,10 @@
     "category": "Sporting Goods",
     "status": "For Sale",
     "condition": "New",
-    "price": "247.83 ",
-    "seller": "623b51449e6388a33cb96ee0",
-    "images": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVB5J0LKCc2x2jTldwmzK9Ea18AJKOfThCAA&usqp=CAU"
+    "price": 247.83,
+    "images": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVB5J0LKCc2x2jTldwmzK9Ea18AJKOfThCAA&usqp=CAU"
+    ]
   },
   {
     "itemName": "Gaming Headset",
@@ -145,8 +157,9 @@
     "category": "Sporting Goods",
     "status": "For Sale",
     "condition": "Fair",
-    "price": "25",
-    "seller": "623b51449e6388a33cb96ede",
-    "images": "https://m.media-amazon.com/images/S/aplus-media/vc/815b7e70-0e8e-454d-ac13-f8bb29eafb66.__CR0,0,488,700_PT0_SX488_V1___.jpg"
+    "price": 25,
+    "images": [
+      "https://m.media-amazon.com/images/S/aplus-media/vc/815b7e70-0e8e-454d-ac13-f8bb29eafb66.__CR0,0,488,700_PT0_SX488_V1___.jpg"
+    ]
   }
 ]
