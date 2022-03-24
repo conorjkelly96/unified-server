@@ -39,6 +39,7 @@ const createForumPost = require("./forumPost/createForumPost");
 const forumPosts = require("./forumPost/getAllForumPosts");
 const forumReply = require("./forumPost/forumReply");
 const getForumPost = require("./forumPost/getForumPost");
+const getStudentJobs = require("./job/getStudentJobs");
 const updateForumPost = require("./forumPost/updateForumPost");
 const updateForumReply = require("./forumPost/updateForumReply");
 const deleteForumPost = require("./forumPost/deleteForumPost");
@@ -57,6 +58,7 @@ const resolvers = {
     viewMyItems,
     getSingleItemData,
     getStaffJobs,
+    getStudentJobs,
     getItemsByCategory,
     forumPosts,
     getForumPost,

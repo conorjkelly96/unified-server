@@ -55,7 +55,12 @@ const seed = async () => {
       };
     });
 
-    await Staff.insertMany(staffToSeed);
+    const staffPromises = staffToSeed.map((staff) => {
+      return Staff.create(staff);
+    });
+
+    await Promise.all(staffPromises);
+
     console.log("[INFO]: Staffs seeded successfully");
 
     const staffFromDb = await Staff.find({});
@@ -81,7 +86,11 @@ const seed = async () => {
       };
     });
 
-    await Student.insertMany(studentsToSeed);
+    const studentPromises = studentsToSeed.map((student) => {
+      return Student.create(student);
+    });
+
+    await Promise.all(studentPromises);
     console.log("[INFO]: Students seeded successfully");
 
     const studentsFromDb = await Student.find({});

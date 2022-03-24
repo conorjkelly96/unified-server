@@ -1,10 +1,18 @@
+const { ApolloError } = require("apollo-server");
 const { Item } = require("../../models");
 
 const getCommentsOnMyItems = async (_, __, { user }) => {
   try {
     if (user) {
-      console.log(user.id);
-      const items = await Item.find({ seller: user.id });
+      const items = await Item.find({ seller: user.id })
+        .populate("comments")
+        .populate({
+          path: "comments",
+          populate: {
+            model: "Student",
+            path: "username",
+          },
+        });
 
       return items;
     } else {

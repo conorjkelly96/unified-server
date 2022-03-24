@@ -4,20 +4,24 @@ const { Student } = require("../../models");
 const saveToMyItems = async (_, { itemId }, { user }) => {
   try {
     if (user) {
-      console.log(itemId);
+      const studentData = await Student.findById(user.id);
 
-      const student = await Student.findByIdAndUpdate(
-        user.id,
-        {
-          $push: {
-            savedItems: { id: itemId, ...input, username: user.username },
+      const savedItems = studentData.savedItems;
+
+      const alreadySaved = savedItems.includes(itemId);
+
+      if (!alreadySaved) {
+        const student = await Student.findByIdAndUpdate(
+          user.id,
+          {
+            $push: { savedItems: itemId },
           },
-        },
-
-        { new: true }
-      ).populate("savedItems");
-
-      return student;
+          { new: true }
+        ).populate("savedItems");
+        return student;
+      } else {
+        throw new ApolloError("Item already saved");
+      }
     } else {
       throw new AuthenticationError("You must be logged in to save an item.");
     }

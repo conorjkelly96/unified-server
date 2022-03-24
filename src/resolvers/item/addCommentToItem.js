@@ -12,7 +12,7 @@ const addCommentToItem = async (_, { input }, { user }) => {
 
     const item = await Item.findByIdAndUpdate(itemId, {
       $push: {
-        comments: { commentBody, username: user.username },
+        comments: { commentBody: commentBody, username: user.id },
       },
     });
 

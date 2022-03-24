@@ -224,6 +224,7 @@ const typeDefs = gql`
     forumPosts: [ForumPost]
     getForumPost(postId: ID!): ForumPost
     getStaffJobs: [Job]
+    getStudentJobs: [Job]
     getCommentsOnMyItems: [Item]
     tags: [Tag]
   }
