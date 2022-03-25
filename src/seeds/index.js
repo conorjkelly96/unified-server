@@ -15,9 +15,9 @@ const {
 
 const universities = require("./data/universities.json");
 const students = require("./data/students.json");
-const comments = require("./data/comments.json");
+const comments = require("./data/commentsData.json");
 const staffs = require("./data/staffs.json");
-const items = require("./data/items.json");
+const items = require("./data/itemsData.json");
 const transactions = require("./data/transactions.json");
 const jobs = require("./data/jobs.json");
 const forumPosts = require("./data/forumPosts.json");
