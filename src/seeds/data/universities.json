@@ -224,5 +224,14 @@
     "city": "Manchester",
     "postcode": "M13 9PL",
     "colleges": ["Biological Sciences", "Clinical Pharmacy", "Criminology"]
+  },
+  {
+    "name": "Southampton Solent University",
+    "courses": ["Math", "Arts", "Marketing", "Acoustics with Music"],
+    "addressLine1": "London, Hampshire",
+    "addressLine2": "Southampton",
+    "city": "Southampton",
+    "postcode": "SO15 1B",
+    "colleges": ["Humanities", "Business Department", "Music College"]
   }
 ]
